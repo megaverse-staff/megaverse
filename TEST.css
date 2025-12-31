@@ -1426,7 +1426,7 @@ a.forumtitle:not(a.forumtitle:has(t6))::after {
 
 /* grille fo_classic double */
 @media screen and (min-width: 1150px) {
-	.forums:not(.forums:has(.fo_onglets), #c9 .forums, .forums:has(#fo_rsflood)){
+	.forums:not(.forums:has(.fo_onglets), #c9 .forums, #c10 .forums, .forums:has(#fo_rsflood)){
 		grid-template-columns: repeat(2, 1fr); 
 	}
 }
