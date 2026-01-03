@@ -143,16 +143,16 @@ html:not(html[data-color-scheme='dark']) .header_dark { display: none }
 }
 
 .top_sites {
-	gap: 20px;
-	margin: 5px;
+    gap: 12px;
+    margin: 4px;
+    padding: 12px 12px;
 }
 
 .top {
-	width: 35px;
-	height: 35px;
-	border-radius: 50%;
-	outline-offset: 5px;
-	outline: 1px solid var(--white);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    outline-offset: 5px;
 }
 
 .top:nth-of-type(odd) {
