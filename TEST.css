@@ -126,18 +126,19 @@ html:not(html[data-color-scheme='dark']) .header_dark { display: none }
 
 .gradient_infos {
 	display: flex;
-	justify-content: space-between;
-	gap: 5px;
-	margin-top: 10px;
+	justify-content: center;
+	gap: 8px;
+	margin-top: 8px;
 }
 
 .gradient_infos span {
-	padding: 1px 5px;
+	padding: 1px 16px;
 	background: var(--co-gradient);
 	border-radius: var(--radius);
 	text-align: center;
 	font-size: var(--little-size);
-	font-weight: 600;
+	text-transform: uppercase; 
+	font-weight: 800;
 	color: white;
 }
 
