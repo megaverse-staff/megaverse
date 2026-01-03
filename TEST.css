@@ -140,6 +140,7 @@ html:not(html[data-color-scheme='dark']) .header_dark { display: none }
 	text-transform: uppercase; 
 	font-weight: 800;
 	color: white;
+	align-content:center;
 }
 
 .top_sites {
