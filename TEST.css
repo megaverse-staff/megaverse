@@ -199,7 +199,6 @@ html:not(html[data-color-scheme='dark']) .header_dark { display: none }
 
 	.top_sites {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
