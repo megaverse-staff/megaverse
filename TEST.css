@@ -161,8 +161,6 @@ html:not(html[data-color-scheme='dark']) .header_dark { display: none }
 }
 
 .header_ctnr {
-    position: fixed;
-    top: 60px;
     display: grid;
     width: 100%;
     height: calc(100vh - 60px);
@@ -259,16 +257,14 @@ html:not(html[data-color-scheme='dark']) .header_dark { display: none }
 	grid-column: 1;
 }
 
-@media screen and (min-width: 890px) {
+/*@media screen and (min-width: 890px) {
 	.global_fo { 
-		top: 100vh;
 	}
 }
 @media screen and (max-width: 889px) {
 	.global_fo { 
-		top: 75vh;
 	}
-}
+}*/
 
 .global_bg {
     background: var(--texture), var(--base-gradient);
