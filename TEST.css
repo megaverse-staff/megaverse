@@ -243,6 +243,119 @@ html:not(html[data-color-scheme='dark']) .header_dark { display: none }
 	}
 }
 
+<!-- header infos -->
+
+.header_infos > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header_infos { 
+position:relative;
+z-index:2;
+display:grid; 
+grid-template-columns: 1fr 1fr; 
+margin: -42px auto 0;
+height: fit-content;
+gap: 80px;  
+width: 80%;
+}
+
+@media screen and (max-width: 1149px) {
+    .header_infos {
+        display: flex;
+        gap: 40px;
+        flex-direction: column;
+    }
+}
+
+.contexte_block {
+    display: flex;
+    gap: 12px;
+    min-width: 100%;
+    justify-content: space-between;
+    background-color: var(--white);
+    border-radius: var(--radius);
+}
+
+.block_contexte {
+    padding: 12px 0;
+    text-align: justify;
+}
+
+.contexte_title {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: var(--l-size);
+    color: var(--co-1);
+}
+
+.contexte_content {
+height:180px;
+}
+
+.contexte_deco {
+    background: var(--co-2);
+    width: 100%;
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.header_projo .cate_title {
+  margin: 0;
+  width: 100%;
+}
+
+.header_projo .cate_title::after {
+  display:none;
+}
+
+
+.projo_items > div {
+    background: var(--co-2);
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.projo_items div::before {
+    content: '➤';
+    color: white;
+    margin-right: 10px;
+}
+
+.projo_items a:hover {
+    background: var(--co-1);
+    transform: translateX(30px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px transparent;
+    font-size: var(--large-size);
+    transition: 0.5s all;
+}
+
+.projo_items {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 0.5px;
+    display: grid;
+    gap: 8px;
+}
+
+.projo_items a {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 0.5px;
+    display: grid;
+    gap: 8px;
+}
+
+<!-- fin header infos -->
+
 .global_fo {
 	position: relative;
 	display: grid;
