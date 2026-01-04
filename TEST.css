@@ -243,7 +243,7 @@ html:not(html[data-color-scheme='dark']) .header_dark { display: none }
 	}
 }
 
-<!-- header infos -->
+/* header infos */
 
 .header_infos > div {
     display: flex;
@@ -354,7 +354,7 @@ height:180px;
     gap: 8px;
 }
 
-<!-- fin header infos -->
+/* fin header infos */
 
 .global_fo {
 	position: relative;
