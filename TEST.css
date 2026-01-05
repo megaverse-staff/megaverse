@@ -2630,6 +2630,25 @@ newsareal1 .topicslist_infos {
 .iconsstaff .gradient_infos { opacity: 0; transition: opacity 0.3s ease; }
 .staffblock .title_number { display: flex; }
 
+@media screen and (min-width: 1500px) {
+	.borderstaff h2 {font-size: 1.1rem!important} 
+ }
+
+@media screen and (min-width: 1476px) and (max-width: 1500px) {
+	.borderstaff h2 {font-size: 1rem!important} 
+ }
+
+@media screen and (min-width: 1381px) and (max-width: 1475px) {
+	.borderstaff h2 {font-size: 0.9rem!important} 
+ }
+
+@media screen and (min-width: 979px) and (max-width: 1380px) {
+  .borderstaff h2 {font-size: 0.6rem!important}
+}
+@media screen and (max-width: 978px) {
+  .borderstaff h2 {font-size: 0.5rem!important}
+}
+
 /*prisma*/
 
 .prisma_pa{
