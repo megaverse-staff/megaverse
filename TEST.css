@@ -1,3 +1,9 @@
+@property --card-rotation-progress {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
 /* ------------ GLOBAL ------------ */
 * {
 	box-sizing: border-box; /*évite que les éléments soient agrandis par le padding*/
