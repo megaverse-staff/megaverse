@@ -2656,6 +2656,7 @@ newsareal1 .topicslist_infos {
     gap: 4px;
     border-radius: var(--xs-radius);
     overflow: hidden;
+	padding: 16px;
 }
 
 .prisma_grid a {
