@@ -1,9 +1,3 @@
-@property --card-rotation-progress {
-  syntax: "<number>";
-  inherits: true;
-  initial-value: 0;
-}
-
 /* ------------ GLOBAL ------------ */
 * {
 	box-sizing: border-box; /*évite que les éléments soient agrandis par le padding*/
@@ -2608,6 +2602,141 @@ newsareal1 .topicslist_infos {
 
 #newsareal1 .topicslist_infos:hover a {
 	color: white;
+}
+
+/* NOUVEAU BLOC STAFF + PRISMA */ 
+
+/*staff*/
+.staffmgv{ width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
+.cardstaff{ width: 100%; aspect-ratio: 200 / 170; border-radius: var(--radius); overflow: hidden; display: flex; justify-content: center; align-items: center; position: relative; transition: background-size .8s ease, background-position .8s ease; }
+.dopelovers { background: url(https://i.pinimg.com/736x/6b/71/6b/6b716bd5926b2ddecb8e841ade97dff1.jpg) center center no-repeat; background-size: cover; }
+.dopelovers:hover { background: url(https://i.pinimg.com/736x/6b/71/6b/6b716bd5926b2ddecb8e841ade97dff1.jpg) left center no-repeat; background-size: 170%; }
+.muse { background: url(https://images2.imgbox.com/14/db/Y4ZCoQU5_o.jpg) center center no-repeat; background-size: cover; }
+.muse:hover { background: url(https://images2.imgbox.com/14/db/Y4ZCoQU5_o.jpg) left center no-repeat; background-size: 170%; }
+.bxd { background: url(https://i.pinimg.com/736x/02/13/4c/02134c36164a88b4423afa00ffdd58f5.jpg) center center no-repeat; background-size: cover; }
+.bxd:hover { background: url(https://i.pinimg.com/736x/02/13/4c/02134c36164a88b4423afa00ffdd58f5.jpg) left center no-repeat; background-size: 170%; }
+.borderstaff { height: 90%; width: 90%; background: transparent; border-radius: 10px; transition: border 1s; position: relative; }
+.borderstaff:hover { border: 1px solid white; }
+.borderstaff h2 { color: white; font-family: var(--special-font); letter-spacing: 1px; text-transform: uppercase; margin-left: 5px; }
+.iconsstaff { display: flex; flex-direction: row; gap: 12px; justify-content: space-around; bottom: 5px; position: absolute; right: 5px; }
+.cardstaff:hover .iconsstaff .gradient_infos { opacity: 1; } 
+.iconsstaff .gradient_infos { opacity: 0; transition: opacity 0.3s ease; }
+.staffblock .title_number { display: flex; }
+
+/*prisma*/
+.prisma_pa{
+  height: 100%;
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.prisma_pa span:first-child{
+  font-family: var(--special-font);
+  font-size: var(--xl-size);
+  color: var(--co-2);
+}
+
+.prisma_pa span{
+  font-family: var(--font-2);
+}
+
+.prisma_cards{
+  width: min(100%, 220px);
+  height: min(360px, 100%); 
+  --card-rotation-progress: 0;
+}
+
+.prisma_cards .cards{
+  container-type: inline-size;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(-50% -50%, 400% -50%, 150% 100%, -80% 100%);
+}
+
+.prisma_cards .card{
+  --index: sibling-index();
+  --count: sibling-count();
+
+  --angle-min: -30;
+  --angle-max: 30;
+  --angle-diff: calc(var(--angle-max) - var(--angle-min));
+  --angle-step: calc(var(--angle-diff) / (var(--count) + 1));
+  --angle: calc(var(--angle-min) + var(--angle-step) * var(--index));
+  --angle-deg: calc((var(--angle) * var(--card-rotation-progress)) * 1deg);
+  width: 100%;
+  position: absolute;
+  transform-origin: bottom center;
+  translate: 0 78%;
+  rotate: var(--angle-deg);
+  animation: prismaCardUp .9s ease-out both, prismaCardRotate .9s ease-out both;
+}
+
+.prisma_cards .card__face{
+  width: 100%;
+  aspect-ratio: 110 / 180; 
+  overflow: hidden;
+  background: transparent;
+}
+
+.prisma_cards .card__img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@keyframes prismaCardUp{
+  from{ translate: 0 78%; }
+  to{ translate: 0 38%; }
+}
+
+@keyframes prismaCardRotate{
+  from{ --card-rotation-progress: 0; }
+  to{ --card-rotation-progress: 1; }
+}
+
+@property --card-rotation-progress {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@supports (animation-timeline: view()){
+  .prisma_cards .card{
+    animation-duration: 1ms;
+    animation-timeline: view(block);
+    animation-range: entry 85% contain 40%;
+  }
+}
+
+.pa_newblock > .block2{
+  max-height: none !important;
+  height: clamp(240px, 28vh, 380px);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+
+.pa_newblock > .block2 .prisma_pa{
+  height: auto;
+  padding: 16px;
+}
+
+.pa_newblock > .block2 .prisma_cards{
+  align-self: center;
+}
+
+@media (max-width: 900px){
+  .pa_newblock{
+    grid-template-columns: 1fr;
+  }
 }
 
 /*** ------------------------------- ***/
