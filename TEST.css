@@ -168,6 +168,10 @@ html:not(html[data-color-scheme='dark']) .header_dark { display: none }
     height: calc(100vh - 60px);
 }
 
+.header_ctnr a {
+    z-index: 1;
+}
+
 .header_ctnr > * {
 	grid-row: 1;
 	grid-column: 1;
@@ -434,7 +438,7 @@ height:180px;
     right: -50px;
 }
 
-.sidebarMenu {z-index: 1;position: fixed;top: -110px;left: calc(-100% + 25px);width: 100%;transition: all 0.3s;}
+.sidebarMenu {z-index: 2;position: fixed;top: -110px;left: calc(-100% + 25px);width: 100%;transition: all 0.3s;}
 .mgv_content:hover .sidebarMenu { top: -84px; left: calc(-100% + 50px); }
 
 #sidebar-checkbox:checked + .mgv_content > .sidebarMenu {left: 0;right: 0;top: 60px;}
