@@ -2691,6 +2691,13 @@ newsareal1 .topicslist_infos {
     border-radius: 5px;
 }
 
+.prisma_grid a:hover,
+.prisma_grid a:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--co-2);
+  transform: translateY(-0.25em);
+}
+
+
 .prisma_grid a span:first-child {
     color: var(--co-2);
   font-size: var(--l-size);
@@ -2805,6 +2812,8 @@ newsareal1 .topicslist_infos {
     grid-template-columns: 1fr;
   }
 }
+
+@media screen and (min-width: 890px) { .pa_newblock { grid-template: repeat(2, auto) / repeat(2, 1fr); padding: 16px 0;} }
 
 /*** ------------------------------- ***/
 /*** FICHES DE PRÉSENTATION ------------ ***/
