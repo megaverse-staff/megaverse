@@ -1817,6 +1817,10 @@ display: none;
 	transform: translateX(-45px); 
 }
 
+.fo_classic .fo_deco {
+ position: sticky; 
+}
+
 @media screen and (max-width: 1149px) {
 	.fo_classic .fo_deco {
 	    height: 255px;
