@@ -3133,6 +3133,17 @@ cwtw:hover::before {
 	margin: 0 auto;
 }
 
+@media screen and (max-width: 1080px) { 
+  .fiche3{flex-direction: column;} 
+  
+  .fiche3 > .block:last-of-type {
+    width: 100%;
+    margin: 0 !important; }
+    
+  .fiche3 > .block:first-of-type {
+    width: 100%; }
+  }
+
 .fiche3 more {
 	position: absolute;
 	top: 15px;
@@ -7438,3 +7449,35 @@ button.more {
 .notebox1::after { display: block; content: ""; position: absolute; width: 110px; height: 30px; top: -21px; left: 45%; border: 1px solid #fff; background: rgba(254, 254, 254, .6); box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1); }
 .titlebox1 { font-size: 26px; color: var(--co-1); font-family: var(--special-font); padding: 15px 0; position: absolute; top: -44px; }
 .titlebox1::before { content: "\ec9f"; font-family: var(--font-ic); color: var(--co-2); margin-right: 5px; }
+
+
+/* MODELE RP TRANSFERT */
+
+.bookrp { position: relative; display: flex; max-width: 870px; margin: 0 auto; } 
+.bookrp > .block:first-of-type { width: 50%; background: var(--neutralDarker); box-shadow: 5px 0 5px var(--neutral); z-index: 1; font-size: var(--little-size); border: 10px solid var(--co-2);} 
+.bookrp > .block:last-of-type { width: calc(50% + 20px); margin: 10px 0 10px -5px; background: var(--neutralDark); } 
+.bookrp > .block { flex-shrink: 0; } .block { background: var(--neutral); border-radius: var(--radius); padding: var(--spacing); } 
+.bookrptag { display: inline-block; background: var(--white); color: var(--contrast); font-size: var(--small-size); letter-spacing: 1px; padding: 5px 8px; border-radius: var(--radius); text-transform: uppercase; font-family: var(--font-2); } 
+.bookrptag span { background: var(--co-1); padding: 0 4px; border-radius: var(--radius);} 
+.bookrptitle { font-family: var(--special-font); font-size: var(--title-size); font-weight: 700; color: var(--co-2);} 
+.sidebar11 { display: flex; justify-content: center; gap: 14px;} .sidebar11 .block { border: 1px solid var(--white); } 
+.sidebar11 img, .sidebar11 .block { width: 70px; height: 70px; border-radius: 8px; object-fit: cover; background: var(--neutralDark); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: white; transform: rotate(-5deg);} 
+.block.ic10 { transform: rotate(5deg);} .block.co1 { background:var(--co-1); transform: rotate(5deg);} 
+.block.co2 { background: var(--co-2); transform: rotate(5deg);} 
+.bookrpgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; } 
+.bookrpstuff { text-align: center; background: var(--co-gradient); border-radius: 10px; padding: 15px; color: white; } 
+.bookrpcont { padding: 20px; background: var(--neutralDark); border-radius: 20px; max-height: 143px; overflow: auto; } 
+.bookrpend { background: var(--co-gradient); font-size: var(--small-size); color: white; font-style: italic; justify-content: center; display: flex; font-family: var(--font-2); letter-spacing: 5px; border-radius: var(--radius);} 
+.bookrp annee { position: absolute; right: -30px; top: -12px; } 
+lett11 { font-size: var(--xl-size); line-height: 115%; font-family: var(--special-font); color: white; float: left; margin: 5px 10px 5px 0px; padding: 20px; border-radius: var(--radius); background: var(--co-gradient); }
+
+@media screen and (max-width: 1080px) { 
+  .bookrp{flex-direction: column;} 
+  
+  .bookrp > .block:last-of-type {
+    width: 100% !important;
+    margin: 0 !important; }
+    
+  .bookrp > .block:first-of-type {
+    width: 100% !important; }
+  }
