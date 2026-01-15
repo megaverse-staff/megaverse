@@ -7388,7 +7388,7 @@ button.more {
 	border: none !important;
 }
 .cartesAn > tbody {
-	height: 250px;
+	max-height: 250px;
 	overflow: hidden auto;
 	padding-right: 3px;
 	border: 10px solid transparent;
