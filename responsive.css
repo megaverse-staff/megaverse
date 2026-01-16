@@ -289,8 +289,7 @@ html.mobile-menu-open body { overflow: hidden; }
     max-height: none !important;
     box-shadow: none !important;
     border: none !important;
-    background: transparent !important;
-    padding: 0 !important;
+    padding: 12px !important;
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
