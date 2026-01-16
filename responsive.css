@@ -191,7 +191,7 @@ html.mobile-menu-open body { overflow: hidden; }
   .mobile_modal_overlay {
     position: fixed;
     inset: 0;
-    z-index: 100000;
+    z-index: 499;
     background: rgba(0,0,0,.45);
     backdrop-filter: blur(2px);
     opacity: 0;
@@ -210,7 +210,7 @@ html.mobile-menu-open body { overflow: hidden; }
     left: 12px;
     right: 12px;
     top: 56px;
-    z-index: 100005;
+    z-index: 500;
     max-height: calc(100vh - 72px);
     background: var(--neutral);
     color: var(--black);
