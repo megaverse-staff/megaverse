@@ -182,7 +182,7 @@ html.mobile-menu-open body { overflow: hidden; }
 
 @media (max-width: 480px) {
   .mobile_modal {
-    z-index: 500;
+    z-index: 100005;
     position: fixed;
     pointer-events: none;
   }
