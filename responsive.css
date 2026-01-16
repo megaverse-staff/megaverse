@@ -1,0 +1,285 @@
+/* =========================
+   MOBILE BURGER NAV (mobile only)
+   ========================= */
+
+.mobile_burger,
+.mobile_menu,
+.mobile_menu_overlay { display: none; }
+
+html.mobile-menu-open,
+html.mobile-menu-open body { overflow: hidden; }
+
+@media (max-width: 480px) {
+
+  /* cache les éléments PC */
+  .navbar_haut,
+  .sidebar { display: none !important; }
+
+  /* bouton burger */
+  .mobile_burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    right: auto;
+    z-index: 999;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid var(--contrast);
+    background: var(--neutralDark);
+    color: var(--textColor);
+    box-shadow: 0 4px 12px rgba(0,0,0,.25);
+  }
+
+  .mobile_burger i { font-size: 20px; }
+
+  /* overlay */
+  .mobile_menu_overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: rgba(0,0,0,.45);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+  }
+  .mobile_menu_overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* panel */
+  .mobile_menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: auto;
+    height: 100%;
+    width: min(86vw, 360px);
+    z-index: 999;
+    background: var(--neutralDarker);
+    color: var(--textColor);
+    box-shadow: 0 18px 60px rgba(0,0,0,.35);
+    border-right: 1px solid var(--contrast);
+    border-left: none;
+    transform: translateX(-105%);
+    transition: transform .25s ease;
+    padding: 14px;
+    overflow: auto;
+  }
+  .mobile_menu.is-open { transform: translateX(0); }
+
+  .mobile_menu_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--contrast);
+  }
+
+  .mobile_menu_title {
+    font-family: var(--special-font);
+    font-size: 16px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+  .mobile_menu_close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid var(--contrast);
+    background: transparent;
+    color: var(--textColor);
+  }
+
+  .mobile_nav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+  }
+  .mobile_nav_list li { list-style: none; }
+
+  /* liens nav look “boutons” */
+  .mobile_menu_nav a,
+  .mobile_menu_nav .mainmenu a,
+  .mobile_menu_nav .mainmenu li a {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 12px;
+    border-radius: 12px;
+    border: 1px solid var(--contrast);
+    background: var(--neutral);
+    color: var(--black);
+    line-height: 1;
+    min-height: 44px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-size: 12px;
+  }
+  
+  a.mainmenu:before, a.mainmenu:after { top: auto !important; }
+
+  .mobile_menu_tools {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--contrast);
+  }
+
+  .mobile_tool {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 12px;
+    border-radius: 12px;
+    border: 1px solid var(--contrast);
+    background: var(--neutral);
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  .mobile_tool_icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    border: 1px solid var(--contrast);
+    background: rgba(0,0,0,.15);
+    flex: 0 0 auto;
+  }
+
+  .mobile_tool_txt { font-size: 13px; letter-spacing: .02em; }
+}
+
+/* =========================
+   MOBILE SWITCHEROO MODAL
+   ========================= */
+
+.mobile_modal,
+.mobile_modal_overlay { display: none; }
+
+html.mobile-modal-open,
+html.mobile-modal-open body { overflow: hidden; }
+
+@media (max-width: 480px) {
+  .mobile_modal_overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    background: rgba(0,0,0,.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+    backdrop-filter: blur(2px);
+  }
+  .mobile_modal_overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile_modal {
+    display: block;
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    top: 56px;
+    z-index: 100005;
+    max-height: calc(100vh - 72px);
+    background: var(--neutral);
+    color: var(--black);
+    border: 1px solid var(--contrast);
+    border-radius: 16px;
+    box-shadow: 0 18px 60px rgba(0,0,0,.35);
+    transform: translateY(12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .25s ease, opacity .25s ease;
+    overflow: hidden;
+  }
+  .mobile_modal.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile_modal_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px;
+    border-bottom: 1px solid var(--contrast);
+    background: rgba(255,255,255,.35);
+  }
+
+  .mobile_modal_title {
+    font-family: var(--special-font);
+    font-size: 14px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+  .mobile_modal_close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid var(--contrast);
+    background: transparent;
+    color: var(--black);
+  }
+
+  .mobile_modal_body {
+    padding: 12px;
+    overflow: auto;
+    max-height: calc(100vh - 140px);
+  }
+
+  /* Quand multiAccountPopup est monté dans la modale, on annule son comportement desktop */
+  #multiAccountPopup.is-mobile-mounted {
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+/*fin nav mobile*/
