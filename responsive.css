@@ -31,9 +31,8 @@ html.mobile-menu-open body { overflow: hidden; }
     width: 44px;
     height: 44px;
     border-radius: 999px;
-    border: 1px solid var(--contrast);
-    background: var(--neutralDark);
-    color: var(--textColor);
+    background: var(--co-2grad);
+    color: white;
     box-shadow: 0 4px 12px rgba(0,0,0,.25);
   }
 
