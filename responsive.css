@@ -175,9 +175,6 @@ html.mobile-menu-open body { overflow: hidden; }
   .mobile_tool_txt { font-size: 13px; letter-spacing: .02em; }
 }
 
-/* =========================
-   MOBILE SWITCHEROO MODAL
-   ========================= */
 
 /* =========================
    MOBILE SWITCHEROO MODAL
@@ -185,7 +182,7 @@ html.mobile-menu-open body { overflow: hidden; }
 
 @media (max-width: 480px) {
   .mobile_modal {
-    z-index: 100005;
+    z-index: 500;
     position: fixed;
     pointer-events: none;
   }
