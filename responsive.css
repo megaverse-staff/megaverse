@@ -4,7 +4,8 @@
 
 .mobile_burger,
 .mobile_menu,
-.mobile_menu_overlay { display: none; }
+.mobile_menu_overlay, #mobileSwitcherooModal { display: none; }
+
 
 html.mobile-menu-open,
 html.mobile-menu-open body { overflow: hidden; }
