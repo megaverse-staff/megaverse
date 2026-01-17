@@ -12,10 +12,10 @@ html.mobile-menu-open body { overflow: hidden; }
 @media (max-width: 480px) {
 
    /*header details*/
-   .title_header a { font-size: 52px; }
-   .title_header span { font-size: 28px; }
-   .projo_title { font-size: 52px; }
-   .header-top-line {flex-direction: column; gap:8px;}
+   .title_header a { font-size: 52px !important; }
+   .title_header span { font-size: 28px !important; }
+   .projo_title { font-size: 52px !important; }
+   .header-top-line {flex-direction: column !important; gap:8px !important;}
 
    #notiffi_panel { width: 100% !important; top: 0!important; }
 #notiffi_button { top: 16px !important; }
