@@ -12,6 +12,10 @@ html.mobile-menu-open body { overflow: hidden; }
 
 @media (max-width: 480px) {
 
+   /* guide - boutons par deux */
+     .slider-page { grid-template-columns: repeat(2, 1fr) !important;}
+}
+
    #mobileSwitcherooModal { display: block; }
 
    /*header details*/
@@ -317,8 +321,6 @@ html.mobile-menu-open body { overflow: hidden; }
     pointer-events: none !important;
   }
 
-   /* guide - boutons par deux */
-     .slider-page { grid-template-columns: repeat(2, 1fr) !important;}
-}
+   
 
 /*fin nav mobile*/
