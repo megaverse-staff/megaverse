@@ -45,7 +45,7 @@ html.mobile-menu-open body { overflow: hidden; }
     box-shadow: 0 4px 12px rgba(0,0,0,.25);
   }
 
-  .mobile_burger i { font-size: 20px; }
+  .mobile_burger i { font-size: 20px; color: white;  }
 
   /* overlay */
   .mobile_menu_overlay {
