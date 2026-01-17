@@ -12,6 +12,8 @@ html.mobile-menu-open body { overflow: hidden; }
 
 @media (max-width: 480px) {
 
+   #mobileSwitcherooModal { display: block; }
+
    /*header details*/
    .title_header a { font-size: 52px !important; }
    .title_header span { font-size: 28px !important; }
