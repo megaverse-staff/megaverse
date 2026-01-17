@@ -629,6 +629,145 @@ background: linear-gradient(to bottom, var(--neutralDark) 50%, transparent), lin
     margin-top: 0;
 }
 
+/*SIDEPANEL FA */
+.sidepan_name {
+    font-family: var(--font-2) !important;
+    font-weight: 100 !important;
+    text-transform: lowercase;
+    letter-spacing: -1px;
+    font-size: var(--medium-size) !important;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg) !important;
+    margin: 16px -10px;
+    background: var(--co-2grad);
+    padding: 7px;
+    border-radius: var(--radius);
+}
+
+/* Side panel */
+.popup-side-FA {
+    position: fixed;
+    top: 47px;
+    left: 65px;
+    height: 100vh;
+    width: min(320px, 86vw);
+    background: var(--co-2grad);
+    border-right: 1px solid var(--black);
+    box-shadow: 12px 0 40px rgba(0, 0, 0, .18);
+    z-index: 999;
+    transform: translateX(-130%);
+    transition: transform .25s ease;
+    overflow: auto;
+    padding: 16px;
+}
+.popup-side-FA.is-open{
+  transform: translateX(0);
+}
+
+html.fa-panel-open,
+html.fa-panel-open body{
+  overflow: hidden;
+}
+
+/* Le menu FA à l’intérieur du panel */
+.popup-side-FA #fa_menulist{
+  width: 100% !important;
+  position: static !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#fa_menulist li {
+    display: block;
+    margin-bottom: var(--spacing);
+    color: white;
+    text-transform: uppercase;
+}
+
+#fa_menulist li::before {
+    content: 'ꨄ︎';
+    margin-right: var(--spacing);
+}
+
+#fa_menulist .fa_separator {
+    display: none;
+}
+
+#fa_usermenu {
+    display: flex;
+    flex-direction: column;
+}
+
+#fa_usermenu img {
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+  margin: 0 auto;
+      border: 1px solid var(--black);
+}
+
+#fa_usermenu > #fa_ranktitle {
+    display:none; 
+}
+
+a#fa_ranktitle {
+    font-weight: 100;
+}
+
+.fa-username-injected {
+    font-size: var(--xl-size);
+    color: white;
+    font-family: var(--special-font);
+    width: min-content;
+    white-space: normal;
+    display: flex;
+    transform: translateY(-40%);
+    line-height: 1.1;
+    margin-top: 0;
+}
+
+/* Bloc phrase stats (maquette) */
+#fa_usermenu .fa-stats-custom{
+  margin-top: 14px;
+  text-align: justify;
+  color: white;
+}
+
+#fa_usermenu .fa-stats-custom .fa-stats-text{
+  font-size: 18px;
+  line-height: 1.25;
+  color: rgba(255,255,255,.82);
+  text-transform: none;
+  letter-spacing: .2px;
+}
+
+.fa-stats-paragraph {
+    background: var(--neutralDark);
+    padding: 8px 12px;
+    border-radius: var(--radius);
+    border: 1px var(--black) solid;
+    color: var(--black);
+}
+
+#fa_usermenu .fa-stats-custom b{
+  color: var(--co-2);
+  font-weight: 800;
+}
+
+#fa_usermenu .fa-stats-custom::after{
+  content:"";
+  display:block;
+  height: 1px;
+  width: 70%;
+  margin: 18px auto var(--spacing);
+  background: rgba(255,255,255,.35);
+}
+
+/*FIN SIDEPANEL FA */
+
 /* BOUTON MESSENGER */
 #FAM-button-open {
     background-color: var(--neutralDark);
