@@ -316,6 +316,9 @@ html.mobile-menu-open body { overflow: hidden; }
   #multiAccountPopup.is-mobile-mounted [class*="overlay" i] {
     pointer-events: none !important;
   }
+
+   /* guide - boutons par deux */
+     .slider-page { grid-template-columns: repeat(2, 1fr) !important;}
 }
 
 /*fin nav mobile*/
