@@ -286,18 +286,24 @@ background: linear-gradient(to bottom, var(--neutralDark) 50%, transparent), lin
 /* Conteneur de switcheroo, up and down et deco */
 
 	/* --- Switcheroo popup positioning + slide from left --- */
-	#multiAccountPopup{
-	  position: fixed;
-	  top: 47px;
-	  left: 62px;
-	  z-index: 999;
-	  transform: translateX(-12px);
-	  opacity: 0;
-	  pointer-events: none;
-	  transition: transform .18s ease, opacity .18s ease;
-      background: var(--co-2grad);
-  border: 1px solid var(--black);
-	}
+	#multiAccountPopup {
+    position: fixed;
+    top: 47px;
+    left: 62px;
+    z-index: 999;
+    transform: translateX(-12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .18s ease, opacity .18s ease;
+    background: var(--co-2grad);
+    border: 1px solid var(--black);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+    padding-bottom: 59px;
+}
 
 	#multiAccountPopup.active{
 	  transform: translateX(0);
