@@ -358,8 +358,7 @@ background: linear-gradient(to bottom, var(--neutralDark) 50%, transparent), lin
 .switcheroo {
 	width: 100%;
 	color: var(--textColor);
-	margin: auto;
-	padding: 0 5px 5px 5px;
+	padding: 0 4px 4px 4px;
 	overflow: auto;
 }
 
