@@ -300,7 +300,6 @@ background: linear-gradient(to bottom, var(--neutralDark) 50%, transparent), lin
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     overflow: auto;
     padding-bottom: 59px;
 }
