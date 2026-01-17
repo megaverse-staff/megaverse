@@ -264,7 +264,6 @@ html.mobile-menu-open body { overflow: hidden; }
   }
 
   .mobile_modal_body {
-    padding: 12px;
     overflow: auto;
     max-height: calc(100vh - 140px);
     position: relative;
