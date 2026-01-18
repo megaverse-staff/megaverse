@@ -1502,6 +1502,6 @@ content:'\eaa2'; font-family: var(--font-ic);
 .home-calendar { display: none !important; } 
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1439px) {
 .home-layout { display: flex !important; gap: 20px; flex-direction: column; } 
 }
