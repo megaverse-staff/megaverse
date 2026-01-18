@@ -1392,6 +1392,7 @@ content:'\eaa2'; font-family: var(--font-ic);
     padding: 25px;
     text-align: center;
     color: var(--co-2);
+	height: 100%;
 } 
   .rfcal-full { width:100%;position:relative;overflow:hidden;color: var(--black);}
  
@@ -1501,6 +1502,6 @@ content:'\eaa2'; font-family: var(--font-ic);
 .home-calendar { display: none !important; } 
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1490px) {
 .home-layout { display: flex !important; gap: 20px; flex-direction: column; } 
 }
