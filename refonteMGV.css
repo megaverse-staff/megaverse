@@ -1091,14 +1091,21 @@ text-align: justify;
     justify-content: flex-start;
     color: var(--black);
     text-align: right;
-    background: var(--base-gradient);
-    background-size: 400% 100%;
-    background-position: 65% 0%;
-    letter-spacing: .5px;
     position: relative;
     overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, var(--neutralDark) 33%, var(--co-1), var(--co-2));
+    background-size: 350% 120%;
+    transition: .7s;
+    background-position: 1% 0%;
 }
-  
+
+.block:hover {
+    background-position: 99% 0;
+}
+
   .slider-page .block span {
     font-size: 50px;
     display: block;
