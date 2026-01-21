@@ -944,14 +944,20 @@ position: relative;
 /* projecteurs */
 
 .etiquette {
-    background: var(--co-2grad);
-    color: white;
+color: white;
     font-family: var(--font-2);
     border: 1px solid var(--black);
     border-radius: var(--radius);
     padding: 10px;
     width: 100%;
     text-align: center;
+    transition: .7s;
+    background: linear-gradient(135deg, var(--co-2) 33%, var(--co-1), var(--co-1c));
+    background-size: 350% 120%;
+}
+
+.etiquette:hover {
+    background-position: 99% 0%;
 }
 
 .etiquette a {
