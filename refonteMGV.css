@@ -1527,8 +1527,8 @@ content:'\eaa2'; font-family: var(--font-ic);
 /*** QUI EST EN LIGNE -------------- ***/
 
 @media screen and (max-width: 1070px) {
-.qeel { display: flex;
-    flex-direction: column; } 
+.qeel { display: flex !important;
+    flex-direction: column !important; } 
 }
 
 .qeel {
