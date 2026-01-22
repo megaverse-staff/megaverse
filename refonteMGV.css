@@ -1531,6 +1531,12 @@ content:'\eaa2'; font-family: var(--font-ic);
     flex-direction: column !important; } 
 }
 
+@media screen and (max-width: 1070px) {
+.qeel-left span {
+   display: none !important;
+}
+}
+
 .qeel {
     display: grid;
     grid-template-columns: 15% auto 20px;
