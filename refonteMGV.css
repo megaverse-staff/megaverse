@@ -1537,6 +1537,12 @@ content:'\eaa2'; font-family: var(--font-ic);
 }
 }
 
+@media screen and (max-width: 1070px) {
+.dernier_inscrit {
+   margin: 16px !important;
+}
+}
+
 .qeel {
     display: grid;
     grid-template-columns: 15% auto 20px;
