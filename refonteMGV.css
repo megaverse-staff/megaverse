@@ -101,7 +101,7 @@
     text-transform: uppercase;
     font-size: var(--little-size);
     letter-spacing: 1px;
-    z-index: 2;
+    z-index: 20;
 }
 
 .navbar {
