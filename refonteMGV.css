@@ -1882,7 +1882,7 @@ right: -40px;
 #c1 .forum_links, #c2 .forum_links, #c4 .forum_links {
     display: inline-flex;
     gap: 8px;
-    padding: 8px 0 20px;
+    padding: 8px 8px 20px;
   align-self: start;
 }
 
