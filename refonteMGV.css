@@ -1952,7 +1952,7 @@ position: absolute; }
 
 #c1 .forum_desc, #c2 .forum_desc, #c4 .forum_desc {
     flex: 1;
-    max-height: 100px;
+    max-height: 120px;
     overflow: auto;
     align-self: center;
     padding: 12px;
@@ -1967,12 +1967,16 @@ position: absolute; }
     padding: 0;
 }
 
+#c1 .forum_rp_flex, #c2 .forum_rp_flex, #c4 .forum_rp_flex {
+	width: 100%; }
+
 #c1 .forum_lastpost, #c2 .forum_lastpost, #c4 .forum_lastpost {
     align-self: end;
     display: flex;
     gap: 16px;
-  align-items: center;
-      padding: 40px 0 8px 0;
+    align-items: center;
+    background: transparent;
+    border: none;
 }
 
 #c1 .forum_details, #c2 .forum_details, #c4 .forum_details {
@@ -1996,7 +2000,7 @@ position: absolute; }
     font-weight: 600;
     float: right;
     font-size: var(--little-size);
-    writing-mode: vertical-rl;
+    writing-mode: vertical-};
     color: white;
     padding: 8px 16px;
 }
