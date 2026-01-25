@@ -1838,6 +1838,7 @@ border-radius: var(--radius);
   display: flex;
   flex-direction: row;
   overflow: hidden;
+	background: var(--neutral);
 }
 
 #c1 a.lastpost_link, #c2 a.lastpost_link, #c4 a.lastpost_link {
