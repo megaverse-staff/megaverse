@@ -1835,6 +1835,8 @@ a.forumtitle {
   font-size: var(--little-size);
 }
 
+.forum_rp_flex { z-index: 10; }
+
 
 /* cosmic crew */
 
@@ -2058,7 +2060,6 @@ position: absolute; }
     gap: 16px;
   align-items: center;
       padding: 40px 0 8px 0;
-  z-index: 10;
 }
 
 #c1 .forum_details, #c2 .forum_details, #c4 .forum_details {
