@@ -665,6 +665,7 @@ background: linear-gradient(to bottom, var(--neutralDark) 50%, transparent), lin
     transition: transform .25s ease;
     overflow: auto;
     padding: 16px;
+	padding-bottom: 47px;
 }
 .popup-side-FA.is-open{
   transform: translateX(0);
