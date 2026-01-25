@@ -2345,6 +2345,8 @@ position: absolute; }
     display: none;
 }
 
+#c5 .forum_rp_flex {width: 25%;}
+
 #c5 .forum_avatar img  {
     width: 80px;
     height: 80px;
