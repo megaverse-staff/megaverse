@@ -2005,7 +2005,7 @@ position: absolute; }
     font-weight: 600;
     float: right;
     font-size: var(--little-size);
-    writing-mode: vertical-};
+    writing-mode: vertical-rl;
     color: white;
     padding: 8px 16px;
     top: unset;
