@@ -2007,6 +2007,9 @@ position: absolute; }
     writing-mode: vertical-};
     color: white;
     padding: 8px 16px;
+    top: unset;
+    left: unset;
+    background: none;
 }
 
 /* guide */
