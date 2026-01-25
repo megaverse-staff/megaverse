@@ -1956,6 +1956,9 @@ position: absolute; }
     align-self: center;
     padding: 12px;
     text-align: justify;
+    width: 100%;
+    border: none;
+    background: transparent;
 }
 
 #c1 .forum_lastpost, #c2 .forum_lastpost, #c4 .forum_lastpost {
