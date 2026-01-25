@@ -1943,6 +1943,10 @@ position: absolute; }
     background: var(--gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    border: none;
+    width: 100%;
+    height: auto;
+	font-size: var(--large-size);
 }
 
 #c1 .forum_desc, #c2 .forum_desc, #c4 .forum_desc {
