@@ -1031,6 +1031,7 @@ text-align: justify;
 
 #c3 .forum_desc {
     width: 100%;
+	padding: var(--spacing); 
 }
 
 .guide-layout {
