@@ -2364,7 +2364,7 @@ position: absolute; }
 #c6 .lastpost_auteur::before, #c7 .lastpost_auteur::before { content: 'par '; }
 #c6 .lastpost_link, #c7 .lastpost_link  { position: relative; display: inline-block; padding-bottom: 18px; }
 #c6 .lastpost_link::after, #c7 .lastpost_link::after { content: ""; display: block; width: 1px; height: 20px; margin: 10px auto 0; background-color: var(--black); }
-#c6 .forums, #c7 .forums { display: flex; justify-content: center; gap: 16px; }
+#c6 .forums, #c7 .forums { display: flex; justify-content: center; gap: 16px; position: relative; z-index: 0; }
 #c6 .media_deco_right { order: 3; width: -webkit-fill-available; background: var(--neutral); border-radius: 35px; border: 1px solid var(--black); padding: var(--spacing); }
 
 #c6 .forum  { 
