@@ -2282,6 +2282,7 @@ position: absolute; }
   }
 
 @media screen and (max-width: 1180px) { #c5 .forum_content { display: flex; gap: 0 !important; align-items: center; margin-top: 10px; padding: 0 !important; flex-direction: column; } .category#c5 { display: flex !important; flex-direction: column; } #c5 .forumtitle { width: 100% !important; border-radius: 5px 5px 0 0 !important; border: 1px solid var(--black); border-bottom: 0 !important; } #c5 .forum_desc { width: 100% !important; border-radius: 0 !important; display: flex; border-bottom: 0 !important; border-top: 0 !important; } #c5 .forum_lastpost.lastpost { width: 100% !important; border: 1px solid var(--black); border-radius: 0 0 5px 5px !important; border-top: 0 !important; } }
+#c5 .forum_rp_flex {width: 25%;}
 
 #c5 .cate_label { display: flex; flex-direction: row; align-items: center; justify-content: flex-end; gap: 12px; }
 
