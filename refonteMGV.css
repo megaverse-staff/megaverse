@@ -1839,6 +1839,7 @@ border-radius: var(--radius);
   flex-direction: row;
   overflow: hidden;
 	background: var(--neutral);
+	border: 1px solid var(--black);
 }
 
 #c1 .forum_lastpost span, #c2 .forum_lastpost span, #c4 .forum_lastpost span {
