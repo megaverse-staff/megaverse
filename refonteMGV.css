@@ -1025,6 +1025,8 @@ text-align: justify;
 
 /* GUIDE */
 
+.forum_content
+
 #c3 .forum_rp_flex {
     display: none;
 }
@@ -2064,7 +2066,6 @@ position: absolute; }
     display: flex;
     gap: 40px;
     align-items: center;
-    margin-bottom: 40px;
 }
 
 .guide-left {
