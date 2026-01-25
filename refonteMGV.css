@@ -1961,6 +1961,11 @@ position: absolute; }
     background: transparent;
 }
 
+#c1 .forum_desc .desc, #c2 .forum_desc .desc, #c4 .forum_desc .desc {
+    height: unset;
+    padding: 0;
+}
+
 #c1 .forum_lastpost, #c2 .forum_lastpost, #c4 .forum_lastpost {
     align-self: end;
     display: flex;
