@@ -1841,6 +1841,10 @@ border-radius: var(--radius);
 	background: var(--neutral);
 }
 
+#c1 .forum_lastpost span, #c2 .forum_lastpost span, #c4 .forum_lastpost span {
+    text-align: left;
+}
+
 #c1 a.lastpost_link, #c2 a.lastpost_link, #c4 a.lastpost_link {
     font-size: 1rem;
 }
