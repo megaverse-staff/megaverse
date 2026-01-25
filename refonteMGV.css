@@ -2416,7 +2416,13 @@ position: absolute; }
     padding: 0;
     border: none;
 }
-#c6 .forumtitle span, #c7 .forumtitle span { color: #000; font-family: var(--font); font-size: 14px; text-transform: uppercase; }
+#c6 .forumtitle span, #c7 .forumtitle span { 
+	color: #000; 
+	font-family: var(--font); 
+	font-size: 14px; 
+	text-transform: uppercase;
+	font-weight: 600;
+}
 #c6 .forum_desc_media, #c7 .forum_desc_media { font-size: 14px; text-transform: uppercase; background: var(--co-2); color: white; font-weight: 600; padding: 4px 8px; border-radius: var(--radius); display: block !important; }
 .forum_desc_media { display: none; }
 #c6 .forum_desc, #c7 .forum_desc { display: none; }
