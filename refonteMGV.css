@@ -2028,7 +2028,7 @@ position: absolute; }
     display: none;
 }
 
-#c3 .forum_details, #c6 .forum_details {
+#c3 .forum_details, #c6 .forum_details, #c7 .forum_details {
     display: none;
 }
 
