@@ -1947,6 +1947,7 @@ position: absolute; }
     width: 100%;
     height: auto;
 	font-size: var(--large-size);
+	padding: 0;
 }
 
 #c1 .forum_desc, #c2 .forum_desc, #c4 .forum_desc {
