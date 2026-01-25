@@ -1025,6 +1025,14 @@ text-align: justify;
 
 /* GUIDE */
 
+#c3 .forum {
+    width: 100%;
+}
+
+#c3 .forum_desc {
+    width: 100%;
+}
+
 .guide-layout {
   display: flex;
   gap: 20px;
