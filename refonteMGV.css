@@ -2222,7 +2222,6 @@ position: absolute; }
     color: var(--co-2);
     font-size: var(--xl-size);
     line-height: 30px;
-	margin-top: 12px;
 }
 
 #c5 .forum_details {
