@@ -1869,7 +1869,7 @@ right: -40px;
     bottom: 75px;
 }
 
-#c1 .forum_avatar img, #c2 .forum_avatar img, #c4 .forum_avatar img, #c8 .forum_avatar img {
+#c1 .forum_avatar img, #c2 .forum_avatar img, #c4 .forum_avatar img, #c8 .forum_avatar img, #c9 .forum_avatar img {
     background: var(--neutralDark);
     width: 80px;
     height: 80px;
@@ -2448,7 +2448,7 @@ position: absolute; }
 #c6 .forum_avatar, #c7 .forum_avatar { width: 110px; height: 110px; justify-self: center; }
 #c6 .forum_avatar img, #c7 .forum_avatar img { width: 110px; height: 110px; object-fit: cover; object-position: center; border-radius: 100%; border: 10px var(--co-2) solid; }
 
-#c6 .forum_icon, #c7 .forum_icon, #c8 .forum_icon { display: none; } 
+#c6 .forum_icon, #c7 .forum_icon, #c8 .forum_icon, #c9 .forum_icon { display: none; } 
 .forum_media_circle { display: none; } 
 #c6 .forum_media_circle, 
 #c7 .forum_media_circle { display: block !important; }
