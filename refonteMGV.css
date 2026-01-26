@@ -118,8 +118,8 @@ display: flex;
 /* Suppression des liens peu utilisés*/
 .navbar a[href^="/faq"],
 /*faq*/
-.navbar a[href^="/calendar"],
-/*calendrier*/
+.navbar a[href^="/discover"],
+/*activites*/
 .navbar a[href^="/groups"],
 /*groupes*/
 .navbar a[href^="/images"]
