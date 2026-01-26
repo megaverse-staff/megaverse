@@ -578,10 +578,6 @@ border: 1px solid var(--co-2);
 
 .center {text-align: center}
 
-label > input[type="radio"] { visibility: hidden; width: 0; margin-right: 5px;}
-label:has(input[type="radio"])::before { visibility: visible; content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; outline-offset: 2px; outline: 1px solid var(--co-2); }
-label:has(input[type="radio"]:checked)::before { background: var(--co-gradient); outline-offset: 2px; outline: 1px solid var(--co-1); }
-
 /****** SIGNATURE ******/
 .sign2 {display:flex;width: 300px; margin-top: 40px;}
 .sign2_title{position: absolute; font-family: var(--special-font); font-size: var(--xl-size); line-height: 125px; color: var(--co-1); margin: -62px 0px 0px 0px; -webkit-transform: rotate(349deg); text-align: center;}
