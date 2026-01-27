@@ -2733,11 +2733,11 @@ a.forumtitle {
     }
 }
 
-  @media screen and (max-width: 1180px) { 
+  /*@media screen and (max-width: 1180px) { 
 .forum {
     height: 100% !important;
     }
-}
+}*/
 
   @media screen and (max-width: 750px) { 
 .bloglist_infos {
