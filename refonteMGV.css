@@ -318,7 +318,7 @@ background: linear-gradient(to bottom, var(--neutralDark) 50%, transparent), lin
     border-radius: 100%;
     object-fit: cover;
     width: 35px;
-    height: 35px;
+    min-height: 35px;
   align-self: center; 
 }
 
