@@ -3238,6 +3238,11 @@ object-fit: cover;
   .filters, .sorts, .croiss {width:100% !important;}
 }
 
+@media screen and (max-width: 1180px) { 
+	.grid-container { transition: none !important; }
+    .userprofil_js { transition: none !important; }
+}
+
 .filtres {
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 1fr;
