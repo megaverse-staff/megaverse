@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Achava';
+    src: url('AchavaRegular.woff2') format('woff2'),
+        url('AchavaRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
