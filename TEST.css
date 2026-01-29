@@ -2624,12 +2624,12 @@ newsareal1 .topicslist_infos {
 /*staff*/
 .staffmgv{ width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
 .cardstaff{ width: 100%; aspect-ratio: 200 / 170; border-radius: var(--radius); overflow: hidden; display: flex; justify-content: center; align-items: center; position: relative; transition: background-size .8s ease, background-position .8s ease; }
-.dopelovers { background: url(https://i.pinimg.com/736x/6b/71/6b/6b716bd5926b2ddecb8e841ade97dff1.jpg) center center no-repeat; background-size: cover; }
-.dopelovers:hover { background: url(https://i.pinimg.com/736x/6b/71/6b/6b716bd5926b2ddecb8e841ade97dff1.jpg) left center no-repeat; background-size: 170%; }
-.muse { background: url(https://images2.imgbox.com/14/db/Y4ZCoQU5_o.jpg) center center no-repeat; background-size: cover; }
-.muse:hover { background: url(https://images2.imgbox.com/14/db/Y4ZCoQU5_o.jpg) left center no-repeat; background-size: 170%; }
-.bxd { background: url(https://i.pinimg.com/736x/02/13/4c/02134c36164a88b4423afa00ffdd58f5.jpg) center center no-repeat; background-size: cover; }
-.bxd:hover { background: url(https://i.pinimg.com/736x/02/13/4c/02134c36164a88b4423afa00ffdd58f5.jpg) left center no-repeat; background-size: 170%; }
+.dopelovers { background: url(https://www.nautiljon.com/images/galerie/16/19/ga_hyeon_dreamcatcher_1303691.webp?1699285248) center center no-repeat; background-size: cover; }
+.dopelovers:hover { background: url(https://www.nautiljon.com/images/galerie/16/19/ga_hyeon_dreamcatcher_1303691.webp?1699285248) left center no-repeat; background-size: 170%; }
+.muse { background: url(https://media.glamour.mx/photos/67912ba8f4f661e4152a65f3/4:3/w_2664,h_1998,c_limit/ROSE%CC%81.png) center center no-repeat; background-size: cover; }
+.muse:hover { background: url(https://media.glamour.mx/photos/67912ba8f4f661e4152a65f3/4:3/w_2664,h_1998,c_limit/ROSE%CC%81.png) left center no-repeat; background-size: 170%; }
+.bxd { background: url(https://wwd.com/wp-content/uploads/2020/09/madison-beer-for-morphe.jpg) center center no-repeat; background-size: cover; }
+.bxd:hover { background: url(https://wwd.com/wp-content/uploads/2020/09/madison-beer-for-morphe.jpg) left center no-repeat; background-size: 170%; }
 .borderstaff { height: 90%; width: 90%; background: transparent; border-radius: 10px; transition: border 1s; position: relative; }
 .borderstaff:hover { border: 1px solid white; }
 .borderstaff h2 { color: white; font-family: var(--special-font); letter-spacing: 1px; text-transform: uppercase; margin-left: 5px; }
