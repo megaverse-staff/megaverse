@@ -3468,3 +3468,81 @@ button.button.is-checked {
 .custom-pager button.is-checked {
     background: var(--co-1);
 }
+
+/*** ------------------------------- ***/
+/*** PAGE DE CONNEXION ------------- ***/
+
+/* Centrer les pages de connexion */
+form[name="form_login"],
+form[name="form_login"]~.panel {
+  text-align: center;
+}
+
+form[name="form_login"] .content {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+#main-content:has(.fld_connexion) {
+display: flex;
+gap: var(--spacing);
+}
+
+#main-content:has(.fld_connexion)>form,
+#main-content:has(.fld_connexion)>div {
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+#main-content:has(.fld_connexion)>form {width: 60%}
+#main-content:has(.fld_connexion)>div {width: 40%}
+
+.panel:has(.fld_connexion) .h3,
+.panel:has(a[href="/register"]) .h3 {font-size: 0}
+
+.panel:has(.fld_connexion) .h3,
+.panel:has(a[href="/register"]) .h3 {font-size: 0}
+
+.panel:has(.fld_connexion),
+.panel:has(a[href="/register"]) {
+backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+outline-offset: 3px;
+outline: 1px solid var(--black);
+margin-bottom: var(--spacing);
+}
+
+.panel:has(.fld_connexion) a,
+.panel:has(a[href="/register"]) a {
+    border: solid 1px var(--black);
+    text-decoration: none;
+    color: var(--black);
+    text-align: right;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, var(--neutralDark) 33%, var(--co-1), var(--co-2));
+    background-size: 350% 120%;
+    transition: .7s;
+    background-position: 1% 0%;
+    background-color: var(--co-1);
+    padding: 5px;
+    font-size: var(--little-size)
+}
+
+.panel:has(.fld_connexion) a:hover,
+.panel:has(a[href="/register"]) a:hover {
+    background-position: 99% 0%;
+}
+
+#bottom.links_bar {
+    width: fit-content;
+    background-color: var(--neutral);
+    border: 1px solid var(--black);
+    font-size: var(--small-size);
+    text-transform: lowercase;
+    padding: 5px 10px;
+}
