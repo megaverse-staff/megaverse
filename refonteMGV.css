@@ -1596,6 +1596,7 @@ content:'\eaa2'; font-family: var(--font-ic);
 
 #newest_user span, .deco_qeel span {
     background: transparent;
+	font-weight: 300;
 }
 
 #newest_user {
