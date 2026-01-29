@@ -2422,6 +2422,7 @@ position: absolute; }
     background: transparent;
     padding: 0;
     border: none;
+	font-weight: 500;
 }
 #c6 .forumtitle span, #c7 .forumtitle span { 
 	color: #000; 
