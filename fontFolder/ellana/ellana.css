@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Ellana';
+    src: url('EllanaRegular.woff2') format('woff2'),
+        url('EllanaRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
