@@ -3510,8 +3510,9 @@ justify-content: center;
 backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
 outline-offset: 3px;
 outline: 1px solid var(--black);
-margin-bottom: var(--spacing);
 }
+
+form { margin-bottom: 0; }
 
 .panel:has(.fld_connexion) a,
 .panel:has(a[href="/register"]) a {
