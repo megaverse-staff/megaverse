@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Mallory';
+    src: url('Mallory.woff2') format('woff2'),
+        url('Mallory.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
