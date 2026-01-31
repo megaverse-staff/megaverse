@@ -642,3 +642,125 @@
 	background: linear-gradient(to right, transparent, var(--co-1), transparent);
 	opacity: 1 !important;
 }
+
+/* LISTE DE RPS #1 */
+.list_rp {
+	font-size: var(--little-size);
+}
+
+.list_rp td {
+	display: grid;
+	grid-template-columns: 60px 1fr auto 60px;
+	gap: 20px;
+	align-items: center;
+	padding: 4px 5px;
+	border-bottom: 1px solid var(--base-1);
+}
+.list_rp td:not(.cancel, .todo) {
+	margin-bottom: 4px;
+}
+.list_rp td.check a::before {
+	content: '';
+	display: inline-block;
+	margin: 0 9px 1px 0;
+	outline: 1px solid var(--co-1);
+	outline-offset: 2px;
+	width: 4px;
+	height: 4px;
+	background: var(--co-1);
+	border-radius: 50%;
+}
+.list_rp td.uncheck a::before {
+	content: '';
+	display: inline-block;
+	margin: 0 9px 1px 0;
+	outline: 1px solid var(--contrast);
+	outline-offset: 2px;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+}
+
+.list_rp td a,
+.list_rp td i {
+	line-height: 126%;
+}
+.list_rp a {
+	border-bottom: none !important;
+	font-size: var(--little-size);
+}
+
+.list_rp td.done {
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	opacity: 0.5;
+	transition: all 0.5s;
+}
+.list_rp td.done:hover {
+	opacity: 1;
+}
+
+.list_rp td.cancel {
+	text-decoration: line-through;
+	opacity: 0.6;
+	transition: all 0.5s;
+	background: var(--base-1);
+	border-radius: var(--radius);
+}
+.list_rp td.cancel h3 {
+	font-size: 0;
+	height: 14px;
+	line-height: 13px;
+}
+.list_rp td.cancel h3::before {
+	content: '00.00.00';
+	font-size: 9px;
+	display: block;
+	text-decoration: line-through;
+}
+.list_rp td.cancel strong {
+	font-size: 0;
+	line-height: 1px;
+}
+.list_rp td.cancel strong::after {
+	content: 'annulé';
+	display: block;
+	text-decoration: line-through;
+	font-size: var(--little-size);
+	text-decoration-color: var(--textColor);
+}
+
+.list_rp td.todo {
+	transition: all 0.5s;
+	background: var(--co-gradient);
+	border-radius: var(--radius);
+}
+.list_rp .todo strong,
+.list_rp .uncheck strong,
+.list_rp .done strong,
+.list_rp .check strong {
+	font-size: 0;
+	line-height: 1px;
+}
+.list_rp .todo strong::after,
+.list_rp .uncheck strong::after,
+.list_rp .check strong::after,
+.list_rp .done strong::after {
+	content: '';
+	display: block;
+	font-size: var(--little-size);
+	text-decoration-color: var(--textColor);
+}
+.list_rp .todo strong::after {
+	content: 'à créer';
+}
+.list_rp .uncheck strong::after {
+	content: 'à faire';
+}
+.list_rp .check strong::after {
+	content: 'à jour';
+}
+.list_rp .done strong::after {
+	content: 'terminé';
+}
