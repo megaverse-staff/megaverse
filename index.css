@@ -1140,6 +1140,7 @@ text-align: justify;
     padding: 5px;
     margin-top: -15px;
     margin-right: -15px;
+	z-index: 2;
 }
 
 @media screen and (max-width: 1380px) {
