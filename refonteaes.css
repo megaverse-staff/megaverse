@@ -602,3 +602,58 @@ border: 1px solid var(--co-2);
 .bujoCntnr .toolcnt {position: fixed !important; width: 250px !important; left: 0; right: 0; top: 0; bottom: 0; margin: auto; text-align: justify; border: 1px solid var(--co-1)}
 /* smileys */
 #smilies_categ select { border: none; background: var(--co-gradient); color: white; text-transform: lowercase; width: 99%; text-align: center; border-radius: var(--radius); }
+
+/* details summary */
+
+summary {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    padding: 2px 5px;
+    font-size: var(--small-size);
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--contrast);
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+    background: var(--white);
+    cursor: pointer;
+}
+
+summary::before {
+    content: "\e9e4";
+    flex-shrink: 0;
+    font-family: var(--font-ic);
+    font-size: 8px !important;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--co-gradient);
+    color: white;
+    float: left;
+    letter-spacing: 0;
+    font-weight: bold;
+    text-align: center;
+    width: 14px;
+    height: 14px;
+}
+
+details[open]>summary::before {
+    content: "\e9e2";
+    display: flex;
+    justify-content: center
+}
+
+details {
+    text-align: justify;
+    width: 100%;
+}
+
+summary::marker {
+    content: "";
+    display: none
+}
