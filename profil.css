@@ -278,3 +278,771 @@
 .step:nth-child(5):before {
 	content: var(--step5);
 }
+
+
+
+/* RECOMPENSES --- */
+/* Conteneur des récompenses */
+#list_awards {
+display: flex;
+flex-wrap: wrap;
+gap: 5px;
+}
+
+/* Récompense */
+.award {
+    width: 64px;
+    min-height: 65px;
+    height: auto;
+    max-height: none;
+    position: relative;
+    background-image: var(--award-image);
+    background-size: 65px 68px;
+    background-position: center;
+}
+
+.award:hover .award_tooltiptext {
+display: block;
+}
+
+.awards_block_simple_wrapper {
+    height: 150px;
+    margin-top: 30px;
+}
+
+/* Bloc description de la récompenses */
+.award_tooltiptext {
+z-index: 1;
+width: max-content;
+display: none;
+position: absolute;
+top: 70%;
+left: -100%;
+background-color: var(--neutralDarker);
+padding: 5px;
+border-radius: 5px;
+text-align: center;
+font-size: 11px;
+}
+
+/* titre de la récompenses*/
+.award_tooltiptext_title {
+font-family: var(--special-font);
+font-size: var(--medium-size);
+line-height: var(--medium-size);
+color: var(--co-2);
+}
+
+/* BADGES DANS LE PROFIL */
+/*Badges*/
+
+.userCollection {
+    position: absolute;
+    z-index: 10;
+    left: 25px;
+    bottom: 15px;
+}
+
+.titre_choco {
+	font-size: var(--xl-size);
+	font-weight: 400;
+	text-transform: uppercase;
+	font-family: var(--special-font);
+	line-height: 100%;
+	grid-column: 1 / -1;
+	color: var(--co-2);
+	border-bottom: 1px solid;
+}
+
+.collec {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 60%;
+	height: 60%;
+	margin: auto;
+	z-index: 2;
+	overflow: auto;
+	transition: 0.5s all;
+	background: var(--white);
+	padding: 20px;
+	border-radius: var(--radius);
+}
+
+.collec.hidden {
+	visibility: hidden;
+	opacity: 0;
+}
+
+#badges-profil {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+	gap: var(--spacing);
+}
+#badges-profil img {
+	width: 100%;
+}
+#badges-profil .badge,
+.js-badges-profil .badge {
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+}
+/*Badges obtenus*/
+.nope {
+	filter: grayscale(100%) !important;
+}
+.yes {
+	filter: grayscale(0) !important;
+}
+
+more, .more {
+    border-radius: 100%;
+    background: radial-gradient(var(--co-2), var(--co-1));
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/*** ------------------------------- ***/
+/*** PAGE DE PROFIL ---------------- ***/
+
+
+/* Bouton édition d'un champ de profil */
+.ajax-profil_edit {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+
+/* Bouton validation des modifications */
+.ajax-profil_valid {
+  cursor: pointer;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+/* pseudo profil  */
+
+.page-title_profil {
+    text-align: right;
+    font-family: var(--special-font);
+    font-size: var(--xxl-size);
+    font-weight: 300;
+    margin-bottom: -20px;
+}
+
+/* balise i & b profil  */
+
+.profilaes i {color: var(--contrast);}
+.profilaes strong { color: var(--co-1);}
+.profile_rank strong, .page-title_profil strong {
+    all: unset;
+}
+
+/* Container des onglets & icons  */
+
+#pr_icon {
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+}
+
+#pr_icon .field_editable {
+    padding-bottom: 60px;
+}
+
+#pr_icon .field_uneditable img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid var(--co-1);
+}
+
+#pr_icon label {
+    display: none;
+}
+
+.profile_tabs {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0 25px;
+    background: var(--neutral);
+    border-radius: var(--radius);
+    border: 1px solid var(--black);
+    position: relative;
+    padding: 20px 20px 20px 175px;
+    justify-content: space-between;
+  font-size: var(--little-size);
+}
+
+/* Onglet */
+.profile_tabs .tab {
+     border: solid 1px var(--black);
+    text-decoration: none;
+    color: var(--black);
+    text-align: right;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, var(--neutralDark) 33%, var(--co-1), var(--co-2));
+    background-size: 350% 120%;
+    transition: .7s;
+    background-position: 1% 0%;
+    background-color: var(--co-1);
+    padding: 5px;
+    transition: all 0.3s ease;
+      width: 100%;
+    text-align: center;
+}
+
+/* Hover */
+.profile_tabs .tab:hover {
+    background-position: 99% 0%;
+}
+
+/* Onglet actif */
+.profile_tabs .tab.active {
+    background: var(--co-1);
+    color: var(--black);
+}
+
+/* Contenu des onglets */
+.tab_content {
+    display: none;
+    animation: fadeTab 0.3s ease;
+  transition:.35s;
+}
+
+/* Contenu visible */
+.tab_content.active {
+    display: block;
+}
+
+/* Container en ligne + sujets/suivis/messages  */
+
+.info_profil {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 8px 20px;
+}
+
+.info_profil_left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.profile_online {
+    background: var(--co-gradient);
+    color: white;
+    text-transform: lowercase;
+    padding: 4px 8px;
+    border-radius: var(--radius);
+    text-transform: uppercase; 
+    font-size: var(--little-size);
+}
+
+.info_profil .profile_field {
+    display: flex;
+}
+
+.pr_links {
+    display: flex;
+    gap: 8px;
+}
+
+.pr_links a {
+  position: relative;
+  background: var(--co-gradient);
+  color: white;
+  padding: 4px 8px;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  font-size: var(--little-size);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.pr_links a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--co-1);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.pr_links a:hover::after {
+  opacity: 1;
+}
+
+/* container avatar + contenu onglets */
+.grille_propro {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 410px auto 20px;
+  margin-bottom: 10px;
+}
+
+.profile_avatar {
+    width: 400px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing);
+    background: var(--co-gradient);
+    border-radius: var(--radius);
+    color: var(--white);
+    font-weight: 100;
+    font-size: var(--little-size);
+}
+
+.profile_avatar img {
+    border: 15px solid var(--black);
+    max-width: 300px !important;
+    border-radius: var(--radius);
+}
+
+.profile_rank {
+    background: var(--black);
+    padding: 4px 8px;
+    border-radius: var(--radius);
+}
+
+.profile_avatar .profile_field {
+    justify-items: center;
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    font-weight: 500;
+    text-transform: uppercase;
+    flex-direction: row;
+}
+
+/*champ rps*/
+
+#field_id-14 {
+    padding: 0;
+    margin: 0;
+}
+
+#field_id-14 label {
+  display: none; }
+
+#field_id-14 field {
+    display: flex;
+    gap: 4px;
+}
+
+#field_id-14 field::after {
+    content: 'RPS';
+}
+
+/*champ cwtw*/
+
+#pr_cwtw label {
+    display: none;
+}
+
+#pr_cwtw field {
+    text-transform: lowercase !important;
+}
+#pr_cwtw {
+    background: var(--neutral);
+    border-radius: var(--radius);
+    color: var(--black);
+    padding: 0 8px;
+}
+
+#pr_cwtw img {
+    border: none !important;
+}
+
+#field_id7 textarea {
+    height: 213px;
+    width: 100%;
+}
+
+/*contenu onglets*/
+.user_profile {
+  background: var(--neutral);
+  border-radius: 5px;
+  padding: var(--spacing);
+  height: 650px; 
+}
+
+.profile_field {
+}
+
+.profile_field label,
+.profile_field label>span {
+color: var(--co-1);
+    font-family: var(--font-2);
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+.profile_field field {
+  position: relative;
+}
+
+.flex {
+    display: flex;
+  gap: 20px;
+}
+
+/*problème alignement aes sur bxd*/
+table {
+    text-align: unset !important;
+  color: unset;
+}
+
+/*tous les onglets*/
+
+#userInfos label::before {
+    content: '\2727\00263E\00A0';
+    color: var(--co-1);
+}
+
+/*basics*/
+
+/*grille sur contenu basics et personnage */
+#userInfos, #userRpg {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing);
+}
+
+/*SAUF aes, gameplay & champs personnage aes */
+
+#field_id8, #field_id30, #field_id15, #field_id17, #field_id18, #field_id19, #field_id20, #field_id21, #field_id22, #field_id23, #field_id24, #field_id25, #field_id26, #field_id27 {
+    grid-column: 1 / -1;
+}
+
+/*aes*/ 
+#field_id8 label {
+    display: none;
+}
+
+#field_id8 textarea {
+    height: 313px;
+    width: 100%;
+}
+
+/*gameplay*/ 
+#field_id30 textarea {
+    height: 113px;
+    width: 100%;
+}
+
+/*rpgiste, avatar, credit, arrivee, messages, naaksha & 5 premiers champs onglet personnage  */
+
+div#field_id1, div#field_id9, div#field_id10, div#field_id-4, div#field_id-6, div#field_id-13, div#field_id13, div#field_id4, div#field_id11, div#field_id14, div#field_id12 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  gap: 5px;
+  background: var(--white);
+    border-radius: var(--radius);
+    padding: 0 12px;
+}
+
+/*champ astro en full largeur*/
+#field_id12 {
+  grid-column: 1 / -1;
+}
+
+/*on retire les titres pour relations puis chrono*/
+#field_id31 label, #field_id32 label, #field_id33 label, #field_id34 label, 
+#field_id35 label, #field_id36 label, #field_id37 label, #field_id38 label, #field_id39 label
+{ display:none; }
+
+/*on met en full size le text area de relations et chrono */
+
+#userInventory textarea, #userLiens textarea, #profil2 textarea, #userRpg textarea {
+    width: 100%;
+}
+
+/* champs contact */
+
+.contact_profil {
+    display: flex;
+    align-items: center;
+    background: var(--co-gradient);
+    border-radius: var(--radius);
+  justify-content: center;
+}
+
+.profile_contact {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile_contact a {
+    color: black;
+}
+
+.profile_contact #field_id:nth-child(2) {
+   display: none;
+}
+
+/* multicomptes */
+
+#field_id29 label {
+    display: none;
+}
+
+#field_id29 textarea {
+    width: 100%;
+    height: 300px;
+}
+
+.multis_grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(201px, 0.3fr));
+	justify-content: center;
+	gap: var(--spacing);
+}
+.multis_grid td {
+	display: block;
+	padding: 0;
+}
+.multi {
+	display: block;
+	border-radius: var(--radius);
+	overflow: hidden;
+	background: var(--white);
+}
+.multi tbody {
+	display: flex;
+	flex-direction: column;
+}
+.multi td {
+	display: block;
+}
+.multi_img {
+	position: relative;
+	height: 110px;
+}
+.multi_img img {
+	width: 100%;
+	height: 110px;
+	object-fit: cover;
+	mask: linear-gradient(to bottom, var(--co-1) 60%, transparent 100%);
+}
+.multi_infos {
+	display: block;
+	padding: 5px 10px 10px;
+	font-size: var(--little-size);
+}
+
+/* bullet journal */
+
+#bullet_journal {
+    margin-top: 10px;
+}
+
+#bullet_journal label {
+    display: none;
+}
+
+#field_id42 textarea, #field_id43 textarea, #field_id44 textarea, #field_id45 textarea, #field_id46 textarea {
+    width: 100%;
+    height: 400px;
+}
+
+.title_bujo {
+    font-family: var(--special-font);
+    font-size: var(--xxl-size);
+    text-align: center;
+    font-weight: 200;
+    background: var(--co-gradient);
+    border-radius: var(--radius);
+    color: white;
+    margin-top: 10px;
+}
+
+/* Petite animation */
+@keyframes fadeTab {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile_infos {}
+
+.profile_content {
+}
+
+.profile_admin {
+  text-align: center;
+  margin: 10px 0 0;
+}
+
+/* Bouton "suivre le membre" */
+.followBtn {
+  background: var(--neutral);
+  border: 1px solid var(--neutralDark);
+  border-radius: 5px;
+  font-weight: 600;
+  margin: 0;
+  font-size: 14px;
+}
+
+.followBtn::before {
+  top: 1px;
+  position: relative;
+  color: var(--accentClr);
+  margin-right: 5px;
+}
+
+/*responsive profil*/
+
+@media screen and (max-width: 1100px) {
+  
+  .grille_propro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.profile_avatar {
+    width: 100% !important;
+    }
+  
+  .profile_contact { flex-direction: row !important; padding: 5px; }
+  
+  .profile_tabs { flex-direction: column !important; }
+  
+  #pr_icon {
+    top: 30px;
+}
+  .userCollection {
+    bottom: 57px !important;
+}
+  
+}
+
+@media screen and (max-width: 430px) {
+  .pr_links {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    text-align: center;
+}
+  }
+
+/*** ------------------------------- ***/
+/*** WOMBAT PROFILS EN POP UP ---- ***/
+
+/* Fond atténué */
+.wombat-overlay {
+  position: fixed;
+  z-index: 990;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s opacity ease;
+  background: var(--neutral);
+}
+
+/* effet de transition du fond atténué */
+.wombat-overlay.open {
+  opacity: 0.5;
+  visibility: visible;
+}
+
+/* Fenêtre du popup */
+.wombat-aside {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  z-index: 999;
+  transition: 0.2s all ease;
+  visibility: hidden;
+  opacity: 0;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: var(--shadowBox);
+  border-radius: 10px;
+  height: max-content;
+  transform: translateX(-20%);
+}
+
+/* effet de transition pour la fenêtre */
+.wombat-aside.open {
+  opacity: 1;
+  transform: translateX(0);
+  visibility: visible;
+}
+
+/*** ------------------------------- ***/
+/*** PROFILS SIMPLIFIÉS DES TAGS ---- ***/
+
+/* Supression de la flèche peu esthétique*/
+.tooltipster-arrow {}
+
+.tooltipster-default {}
+
+.preview_content {
+  display: flex;
+}
+
+.preview_avatar img {
+  object-fit: cover;
+  object-position: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.preview_infos {
+  width: 100%;
+  padding-top: 3px;
+}
+
+.preview_pseudo,
+.preview_pseudo strong {
+  font-size: var(--medium-size);
+}
+
+.preview_contacts {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.preview_contacts a {
+  margin-left: 5px;
+}
+
+.tooltipster-arrow {
+  display: none;
+}
