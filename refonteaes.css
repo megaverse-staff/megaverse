@@ -84,9 +84,7 @@ color: var(--contrast);
 t2,
 t2b,
 .t2b,
-t3,
-.user_profile h2,
-.post_userinfo h2 {
+t3 {
 display: block;
 font-family: var(--font-2);
 text-transform: uppercase;
@@ -126,9 +124,7 @@ margin-right: 10px;
 font-size: 13px;
 color: var(--co-1);
 }
-t4,
-.user_profile h2,
-.post_userinfo h2 {
+t4 {
 display: block;
 font-size: var(--medium-size);
 letter-spacing: 1px;
