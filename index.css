@@ -1424,7 +1424,7 @@ content:'\eaa2'; font-family: var(--font-ic);
   
   .rfcal {
     display:grid;
-    grid-template-columns: auto 200px;
+    grid-template-columns: auto 150px;
     width:100%;
     position:relative;}
 
@@ -1465,7 +1465,7 @@ content:'\eaa2'; font-family: var(--font-ic);
     font-family: var(--font-2);
     font-size: var(--title-size);
     line-height: 50px;
-    width: 200px;
+    width: 150px;
     text-align: center;
     height: 30px;
     opacity: 0;
