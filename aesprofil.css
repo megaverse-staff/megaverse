@@ -495,10 +495,12 @@
 	margin: 0 auto;
 }
 .pp_cadre tbody {
-	background: var(--neutralDark);
-	display: block;
-	margin: -1px;
-	padding: 10px;
+    background: var(--neutralDark);
+    display: block;
+    margin: -1px;
+    padding: 10px 0px 10px 10px;
+    height: inherit;
+    overflow: unset;
 }
 .pp_blockquote {
 	margin: 0 20px;
