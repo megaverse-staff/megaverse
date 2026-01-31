@@ -1,0 +1,310 @@
+/* LISTE DES MEMBRES */
+
+@media screen and (max-width: 1180px) {
+  .filtres { display: flex !important; flex-direction: column !important; align-items: center !important; gap:10px !important;}
+  .filters, .sorts, .croiss {width:100% !important;}
+}
+
+@media screen and (max-width: 1180px) { 
+	.grid-container { transition: none !important; }
+    .userprofil_js { transition: none !important; }
+}
+
+.filtres {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    column-gap: 40px;
+    align-items: start;
+    margin: 10px 0px 10px 0px;
+    background: var(--neutral);
+    border-radius: var(--radius);
+    padding: var(--spacing);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.bloc_first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.sstitle_memberlist {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: var(--litlle-size);
+    color: white;
+    background: var(--co-gradient);
+    border-radius: var(--radius);
+}
+
+.ui-group,
+.sorts,
+.croiss {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button-group {
+    display: grid;
+    gap: 10px;
+}
+
+.title_listm {
+    text-transform: uppercase;
+    line-height: 30px;
+    font-size: var(--xl-size);
+    font-weight: 800;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.filtres .quicksearch {
+    margin-top: 10px;
+}
+
+.ui-group .button span, .sorts .button span, .croiss .button span {
+font-size: 30px;
+    display: block;
+    margin-bottom: 5px;
+    position: absolute;
+    bottom: -13px;
+    left: -7px;
+    color: var(--co-2);
+} 
+
+/*** ------------------------------- ***/
+/*** LISTE DES MEMBRES ------------- ***/
+
+.liste_grp_membres { background-color: none !important; position: absolute; width: 200% !important; height: 270px !important; top: -25px !important; -webkit-mask-image: url(https://i.ibb.co/SDBb2c1K/test-bg.webp); /* -webkit-mask-size: auto 180%; */ -webkit-mask-repeat: no-repeat; -webkit-mask-position: center bottom; transform: rotate(12deg); left: -50px; } 
+.liste_grp_membres { display: block !important; } 
+.liste_grp_membres { background-color: var(--co-2); position: absolute; width: 100%; height: 260px; top: -100px; border-radius: 0 0 150px 150px; }
+
+/* CHR */
+.grp_chr .liste_grp_membres {
+    background: linear-gradient(
+        180deg,
+        rgba(102,151,193,0.9),
+        rgba(102,151,193,0.4),
+        rgba(102,151,193,0)
+    );
+}
+
+/* COP */
+.grp_cop .liste_grp_membres {
+    background: linear-gradient(
+        180deg,
+        rgba(205,151,43,0.9),
+        rgba(205,151,43,0.4),
+        rgba(205,151,43,0)
+    );
+}
+
+/* IRI */
+.grp_iri .liste_grp_membres {
+    background: linear-gradient(
+        180deg,
+        rgba(144,138,203,0.9),
+        rgba(144,138,203,0.4),
+        rgba(144,138,203,0)
+    );
+}
+
+/* TIT */
+.grp_tit .liste_grp_membres {
+    background: linear-gradient(
+        180deg,
+        rgba(208,106,137,0.9),
+        rgba(208,106,137,0.4),
+        rgba(208,106,137,0)
+    );
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    transition: all 0.4s ease;
+}
+
+.userprofil_js {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+ .userlist {
+}
+
+.userlist_profil {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px var(--black);
+    border-radius: var(--radius);
+    min-height: 300px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.user_test {
+    text-align: center;
+}
+
+.userlist_avatar:hover {
+    transform: rotate(90deg);
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.userlist_avatar {
+    transition: color 0.2s ease, background 0.2s ease, transform 0.3s ease; position: relative;
+}
+
+.userlist_avatar img {
+object-fit: cover;
+    object-position: center;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    border: 3px solid var(--co-1);
+}
+
+.userlist_details {
+    display: flex;
+    flex-direction: column;
+    position:relative;
+}
+
+.userlist_pseudo {
+  text-align: center;
+  font-family: var(--special-font);
+  font-size: var(--xl-size);
+}
+
+.userlist_infos {
+    text-align: justify;
+    line-height: 16px;
+    background: var(--neutral);
+    border-radius: var(--radius);
+    padding: var(--spacing);
+    backdrop-filter: blur(20px);
+    font-size: var(--little-size);
+}
+
+.userlist_contact {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin: 10px;
+}
+
+.msgs_list {
+    display: flex;
+    justify-content: space-around;
+    background: var(--co-gradient);
+    color: white;
+    font-family: var(--font-2);
+    font-style: italic;
+    border-radius: var(--radius);
+}
+
+button.button.is-checked {
+    background: var(--co-1);
+}
+
+.custom-pager button {
+    border: 1px solid var(--black);
+    font-size: var(--little-size);
+}
+
+.custom-pager {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.custom-pager button.is-checked {
+    background: var(--co-1);
+}
+
+/****** ------------------------------------------------------------------------------ 
+ ****** MESSAGES PRIVES -------------------------------------------------------------- ******/
+
+/*** ------------------------------- ***/
+/*** LISTE DES MPs ----------------- ***/
+
+#main-content {
+    margin-top: var(--spacing);
+}
+
+/* Menu des MPS */
+#privmsgs-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+    background: var(--neutralDark);
+    padding: 10px;
+    border-radius: var(--radius);
+    text-transform: uppercase;
+    font-size: var(--little-size);
+}
+
+#privmsgs-menu li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Affichage d'un MP dans la liste */
+.mp_row {
+  background: var(--base-gradient);
+  border: 1px solid var(--black);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 55px auto;
+  grid-gap: 10px;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+/*** ------------------------------- ***/
+/*** AFFICHAGE D'UN MESSAGE PRIVÉ -- ***/
+
+.message {
+  background: var(--neutral);
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: max-content auto;
+  grid-template-columns: 220px auto;
+}
+
+.message_infos {
+  grid-column: 1 / span 2;
+  border-bottom: 1px solid var(--neutralDark);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mp-icons {
+  display: flex;
+  float: right;
+}
+
+.message_profil {
+  padding: 10px;
+  border-right: 1px solid var(--neutralDark);
+  text-align: center;
+}
+
+.message_content {
+  padding: 25px;
+}
