@@ -491,7 +491,7 @@
 }
 .pp_cadre {
 	background: var(--co-gradient);
-	max-width: 350px;
+	max-width: 100%;
 	margin: 0 auto;
 }
 .pp_cadre tbody {
