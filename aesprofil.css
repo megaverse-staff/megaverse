@@ -405,7 +405,23 @@
 .squarepro { display: flex ; justify-content: space-around; margin-top: 20px;}
 
 .likebox { margin: auto; padding: 10px; } 
-.titlebox { font-size: 26px; color: var(--co-1); font-family: var(--special-font); padding: 15px 0; } 
+.titlebox {
+    font-size: 36px;
+    color: var(--co-1);
+    font-family: var(--special-font);
+}
+.titlebox2 {
+    background: var(--co-gradient);
+    font-size: var(--small-size);
+    color: white;
+    font-style: italic;
+    justify-content: center;
+    display: flex;
+    font-family: var(--font-2);
+    letter-spacing: 5px;
+    border-radius: var(--radius);
+    margin-top: -11px;
+}
 .titlebox::before { content: "\ec9f"; font-family: var(--font-ic); color: var(--co-2); margin-right: 5px; } 
 .grid3 { display: grid ; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 10px; } 
 .boxinfo { background: var(--white); border-radius: 10px; padding: 15px; text-align: center; } 
@@ -584,6 +600,7 @@
 .pp_scroll td:first-child {
 	position: relative;
 	border-right: 1px solid var(--co-2) !important;
+	margin-right: -5px;
 }
 .pp_scroll td:first-child::after {
 	content: '';
@@ -763,4 +780,33 @@
 }
 .list_rp .done strong::after {
 	content: 'terminé';
+}
+
+/* Titres aes profil Jen #1 */
+.titledp1 {
+    display: flex;
+    justify-self: center;
+}
+
+.titredp1 {
+    color: var(--co-1);
+    font-family: var(--special-font);
+    font-size: 50px;
+    opacity: 0.6;
+    position: relative;
+    top: 10px;
+}
+
+.titredp2 {
+    background: var(--co-2);
+    font-size: var(--small-size);
+    color: white;
+    justify-content: center;
+    display: flex;
+    font-family: var(--font-2);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    top: -25px;
+    line-height: 1;
+    position: relative;
 }
