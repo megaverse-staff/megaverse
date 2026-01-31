@@ -1,2 +1,280 @@
 /* PROFILS UTILISATEURS — U */ 
 
+/*** ÉVOLUTION JAUGE PROFIL ***/
+.obvan1 {
+	--step1: "l'obvantis s'efforce de vider totalement son esprit grâce à la méditation.";
+	--step2: "capacité à détecter les tentatives d'intrusion dans l'esprit, l'obvantis apprend à repérer les attaques mentales et à ériger ses défenses en conséquence.";
+	--step3: "iel ferme son esprit contre les intrusions mentales, cachant ses pensées et émotions, rendant son bouclier plus résistant aux attaques psychiques et aux sortilèges de manipulation.";
+	--step4: "le bouclier se complexifie en labyrinthe impénétrable de pensées et d'idées. l'obvantis cloisonne également ses souvenirs sensibles, compartimente ses émotions envahissantes, érigeant des portes closes ou coffres, selon la façon dont iel le visualise.";
+	--step5: "iel peut repousser les intrus, les perdre dans son monde mental ou lui opposer des défenses psychologiques (expl : monstres mentaux). la maîtrise est telle qu'il lui est possible de résister à l'imperium et au véritaserum, bien que non sans difficulté et impacts sur la psyché.";
+}
+
+.obvan2 {
+	--step1: "modification d'un détail d'un souvenir spécifique.";
+	--step2: 'remplacement du souvenir visé par un autre existant.';
+	--step3: 'projection de pensées en vrac afin de noyer toute la toile de souvenirs liés.';
+	--step4: "altération de souvenirs. la multiplication des changements menace toutefois ses propres certitudes, l'obvantis n'est plus certain·e de la réalité.";
+	--step5: "modelage de l'esprit, des pensées et des souvenirs afin de transmettre de fausses vérités.";
+}
+
+.anim1 {
+	--step1: "(étapes 1 à 5 du rituel) l'apprenti·e crée un lien stable avec son animal totem, éveille ses instincts et apprend à équilibrer forme humaine et essence animale.";
+	--step2: "de terriblement douloureuse, la métamorphose devient indolore. elle n'est toutefois pas systématique : il arrive de ne pas parvenir à la déclencher ou de peiner à retrouver forme humaine.";
+	--step3: "la mécanique est tout à fait maîtrisée, permettant des transformations complètes aisées.";
+	--step4: "iel s'habitue progressivement aux sens de l'animal, à cette nouvelle forme, aux perceptions nouvelles du monde à travers cet autre regard. il est aussi temps d'apprendre à en évoquer des éléments sous sa forme humaine (transformation partielle).";
+	--step5: "le contrôle est tel que la baguette n'est plus une nécessité pour les transformations. elles sont immédiates et peu coûteuses en énergie, de même que l'animorphe parvient sans peine à se servir sous forme humaine des caractéristiques de son animal totem.";
+}
+
+.anim2 {
+	--step1: "(dès l'étape 4) la fusion des formes intensifie la connexion entre l'humain·e et l'animal, aide l'apprenti·e animorphe à mieux comprendre la nature, se faire accepter d'elle. iel ressent une différence dans l'attitude de la faune à son égard : un début de confiance.";
+	--step2: "les hésitations se dissipent, la cohésion avec la faune se concrétise, la confiance et la compréhension sont indéniables. il arrive que l'espèce correspondant à l'animal totem de l'apprenti·e, en particulier, vienne à lui spontanément, comme s'iel était des leurs.";
+	--step3: "au-delà de l'appartenance, c'est une véritable communication non verbale qui s'établit, d'abord avec l'espèce de l'animal totem puis avec d'autres créatures similaires. d'instinct l'apprenti·e comprend la gestuelle, les sons et les besoins, et parvient à se faire entendre d'eux en retour.";
+	--step4: "la communication s'étend à de multiples espèces, en fonction des affinités et des rivalités intrinsèques à la nature. en parallèle, l'instinct et l'attention de l'animorphe s'aiguisent, lui permettant de déceler les dangers de la nature. parallèlement, iel court aussi le risque d'être rongé·e par le caractère primal de cet instinct naissant : iel développe des traits propres à son animal et doit apprendre à les dompter.";
+	--step5: "l'instinct est fiable et les réflexes s'imposent telle une évidence, sans pour autant prendre le pas sur l'animorphe qui peut écouter ou faire taire à volonté cette nouvelle part d'iel.";
+}
+
+.lg1 {
+	--step1: 'transformation intensément douloureuse uniquement à la pleine lune, rage difficile voire impossible à canaliser, violence exacerbée, force incontrôlée.';
+	--step2: 'transformation légèrement moins douloureuse (pleine lune), les émotions sont progressivement canalisées.';
+	--step3: "maîtrise de la force qu'iels sont capables de moduler selon les besoins.";
+	--step4: 'transformation totale en dehors des pleines lunes.';
+	--step5: "capacité d'utiliser les sens lupins au quotidien sans prendre leur forme loup·ve.";
+}
+
+.lg2 {
+	--step1: 'incapacité à distinguer ses émotions de celles plus brutes et impulsives du/de la loup·ve (territorial·e, possessif·ve, etc).';
+	--step2: "commence à entendre la voix du/de la loup·ve, envahissante qu'iel soit en accord ou en désaccord avec l'humain·e.";
+	--step3: "meilleures compréhension et cohésion avec son loup·ve (physique, mental et émotions), éveil de l'instinct.";
+	--step4: "reprise du contrôle de l'humain·e sur le·a loup·ve.";
+	--step5: "symbiose totale entre les deux parties, ne forment désormais plus qu'un.";
+}
+
+.daemonis1 {
+	--step1: "sensation de vide et de manque constant, le·a daemonis est asservi·e par ses envies et refuse de l'admettre. ses réactions sont erratiques et excessives.";
+	--step2: 'prise de conscience mais incapacité à gérer ses obsessions qui continuent de dominer ses pensées.';
+	--step3: "élaboration de mécanismes d'adaptation, les obsessions sont toujours présentes mais iel en est moins esclave.";
+	--step4: 'le contrôle se raffermit en dépit de rechutes.';
+	--step5: 'la sensation de vide et de manque demeure présente mais assourdie, iel est plus stable dans ses relations et son quotidien.';
+}
+
+.daemonis2 {
+	--step1: 'fait naître des mirages dans son environnement proche, brefs et non maîtrisés.';
+	--step2: 'les mirages persistent, sont volontaires mais simples.';
+	--step3: 'les illusions deviennent plus complexes, pleines de détails et de nuances.';
+	--step4: 'réalistes et durables, elles gagnent en ampleur et occupent un espace plus vaste.';
+	--step5: "élaboration d'illusions complexes presque indiscernables de la réalité.";
+}
+
+.vamp1 {
+	--step1: 'rétraction des crocs, morsure sale et douloureuse, aucun contrôle.';
+	--step2: "le contrôle de soi s'améliore, le·a vampire prend le temps de soigner les plaies à l'aide de son venin.";
+	--step3: 'bien plus méthodique et maitrisé·e, le·a vampire parvient à susciter du plaisir.';
+	--step4: "acquisition d'un sang-froid facilitant son évolution en communauté, iel peut même résister à l'attraction d'une plaie ouverte.";
+	--step5: 'euphorisante et relaxante, la morsure devient addictive.';
+}
+
+.vamp2 {
+	--step1: 'sensible aux battements de coeur et à la chaleur du sang, le·a vampire est confronté·e à de multiples possibilités et a du mal à se focaliser sur une proie unique.';
+	--step2: 'iel se déplace telle une ombre, sa célérité le·a rend de plus en plus difficile à fuir.';
+	--step3: 'parvient à se concentrer sur une cible spécifique et à pister sa trace presque sans faille.';
+	--step4: 'parvient à débusquer même les proies les plus discrètes et silencieuses, il devient alors impossible de lui échapper. iel perçoit les subtilités (odeur, goût, délicatesse) du sang des autres comme une évidence, ce qui lui permet de choisir ses repas suivant ses préférences.';
+	--step5: "perfectionnement des techniques de séduction pour attirer les proies volontaires : le·a vampire les entraîne dans une toile de fascination au point qu'iels réclament d'être mordu·e·s.";
+}
+
+.oracle1 {
+	--step1: "les premières manifestations se font légères, pressentiments similaires à de la clairvoyance (exemple : impression de voir naître ou mourir des vérités dans le regard d'autrui, certitudes sans fondements, etc).";
+	--step2: 'que le don se manifeste par contact, flashs en éveil ou rêves prémonitoires, il reste bref, évanescent et difficile à traduire, glissant trop aisément entre les doigts maladroits des oracles.';
+	--step3: "la capacité d'interprétation s'améliore, l'oracle cerne plus aisément les futurs les plus probables parmi l'infinité des possibles.";
+	--step4: "l'oracle ne se contente plus de seulement attendre que le futur ou le passé se présente aléatoirement : iel l'invoque par le biais de déclencheurs qui lui sont propres (sang, interrogation des astres, rayons de lumière éveillant des voix, tarot, etc).";
+	--step5: "complétion, précision et clarté rendent les prédictions plus fiables. l'oracle peut se focaliser sur des thèmes précis, répondant plus spécifiquement aux interrogations de celleux qui le·a consultent. leur perception des détails et des besoins leur permettent de choisir avec minutie les informations qu'iels partagent.";
+}
+.oracle2 {
+	--step1: "l'oracle perçoit comme des échos l'énergie que dégagent les matériaux, métaux, plantes, runes, alignement des planètes et autres éléments mystiques, bien qu'incapable d'expliquer ces intuitions encore en phase d'éveil.";
+	--step2: "les intuitions se font plus fréquentes, plus tangibles — l'oracle commence à distinguer clairement les énergies spécifiques et leurs impacts.";
+	--step3: "l'oracle apprend à canaliser ces énergies de manière consciente, les ajoutant à ses rituels qui s'en trouvent renforcés.";
+	--step4: 'iel est désormais apte à influer sur ces énergies pour les purifier ou les corrompre.';
+	--step5: "sa maîtrise lui rend accessible la création d'amulettes efficaces, mais aussi de charger des objets en énergie, ou encore de faire des âmes franchir le voile. iels prennent en charge les fléaux dont iels parviennent à tempérer la malédiction (souvent accompagné·e·s d'apprenti·e·s).";
+}
+
+.men1 {
+	--step1: "le don se manifeste de façon aléatoire pendant l'enfance, iels entendent alors des murmures indistincts.";
+	--step2: "les murmures intrusifs s'intensifient, se clarifient et forment des phrases distinctes, l'invasion n'en est que plus pénible plongeant progressivement le·a mentis dans un état de confusion entre les pensées et les dires d'autrui.";
+	--step3: 'les murmures deviennent voix, leur provenance se fait plus claire permettant aux mentis de distinguer à qui elles appartiennent. iels parviennent également à dissocier les pensées des paroles.';
+	--step4: "c'est volontairement désormais qu'iels partent en quête des pensées d'autrui. aptes à rechercher et sélectionner des informations spécifiques dans un nuage d'idées.";
+	--step5: "possibilité de déceler des secrets qu'ils soient enfouis, inconscients, niés ou réprimés.";
+}
+
+.men2 {
+	--step1: "le·a mentis est incapable de stopper le flux de pensées d'autrui, les intrusions sont constantes et les saturations fréquentes.";
+	--step2: 'iels sont en mesure de réduire les sons étouffants de quelques personnes durant un court de laps de temps. les paroles deviennent alors des souffles fugaces, et les cris, de simple échos.';
+	--step3: "capacité à atténuer l'entièreté des sons alentours, les pertes de contrôle sont pourtant fréquentes en fonction des émotions des mentis, brisant alors l'équilibre fragile de leur tranquillité.";
+	--step4: "les émotions intempestives des mentis n'impactent plus leur aptitude à estomper les voix.";
+	--step5: "comme un switch bienvenu, les voix s'éteignent ou reviennent à volonté. le contrôle offre aux mentis l'apaisement si longtemps recherché.";
+}
+
+.meta1 {
+	--step1: "les changements sont aléatoires et surviennent dès la naissance. il est plus fréquent qu'ils touchent les cheveux et les yeux, ils peuvent être arbitraires ou en harmonie avec les émotions, qu'ils trahissent la majorité du temps. Parfois s'invitent des traits animaux, totalement inopinés.";
+	--step2: "le·a métamorphe parvient à déclencher les transformations mais de façon brève et non systématique. elles ne sont pas tout à fait ciblées : il arrive que d'autres parties du corps se calquent sur elles de manière hasardeuse.";
+	--step3: "iel peut à présent se focaliser sur plusieurs de ses traits, voire s'offrir un ravalement de façade cohérent (maîtrise des proportions). la durée est brève.";
+	--step4: 'gestion délicate des détails (carnation, grains de beauté, …), transformation du corps tout entier sur la durée.';
+	--step5: "la transformation animale est désormais accessible, les changements sont si pointus que le·a métamorphe parvient à adopter une consistance totalement différente (écailles, plumes, etc), bien qu'iel ne pourra jamais adopter entièrement l'apparence d'une créature.";
+}
+.meta2 {
+	--step1: "l'allure, la démarche et la façon de se tenir sont les premières caractéristiques sur lesquelles se focaliser pour ne pas être démasqué·e en un instant.";
+	--step2: "apprentissage des mimiques inhérentes à la personne imitée, sa voix, sa manière de s'exprimer. l'observation du caractère et des habitudes en est la clé.";
+	--step3: "le·a métamorphe se sent plus à l'aise dans ses corps d'emprunt. iel gagne en assurance, accroissant la stabilité de ses transformations. c'est ce qui fait la différence entre les bon·ne·s métamorphes (apparence) et les expert·e·s (sosie associé à la psychologie).";
+	--step4: "comme un·e acteur·ice débutant iel se perd dans ses rôles, à force d'apprendre l'autre iel ne sait plus qui iel est, peut peiner à retrouver ses traits d'origine ou sa véritable personnalité.";
+	--step5: "acteur·ice chevronné·e iel établit une distinction ferme entre sa personne et celles imitées. passer d'un rôle à l'autre devient plus spontané et sa crédibilité à toute épreuve peut duper même les plus méfiant·e·s.";
+}
+
+.sir1 {
+	--step1: "switch de façon incontrôlée entre apparence aquatique et jambes en fonction de l'environnement (terre ou mer). changement systématique, inévitable et total au contact de l'eau, même de quelques gouttes.";
+	--step2: 'les émotions fortes peuvent faire surgir des caractéristiques physiques telles que les écailles ou les branchies de manière intempestive.';
+	--step3: "le besoin de s'hydrater régulièrement demeure vital, mais l'individu ressent de moins en moins l'obligation de s'immerger.";
+	--step4: "transformation partielle ou totale au contact de l'eau, la sirène ou le triton peut contenir la propagation à quelques zones de son corps.";
+	--step5: "totale maîtrise indépendante de l'environnement, possibilité de maintenir l'apparence humaine même immergé·e.";
+}
+
+.sir2 {
+	--step1: 'cible unique et suggestions simples ; les succès sont rares, la cible entend mais peut rester imperméable ou céder, sans être privée de sa volonté.';
+	--step2: "l'efficacité s'accroît, le succès est assuré sur une cible unique.";
+	--step3: "suggestions de plus en plus complexes (influence forte sur des relations, des décisions, possibilité de semer la discorde ou d'encourager l'harmonie, variation des perceptions…).";
+	--step4: "l'emprise s'étend progressivement à deux personnes, puis plus. le succès n'est pas garanti.";
+	--step5: "totale maîtrise, capacité d'influencer les pensées et actions de plusieurs personnes simultanément.";
+}
+
+.nae1 {
+	--step1: "profonde instabilité émotionnelle, à la moindre contrariété ou peine apparaissent des écailles, les traits s'allongent et la douceur naturelle se mue en laideur repoussante.";
+	--step2: "meilleure maîtrise des émotions, possibilité d'atténuer ou d'estomper les changements dûs aux émotions négatives mais jamais d'y échapper tout à fait.";
+	--step3: "la beauté devient surnaturelle, impliquant une attirance sur les personnes de la tranche d'âge des naelides ainsi qu'une fascination sur autrui de manière générale.";
+	--step4: "le·a naelide peut parvenir à cerner les véritables désirs, les réelles envies de sa·on interlocuteur·ice, permettant de s'assurer de la sincérité de celleux qu'iel côtoie.";
+	--step5: "capacité de stopper la fascination ou de l'intensifier.";
+}
+
+.nae2 {
+	--step1: 'affinité avec UN élément. si présent alentours, il réagit aux émotions de manière incontrôlée, comme une simple réponse de la nature.';
+	--step2: "influence sur l'élément si présent dans l'environnement, possibilité de lui donner des ordres simples.";
+	--step3: "invocation de l'élément même lorsqu'il est absent du décor, la création est toutefois de petite ampleur (flammèches, gouttes d'eau, brise, donner forme à une petite parcelle de terre et l'animer ou faire trembler la terre sur une zone minime).";
+	--step4: 'les invocations se renforcent, impactent à plus grande échelle, mais demeurent limitées dans le temps.';
+	--step5: 'création et contrôle plus durables, sur de plus grandes surfaces (faire tempêter dans une zone donnée, créer des golems, provoquer des incendies, déclencher une tornade)';
+}
+
+.harp1 {
+	--step1: 'affection réciproque pour les créatures volantes, compréhension mutuelle innée.';
+	--step2: 'gestion des serres — rétractaction, extension.';
+	--step3: 'communication avec certaines espèces volantes (affinités au cas par cas) et contrôle progressif des ailes — prendre conscience de ces muscles et ossements supplémentaires, les agiter, les rétracter..';
+	--step4: 'apprentissage du vol sur de courtes distances et des durées brèves.';
+	--step5: "capacité d'ordonner aux oiseaux, de les contrôler, et meilleure endurance en vol (durée/distance).";
+}
+
+.harp2 {
+	--step1: "les spectres (qu'iels sont seul·e·s à percevoir) s'accrochent à elleux, rendant l'atmosphère glaciale et leur proximité inconfortable.";
+	--step2: "hanté·e·s par des voix désincarnées et incompréhensibles, voire des cris, en se concentrant iels peuvent même sentir et voir leurs formes décharnées converger autour d'elleux.";
+	--step3: 'parviennent à comprendre leurs murmures, mises en garde, cris et appels. peuvent leur parler en retour mais pas les apaiser, les émotions négatives des spectres tendent à déteindre sur elleux.';
+	--step4: "peuvent les convaincre de les aider, atténuer l'atmosphère glaciale due à leur présence ou la projeter vers une cible.";
+	--step5: "capacité de les calmer, voire de les libérer (nécessité de résoudre leurs tracas avant de les convaincre de s'en aller).";
+}
+
+.fae1 {
+	--step1: "capacité à sentir et à influencer les flux de chance autour d'eux, ils peuvent alors provoquer involontairement de petites coïncidences favorables (trouver des objets perdus, éviter des accidents mineurs) ou défavorables (se taper le petit orteil dans un meuble).";
+	--step2: "l'aptitude devient plus précise et plus fiable ainsi que volontaire.";
+	--step3: 'altération fondamentale des probabilités, les évènements hautement improbables peuvent alors devenir beaucoup plus probables, ou vice versa.';
+	--step4: "l'influence s'étend à plusieurs personnes avec une marge d'erreur.";
+	--step5: "désormais capable d'influer sur les flux de chance ou de malchance d'un groupe de personnes.";
+}
+
+.fae2 {
+	--step1: "intensification ou atténuation des émotions d'une personne se trouvant à proximité, l'espace de quelques secondes.";
+	--step2: 'intensification ou atténuation volontaire mais aléatoire, toujours sur un  laps de temps et une distance plus larges.';
+	--step3: "injection d'une émotion spécifique sur une durée brève.";
+	--step4: "suppression d'une émotion spécifique sur une durée brève.";
+	--step5: "manipulation des émotions à volonté, elles deviennent cependant terriblement drainantes au delà d'une heure.";
+}
+
+.branch {
+	margin: 0 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 10%;
+	position: relative;
+	height: 4px;
+	background-color: var(--co-2);
+	border-radius: 50%;
+	counter-reset: item;
+}
+.branch.\30 {
+	counter-reset: item -1;
+}
+.step::before {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: block;
+	width: 132px;
+	padding: 5px;
+	font-size: var(--little-size);
+	line-height: var(--little-size);
+	background-color: var(--base-1);
+	border-radius: var(--radius);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+	z-index: 1;
+}
+.step:hover::before {
+	opacity: 1;
+	visibility: visible;
+}
+.step.done {
+	background-color: var(--co-1);
+}
+.step {
+	position: relative;
+	transition: all 0.3s;
+	scrollbar-width: thin;
+	scrollbar-color: var(--co-2) var(--neutralDarker);
+	cursor: pointer;
+	counter-increment: item;
+	z-index: 1;
+}
+.step.HERE::before {
+	bottom: 30px;
+}
+.step:not(.HERE) {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+}
+.step.HERE::after {
+	content: counter(item);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+	background: var(--co-1);
+	width: 24px;
+	height: 28px;
+	color: white;
+	font-size: var(--medium-size);
+	font-family: var(--special-font);
+}
+.step:not(.done):not(.HERE) {
+	background-color: var(--gray);
+}
+.step:nth-child(1):before {
+	content: var(--step1);
+}
+.step:nth-child(2):before {
+	content: var(--step2);
+}
+.step:nth-child(3):before {
+	content: var(--step3);
+}
+.step:nth-child(4):before {
+	content: var(--step4);
+}
+.step:nth-child(5):before {
+	content: var(--step5);
+}
