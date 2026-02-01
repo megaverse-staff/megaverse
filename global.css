@@ -83,6 +83,15 @@ form { margin-bottom: 0; }
     padding: 5px 10px;
 }
 
+/* onglets dans les messages */
+.msg_ong_contenu > div.ongContent {
+    display: block;
+}
+
+.msg_ong_contenu > div:not(.ongContent) {
+	display: none;
+}
+
 /* KEYFRAMES */
 @keyframes rotate {
 0% {
