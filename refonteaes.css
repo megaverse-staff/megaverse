@@ -19,15 +19,6 @@ line-height: 100%;
 
 .pr_title strong {font-weight: 400}
 
-.pr_title::before,
-h1::before {
-content: "\0027E1\0027E3\0000A0";
-}
-.pr_title::after,
-h1::after {
-content: '\0000A0\0027E2\0027E1';
-}
-
 h1>span.cp {
 display: none;
 }
@@ -371,8 +362,7 @@ color: var(--co-2);
 }
 
 c3, .c3, bb3, bb6, b3, i3, ba3, t5, .cate_title h2:nth-of-type(2), 
-.tabs ul li a .cp,
-h1, .panel:has(.fld_connexion) .h3::after {
+.tabs ul li a .cp, .panel:has(.fld_connexion) .h3::after {
 background: var(--co-gradient);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
