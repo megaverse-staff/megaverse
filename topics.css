@@ -541,3 +541,683 @@ object-fit: cover;
     color: var(--black);
 }
 
+/*PAGE RÉPONSE*/
+@media screen and (max-width: 670px) {
+  .message-edition {
+    flex-direction: column !important;
+}
+  #smileyContainer iframe {
+    width: 100% !important;
+    height: 300px !important;
+    overflow: auto;
+}
+  
+  .panel dl {
+    display: flex !important;
+    flex-direction: column;
+}
+}
+
+/* BOUTON COMPTE RP */
+.fa_reputation { }
+.fa_reputation>a {border: none !important}
+.fa_reputation:has(.fa_positive:not(.fa_positive[title="+0 rp"])) .fa_vote.fa_plus,
+.fa_reputation:has(.fa_positive:not(.fa_positive[title="+0 rp"])) .fa_voted { display: none; }
+.rp_button,
+.fa_positive:not(.fa_positive[title="+0 rp"])::before { display: block; width: 70px; height: 18px; text-align: center; padding: 0 5px; border-radius: var(--radius); font-size: var(--little-size); color: var(--textColor)}
+.rp_button {background: var(--neutralDark); letter-spacing: 1px}
+.fa_positive[title="+1 rp"]::before { content: "rp compté"; display: block; background: var(--co-2grad); color: white !important}
+.fa_positive:not(.fa_positive[title="+0 rp"], .fa_positive[title="+1 rp"])::before { content: "+ d'une fois !"; display: block; background: var(--co-gradient); color: white}
+.fa_count { font-size: 0; }
+
+/****** ------------------------------------------------------------------------------
+ ****** AFFICHAGE D'UN SUJET --------------------------------------------------------- ******/
+
+
+/* PARTICIPANTS DU SUJET ---*/
+
+/* Conteneur de la liste des participants au sujet */
+.poster-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.poster-count {
+    margin-left: 8px;
+    font-family: var(--font-2);
+    font-style: italic;
+}
+
+/* Avatar du participant*/
+.poster {
+  background: var(--poster-avatar);
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  margin-left: -8px;
+  border: 2px solid var(--neutralDark);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Lien de renvoi vers son profil */
+.poster a {
+  display: block;
+  height: 100%;
+}
+
+.poster-more-list {
+  display: none;
+}
+
+.poster-more {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.poster-more:hover .poster-more-list {
+  display: block;
+  position: absolute;
+  top: 29px;
+  width: 150px;
+  background: var(--neutralDarker);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/*** ------------------------------- ***/
+/*** SUJET ------------------------- ***/
+
+.post_row {
+display: flex;
+    flex-direction: column;
+    background: var(--neutral);
+    margin-bottom: var(--spacing);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+div.post_row:nth-of-type(2) {
+  border-radius: 5px 5px 0 0;
+}
+
+div.post_row:last-of-type {
+  border-radius: 0 0 5px 5px;
+  border-bottom: none;
+}
+
+/*première rangée profil*/
+.msg_rpgiste_infos {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border: 1px solid var(--black);
+    width: 100%;
+  padding: 12px 20px;
+  border-bottom:unset;
+  border-radius: 5px 5px 0 0;
+}
+
+.rpgiste_infos_left, .rpgiste_infos_right {
+    display: flex;
+    gap: 4px;
+}
+
+.msg_ctnr, .naaksha_ctnr, .rpgiste_ctnr {
+    font-weight: 600;
+    background: var(--co-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.field-messages .field_label, .field-naaksha .field_label, .field-rpgiste .field_label, .field-cw-tw .field_label {
+    display: none;
+}
+
+/**/
+
+/*container contact + infos*/
+.msg_bloc_1 {
+    display: grid;
+    grid-template-columns: 300px auto;
+}
+
+/*bloc gauche - contacts*/
+.bloc_left_1 {
+    border: 1px solid var(--black);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  border-right: unset;
+  border-bottom: unset;
+}
+
+.post_contact {
+    display: flex;
+    gap: 8px;
+  font-size: var(--l-size);
+}
+
+.post_contact a {
+  transition: 0.5s all;
+}
+
+.post_contact a:hover, .post_contact a:focus {
+    transform: translateY(-0.25em);
+}
+
+/*bloc droite - pseudo, rang, infos*/
+
+.bloc_right_1 {
+    border: 1px solid var(--black);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background: linear-gradient(to left, var(--neutralDark) 50%, transparent), linear-gradient(to left, var(--co-1) 65%, var(--co-2b));
+  border-bottom:unset;
+}
+
+.post_rank {
+    background: var(--neutral);
+    padding: 2px 4px;
+    border-radius: var(--radius);
+    color: var(--black);
+}
+
+.post_pseudo a {
+    font-family: var(--special-font);
+    font-weight: 300 !important;
+    font-size: var(--xl-size);
+}
+
+.post_fields {
+    display: flex;
+    gap: 8px;
+}
+
+.field-age .label, .field-pronom .label, .field-dimension .label, .field-surnom .label {
+    display: none;
+}
+
+.field-age, .field-pronom, .field-dimension, .field-surnom {
+    background: var(--neutral);
+    color: var(--black);
+    padding: 4px 8px;
+    border-radius: var(--radius);
+    text-transform: uppercase;
+    font-size: var(--little-size);
+}
+
+.field-age .field_content::after {
+    content: 'ans';
+    margin-left: 4px;
+}
+
+.field-surnom .field_content::before {
+    content: 'aka';
+    margin-right: 4px;
+}
+
+/* container avatar + contenu message*/
+
+.msg_bloc_2 {
+    display: grid;
+    grid-template-columns: 300px auto;
+}
+
+/*bloc avatar*/
+.post_profile {
+    padding: 10px;
+    border: 1px solid var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  background: var(--co-gradient2);
+  border-bottom: unset;
+}
+
+.post_avatar img {
+    max-width: 250px !important;
+}
+
+.bloc_av {
+    position: sticky;
+    top: 67px;
+}
+
+.avatar_behind {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: var(--spacing);
+    opacity: 0;
+    background: var(--neutralDark);
+  transition: 0.5s all; 
+  overflow: auto;
+}
+
+.avatar_behind:hover {
+    opacity: 1;
+}
+
+h4.post-content {
+    background: var(--co-2);
+}
+h3.post-content {
+    background: var(--co-1);
+}
+h3.post-content, h4.post-content {
+    margin: 0;
+    display: inline-block;
+    padding: 0px 3px;
+    line-height: 150%;
+    font-weight: 600;
+    border-radius: var(--xs-radius);
+    color: white;
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.field-gameplay .label { display: none; }
+
+/*bloc contenu message*/
+/*sous bloc infos message*/
+.post_details {
+    padding: 8px !important;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--neutralDark);
+    width: 100%;
+    border: 1px solid var(--black);
+    height: 40px;
+  border-left: unset;
+}
+
+a.msg_anchor {
+    background: var(--co-gradient);
+    padding: 8px;
+    border-radius: 100%;
+    font-size: 12px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+}
+
+.post_date {
+    flex-grow: 100;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/*message*/
+
+.post_message { position: relative; padding-bottom: 70px;}
+
+.post_message > div:not(.sepa_sign):not(.msg_tools):not(.like_button):not(fa_like_div):not(.signature_div) {
+    padding: 50px;
+}
+
+
+.signature_div { text-align: center; margin-top: -10px; padding: 0 var(--spacing) var(--spacing) 0 }
+
+.sepa_sign {
+	margin: 50px auto 0;
+	width: 400px;
+	position: relative;
+}
+.sepa_sign .mask {
+	overflow: hidden;
+	height: 20px;
+}
+.sepa_sign .mask:after {
+	content: '';
+	display: block;
+	margin: -25px auto 0;
+	width: 100%;
+	height: 25px;
+	border-radius: 125px / 12px;
+	box-shadow: 0 0 8px var(--white);
+}
+.sepa_sign span {
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	bottom: 100%;
+	margin-bottom: -18px;
+	left: 50%;
+	margin-left: -25px;
+	border-radius: 100%;
+	box-shadow: 0 2px 4px var(--white);
+	background: var(--co-gradient);
+}
+.sepa_sign span i {
+	position: absolute;
+	top: 4px;
+	bottom: 4px;
+	left: 4px;
+	right: 4px;
+	border-radius: 100%;
+	border: 1px solid var(--co-2);
+	outline: 1px solid var(--co-1);
+	text-align: center;
+	line-height: 235%;
+	font-size: var(--small-size);
+	text-shadow: 0px 0px 5px var(--co-2);
+	color: var(--contrast);
+}
+
+/* BOUTONS D'EDITION DU MESSAGE --- */
+/* Conteneur boutons d'édition */
+.msg_tools {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    right: -15px;
+    width: 30px;
+    height: calc(100% - 40px);
+    justify-content: flex-start;
+    background: var(--co-gradient2);
+    margin-top: 40px;
+    border-radius: var(--radius);
+  align-items: center;
+  padding: 20px 0;
+}
+
+ul.profile-icons {
+    position:sticky;
+  top:97px;
+}
+
+.profile-icons a {
+    color: var(--black);
+}
+
+
+
+/*UN SEUL bouton d'édition */
+ul.profile-icons li {
+  padding: 2px 4px;
+  border-radius: 5px;
+    transition: 0.5s all;
+}
+
+/* Cache les boutons pour les invités */
+.profile-icons a[href=""] {
+  display: none
+}
+
+/*hover d'un bouton d'édition*/
+ul.profile-icons li:hover {
+   transform: translateY(-0.25em);
+}
+
+/*troisième bloc — cw/tw, badges, icon/fc */
+.msg_bloc_3 {
+    display: grid;
+    grid-template-columns: 300px auto 250px;
+}
+
+/*bloc cwtw*/
+.msg_cwtw {
+    border: 1px solid var(--black);
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+      border-radius: 0 0 0 5px;
+}
+
+.msg_cwtw details {
+    width: 250px;
+}
+
+.msg_cwtw .cwtw_ctnr {
+    height: 120px;
+    overflow: auto;
+}
+
+.field-cw-tw {
+    padding: var(--spacing);
+    font-size: var(--little-size);
+    background: var(--neutral);
+}
+
+/*bloc badges*/
+.msg_badges {
+    border: 1px solid var(--black);
+    padding: var(--spacing);
+    overflow: auto;
+    align-content: center;
+    height: 222px;
+  border-left: unset;
+}
+
+.titre_badges {
+    font-size: 35px;
+    margin-bottom: 10px;
+    font-weight: 800;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.sstitre_badges {
+    text-align: center;
+    background: var(--co-1grad);
+    padding: 6px 18px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.sstitre_badges a {
+  color: #fff; }
+
+.msg_badges #list_awards { justify-content: center; }
+
+
+/*bloc icon + fc*/
+.msg_icon {
+    border: 1px solid var(--black);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    padding: var(--spacing);
+    border-left: unset;
+      border-radius: 0 0 5px 0;
+      justify-content: center;
+}
+
+.feat_ctnr {
+    font-family: var(--font-2);
+    font-style: italic;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.field-avatar .field_label {
+    display: none;
+}
+
+/*champ icon*/
+.field- {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.field- img:hover {
+    transform: rotate(90deg);
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.field- img {
+    height: 130px;
+    width: 130px;
+    object-fit: cover;
+    border-radius: 100%;
+    outline: 1px solid var(--black);
+    transition: color 0.2s ease, background 0.2s ease, transform 0.3s ease;
+    outline-offset: 5px;
+}
+
+/* BOUTON LIKE --- */
+/* Conteneur du bouton like */
+.fa_like_list:not(:empty), .fa_dislike_list:not(:empty) { background: var(--neutral); margin: 20px 100px -10px 0; padding: 6px 10px; border-radius: var(--radius); font-size: var(--little-size); text-transform: lowercase; }
+.fa_like_div {
+    position: absolute;
+    right: 5px;
+    bottom: -30px;
+    width: 100%;
+}
+.fa_like_div p {margin: 0}
+.fa_like_tooltip {display: none; position: absolute; background: var(--co-gradient); border-radius: var(--xs-radius); z-index: 2}
+.fa_like_others { position: relative; background: none; color: var(--contrast); font-weight: 600; border-bottom: 1px dotted; }
+.fa_like_others:hover .fa_like_tooltip {display: inline-block}
+.fa_like_tooltip a {white-space: nowrap}
+
+
+.like_button {
+position: absolute;
+right: 50px;
+bottom: 10px;
+cursor: pointer;
+display: flex;
+gap: 5px;
+  z-index: 1;
+}
+
+.like_button button img {
+width: 30px;
+height: 30px;
+}
+
+/* Bouton like */
+.rep-button,
+.rep-button:active,
+.rep-button:focus {
+display: flex;
+min-width: 36px;
+background: transparent;
+color: var(--textColor);
+border: none;
+padding: 0;
+border-radius: 5px;
+font-weight: 600;
+}
+
+/*Bouton au survol*/
+.rep-button:hover {
+background: var(--var(--contrastLighter));
+}
+
+/* Lien "@" de mention */
+a.fa-mention {
+  cursor: pointer;
+}
+
+/* Mention "en ligne" */
+.presence {
+  display: none
+}
+
+.presence.online {
+    display: inline-block;
+    position: relative;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin: 0 auto;
+    text-transform: lowercase;
+    font-style: italic;
+    font-family: var(--font-2);
+    color: var(--black);
+}
+
+/*responsive*/
+@media screen and (max-width: 890px) {
+
+  .msg_bloc_2 {
+    display: flex !important;
+    flex-direction: column;
+    border-left: 1px solid var(--black);
+}
+  
+  .post_profile {border-left: unset !important;}
+  
+  .msg_bloc_3 {
+    grid-template-columns: 1fr 1fr !important;
+}
+  
+  .msg_badges {
+    display: none;
+}
+   
+}
+
+@media screen and (max-width: 430px) {
+  .msg_rpgiste_infos {
+    align-items: center;
+    flex-direction: column;
+}
+  
+  .msg_bloc_1 {
+    display: flex;
+    flex-direction: column;
+}
+  
+  .bloc_left_1 {
+    border-right: 1px solid var(--black);
+}
+  
+  .post_fields {
+    flex-direction: column;
+}
+  
+  .signature_div, .sepa_sign {
+    display: none;
+}
+  
+  .msg_bloc_3 {
+    display: none;
+}
+  
+  .msg_bloc_2 {
+    border-bottom: solid 1px var(--black);
+}
+  
+  .links_bar .buttons {height: unset;}
+  
+}
+
+.fond_modo_tools {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--neutralDark);
+    border: 1px solid var(--black);
+    border-radius: var(--radius);
+    padding: var(--spacing);
+    gap: 12px;
+}
+
+.fond_modo_tools label {
+    display: none;
+}
