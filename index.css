@@ -1817,6 +1817,10 @@ border-radius: var(--radius);
   .forumtitle { width: 100% !important; border: none !important; border-bottom: 0 !important; background-color: transparent !important; }
   .forum_desc { width: 100% !important; border-radius: 0 !important; border: none !important; background: transparent !important; }
   .forum_lastpost.lastpost { width: 100% !important; border: none !important; background: transparent !important; }
+	.forum_desc .desc {
+    height: 100px !important;
+    padding: var(--spacing);
+}
 
 }
 
