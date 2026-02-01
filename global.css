@@ -82,3 +82,13 @@ form { margin-bottom: 0; }
     text-transform: lowercase;
     padding: 5px 10px;
 }
+
+/* KEYFRAMES */
+@keyframes rotate {
+0% {
+transform: rotate(0deg);
+}
+100% {
+transform: rotate(359deg);
+}
+}
