@@ -1,7 +1,7 @@
 /* MODÈLES ADMINS, FICHES DE PRÉSA, MISES EN PAGE RP, SIGNATURES, etc */
 
 
-/****** SIGNATURE ******/
+/****** SIGNATURE ******/ 
 .sign2 {display:flex;width: 300px; margin-top: 40px;}
 .sign2_title{position: absolute; font-family: var(--special-font); font-size: var(--xl-size); line-height: 125px; color: var(--co-1); margin: -62px 0px 0px 0px; -webkit-transform: rotate(349deg); text-align: center;}
 .sign2_contour{border:1px dashed var(--co-2);border-radius:100%;width:120px;height:120px;padding:10px;z-index:201;position:relative;}
@@ -16,8 +16,6 @@
 .imgv10 { float: left; margin: 2px; border: 1px solid var(--neutralDark); border-radius: 100%; height: 65px; object-fit: cover; padding: 5px; width: 65px; }
 .titv10 { font-family: var(--special-font); font-size: 19px; text-transform: uppercase; text-align: left; background: var(--co-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0px 0px transparent;}
 .txtv10 { width: 280px; font-size: 9px; text-align:justify; }
-
-/*FICHES DE PRÉSENTATION */
 
 /*** ------------------------------- ***/
 /*** FICHES DE PRÉSENTATION ------------ ***/
