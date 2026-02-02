@@ -1,6 +1,181 @@
 /*BODY, INPUTS, CODES/SPOILERS/HIDE...*/
 /*** ------------------------------- ***/
 
+/* BALISES DE MESSAGE : spoiler, code, quote... */
+
+/* Balise code, spoiler et hide*/
+.codebox {
+display: block;
+width: 90%;
+max-width: 50vw;
+margin: 0 auto;
+position: relative;
+}
+
+/* Contenu code, spoiler et hide*/
+.codebox dd:not(.hidecode dd) {
+background: var(--neutralDark);
+border-radius: 5px;
+padding: 5px;
+overflow: hidden auto;
+max-height: 250px;
+}
+
+/* Nom de balise "code, spoiler" */
+.codebox dt {
+font-size: var(--little-size);
+font-weight: 700;
+letter-spacing: 1px;
+color: var(--co-2);
+transition: all .5s;
+text-transform: uppercase;
+}
+
+/* bouton "copier" */
+.copyCode {
+position: absolute;
+    top: 7px;
+    right: 35px;
+    color: var(--co-2);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: var(--little-size);
+}
+
+code:not(.codebox code), .code {
+background: var(--neutralDarker);
+padding: 1px 2px;
+border: 1px solid var(--base-2);
+border-radius: var(--xs-radius);
+color: var(--co-2);
+text-shadow: 0 0 3px;
+}
+
+code span::before {font-size:var(--small-size);margin:0}
+
+dl.codebox {background-color: var(--neutralDarker);border-left: 4px solid var(--co-2);border-radius: var(--radius);padding: 10px;}
+dl.codebox dt {border-bottom: 1px solid var(--co-2);position: inherit;}
+dl.codebox::before { color: var(--base-5) }
+dl.codebox code { color: var(--textColor); font-family: var(--font); font-size: 14px; line-height: 20px; text-shadow: none; border: none; }
+dl.codebox::before {
+color: var(--base-5);
+}
+dl.codebox:not(.hidecode)::before {
+content: "\ea11";
+position: absolute;
+right: 10px;
+top: 8px;
+display: inline-block;
+font-family: var(--font-ic);
+color: var(--co-1);
+speak: none;
+font-style: normal;
+}
+
+div.cont_code {
+clear: right;
+}
+
+/* Spoiler */
+.hidebox.spoiler {
+}
+
+/* spoiler fermÃ© */
+.spoiler_content {
+display: none;
+}
+
+/* spoiler ouvert */
+.spoiler_content.hidden {
+display: block;
+}
+
+/*code dans les profils*/
+
+#wombat .codebox {padding: 3px 5px}
+
+#wombat dl.codebox:not(.hidecode)::before {
+    content: "\e9e4";
+    position: static;
+    font-family: var(--font-ic);
+    font-size: 6px !important;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    border-radius: 50%;
+    background: var(--co-gradient);
+    color: white;
+    float: left;
+    letter-spacing: 0;
+    font-weight: bold;
+    text-align: center;
+    width: 12px;
+    height: 12px;
+    }
+
+#wombat .codebox dd:not(.hidecode dd) {
+    background: none;
+    padding: 0 3px 0 0;
+}
+
+#wombat dl.codebox dt {
+    border: none;
+    font-size: var(--small-size);
+    line-height: 120%;
+}
+
+#wombat .spoiler_content {
+    font-size: var(--inter-size);
+    line-height: 115%;
+}
+
+/* Citation contenu */
+
+blockquote:has(cite) {
+margin-bottom: 5px;
+padding: 15px 0 15px 15px;
+font-size: var(--inter-size);
+border-left: 1px solid var(--co-1);
+position: relative;
+background-color: var(--neutral);
+border-radius: 5px;
+}
+
+blockquote:has(cite)::before {
+content: '\00201D';
+right: 0;
+color: var(--co-1);
+position: absolute;
+font-size: var(--xxl-size);
+top: -30px;
+}
+
+/* Citation mention "... a Ã©crit" */
+blockquote cite {
+display: block;
+font-style: normal;
+text-transform: uppercase;
+font-size: var(--little-size);
+letter-spacing: 1px;
+}
+
+/* Citation pseudo */
+blockquote cite a {
+text-decoration: none !important;
+}
+
+blockquote2 {display: block; margin: 0 20px}
+blockquote3 {display: block; margin: 0 40px; border-left: 1px solid var(--co-2); padding-left: 20px}
+.flex>blockquote {border-left: 1px solid var(--co-2); padding-left: 20px; font-family: courier new;}
+
+/* Hide */
+.codebox.hidecode dd {
+background: transparent;
+opacity: 0.8;
+}
+
 
 /* smileys */
 #smilies_categ select { border: none; background: var(--co-gradient); color: white; text-transform: lowercase; width: 99%; text-align: center; border-radius: var(--radius); }
