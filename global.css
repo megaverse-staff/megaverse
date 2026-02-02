@@ -81,6 +81,7 @@ form { margin-bottom: 0; }
     font-size: var(--small-size);
     text-transform: lowercase;
     padding: 5px 10px;
+	justify-self: center;
 }
 
 /* onglets dans les messages */
