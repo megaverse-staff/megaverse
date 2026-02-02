@@ -616,3 +616,32 @@ summary::marker {
     content: "";
     display: none
 }
+
+.note {
+	position: relative;
+	width: 70%;
+	margin: 0 auto;
+	border: 1px solid var(--co-1);
+	padding: 5px 10px;
+	font-size: var(--inter-size);
+	font-size: 12px;
+	border-radius: var(--radius);
+}
+
+.note::before {
+	content: '?';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	background: var(--co-1);
+	font-family: var(--font-2);
+	color: white;
+	position: absolute;
+	left: -10px;
+	top: -10px;
+	margin: auto;
+	font-size: var(--normal-size);
+}
