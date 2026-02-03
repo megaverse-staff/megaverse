@@ -106,15 +106,7 @@ text-transform: uppercase;
 font-weight: 600;
 border-radius: 5px;
 }
-t4::before,
-.user_profile h2::before,
-.post_userinfo h2::before {
-content: '\eca1';
-font-family: var(--font-ic);
-margin-right: 10px;
-font-size: 13px;
-color: var(--co-1);
-}
+
 t4 {
 display: block;
 font-size: var(--medium-size);
