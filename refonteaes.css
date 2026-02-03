@@ -645,3 +645,37 @@ summary::marker {
 	margin: auto;
 	font-size: var(--normal-size);
 }
+
+.deco_top {
+	position: relative;
+}
+.deco_top::before {
+	position: absolute;
+	top: -10px;
+	left: -4px;
+	content: '\eca0';
+	font-family: var(--font-ic);
+	font-size: var(--medium-size);
+	color: var(--co-2);
+	text-shadow: 0 0 3px;
+}
+
+.deco_bottom {
+	position: relative;
+}
+.deco_bottom::after {
+	position: absolute;
+	bottom: -10px;
+	right: -4px;
+	content: '\eca0';
+	font-family: var(--font-ic);
+	font-size: var(--medium-size);
+	color: var(--co-1);
+	text-shadow: 0 0 3px;
+}
+
+.block {
+    background: var(--neutral);
+    border-radius: var(--radius);
+    padding: var(--spacing);
+}
