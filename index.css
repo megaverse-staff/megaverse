@@ -1290,7 +1290,7 @@ text-align: justify;
 
 .grp_pa { display: flex; flex-direction: column; gap: 10px; -webkit-transform: translate(0%, 0%); transform: translate(0%, 0%); }
 
-.grp_pa a { color: white; border-radius: var(--radius); text-align: center; text-decoration: none; position: relative; display: inline-block; width: 40px; height: 40px; padding-top: 12px; margin: 0 2px; -o-transition: all .5s; -webkit-transition: all .5s; -moz-transition: all .5s; transition: all .5s; -webkit-font-smoothing: antialiased; }
+.grp_pa a { color: white; border-radius: var(--radius); text-align: center; text-decoration: none; position: relative; display: inline-block; width: 40px; height: 40px; padding-top: 9px; margin: 0 2px; -o-transition: all .5s; -webkit-transition: all .5s; -moz-transition: all .5s; transition: all .5s; -webkit-font-smoothing: antialiased; }
 
 .grp_pa a:nth-of-type(1) { background: var(--chr); }
 
