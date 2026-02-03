@@ -449,3 +449,7 @@ lab-2 {
 	border-radius: var(--radius) var(--radius) 0 0;
 	object-fit: cover;
 }
+
+/*** RP9 ***/
+
+.rp9 {margin: auto; width: 730px; height: 700px; display: flex ; overflow: hidden; position: relative; background: var(--neutralDark); border-right: 2.5px solid var(--co-1); border-radius: var(--radius);} .rp9_left{ width:100px; background:var(--co-2grad); transform:rotate(-3deg) scale(1.5); position:inherit; } .rp9_pink{width: 165px; height: 263px;} .rp9_icon { width: 165px; height: 263px; filter: grayscale(1); transform: scale(0.8) translate(-25px, 90px); z-index: 2; position: absolute; } .rp9_icon img { width: 200px; height: 200px; object-fit: cover; border-radius: 100%; } .rp9_titre {font-family: var(--special-font); font-size: var(--xl-size); line-height: var(--xl-size); padding:30px 102px; color: var(--contrast); } .rp9_titre::after { position: relative; content: ""; display: block; width: 280px; height: 2px; background: var(--co-gradient); } .rp9_rp {background: var(--neutral); border-radius: var(--radius); padding: 30px; margin: 30px 50px 0 0; backdrop-filter: blur(3px); text-align: justify; height: 450px;} .rp9_position { position:relative; z-index:2; padding:30px 0; } .rp9 time {border: 1px solid var(--co-1) !important;}
