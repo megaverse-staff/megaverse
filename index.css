@@ -293,8 +293,8 @@ background: linear-gradient(to bottom, var(--neutralDark) 50%, transparent), lin
 	/* --- Switcheroo popup positioning + slide from left --- */
 	#multiAccountPopup {
     position: fixed;
-    top: 47px;
-    left: 62px;
+    top: 48px;
+    left: 61px;
     z-index: 999;
     transform: translateX(-12px);
     opacity: 0;
@@ -657,8 +657,8 @@ background: linear-gradient(to bottom, var(--neutralDark) 50%, transparent), lin
 /* Side panel */
 .popup-side-FA {
     position: fixed;
-    top: 47px;
-    left: 65px;
+    top: 49px;
+    left: 62px;
     height: 100vh;
     width: min(320px, 86vw);
     background: var(--co-2grad);
