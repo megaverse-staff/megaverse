@@ -218,7 +218,7 @@ a.mainmenu img {
 
 .sidebar {
 position: fixed;
-top: 47px;
+top: 49px;
 left: 0;
 width: max-content;
     height: calc(100vh - 47px);
