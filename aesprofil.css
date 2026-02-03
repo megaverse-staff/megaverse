@@ -826,3 +826,7 @@
     line-height: 1;
     position: relative;
 }
+
+/* liens profil mel #1 */
+
+.nvlnprliens img {width:80px; height:80px; border-radius: 100%; object-fit:cover; box-shadow: 10px 0 0 var(--co-1);} .nvlnliens { padding:10px; width: 190px;} .nvlnliens h3, .nvlnliens h4 { width: 100%; display: inline-grid;} .nvlnliens i { width: 100%; text-align: center; display: inline-table; }
