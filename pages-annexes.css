@@ -319,3 +319,26 @@ button.button.is-checked {
     width: 100%;
 }
 }
+
+/*PAGE S'ENREGISTRER*/
+
+h2.u {
+    font-family: var(--special-font);
+    font-weight: 400;
+    font-size: var(--xl-size);
+    text-align: center;
+    color: var(--co-1);
+}
+
+#frmAgreement strong {
+    color: var(--co-1);
+}
+
+#frmAgreement span {
+    color: var(--co-1) !important;
+}
+
+.register_check {
+    background: var(--neutral);
+    padding: var(--spacing);
+}
