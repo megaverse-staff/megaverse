@@ -677,7 +677,7 @@ summary::marker {
 .block {
     background: var(--neutral);
     border-radius: var(--radius);
-    padding: var(--spacing);
+    padding: var(--spacing); }
 
 	.empty-title {
 	position: relative;
@@ -946,5 +946,4 @@ telepathy::before {
 }
 telepathy::after {
 	margin-left: 10px;
-}
 }
