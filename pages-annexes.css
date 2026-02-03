@@ -342,3 +342,12 @@ h2.u {
     background: var(--neutral);
     padding: var(--spacing);
 }
+
+/*ENLEVER AVATAR POST BOUTIQUE*/
+
+.post:has(.annexe) .post_profile, .post:has(.annexe) .post_avatar {
+    display: none;
+}
+
+.msg_bloc_2:has(.annexe) { display: flex; }
+
