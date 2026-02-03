@@ -1221,3 +1221,12 @@ a.fa-mention {
 .fond_modo_tools label {
     display: none;
 }
+
+/* DÉCOS EVENTS */
+/*contour avatar event*/
+.post_avatar.yule::before { grid-row: 2; grid-column: 1; position: relative; content: ""; display: block; width: 225px; height: 325px; background: url(https://www.aht.li/3946585/noel.png) no-repeat; background-size: auto 331px; margin-top: 25px; }
+
+.post_avatar.treat::before { grid-row: 2; grid-column: 1; position: relative; content: ""; display: block; width: 225px; height: 362px; background: url(https://www.aht.li/3872728/cadre-treat.png) no-repeat; background-size: 100% auto; margin: 18px -4px 0 0; }
+.post_avatar.treat::after { grid-row: 2; grid-column: 1; position: relative; content: ""; display: block; background: url(https://www.aht.li/3872730/cadre-treat2.gif); background-size: contain; background-repeat: no-repeat; margin: 280px 0 0 165px; width: 62px; }
+.post_avatar.trick::before { grid-row: 2; grid-column: 1; position: relative; content: ""; display: block; width: 225px; height: 362px; background: url(https://www.aht.li/3872727/cadre-trick.png) no-repeat; background-size: 100% auto; margin: -27px 0 0 -12px; }
+.post_avatar.trick::after { grid-row: 2; grid-column: 1; position: relative; content: ""; display: block; background: url(https://www.aht.li/3872729/cadre-trick2.gif); background-size: contain; background-repeat: no-repeat; margin: 258px 0 0 165px; width: 62px; }
