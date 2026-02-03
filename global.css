@@ -268,7 +268,7 @@ form { margin-bottom: 0; }
 	display: none;
 }
 
-/* KEYFRAMES */
+/* KEYFRAMES ET ANIMATIONS */
 @keyframes rotate {
 0% {
 transform: rotate(0deg);
@@ -290,6 +290,72 @@ transform: rotate(359deg);
     100% {
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
+}
+
+.bounce {
+animation: mini-bounce 1.5s ease infinite alternate;
+top: 10px;
+position: relative;
+}
+@keyframes mini-bounce {
+0% {
+top: 0;
+}
+100% {
+top: 5px;
+}
+}
+@keyframes bounce {
+0% {
+top: 0;
+}
+100% {
+top: 10px;
+}
+}
+@keyframes rev-bounce {
+0% {
+top: 10px;
+}
+100% {
+top: 0;
+}
+}
+@keyframes rotate {
+0% {
+transform: rotate(0deg);
+}
+100% {
+transform: rotate(359deg);
+}
+}
+@keyframes fromtop {
+0% {
+opacity: 0;
+transform: translateY(-20%);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
+}
+@keyframes frombottom {
+0% {
+opacity: 0;
+transform: translateY(20%);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
+}
+@keyframes comein {
+0% {
+    clip-path: circle(0% at 50% 50%);
+}
+100% {
+    clip-path: circle(200% at 50% 50%);
+}
 }
 
 /* Barre d'outils de l'éditeur de texte*/
