@@ -1744,7 +1744,7 @@ content:'\eaa2'; font-family: var(--font-ic);
 /*** ------------------------------- ***/
 /*** CATEGORIES -------------------- ***/
 
-/*CATÉ PAR DÉFAUT*/
+/*CATÉGORIE PAR DÉFAUT*/
 
 .cate_title {
   position: relative;
@@ -1801,7 +1801,7 @@ border-radius: var(--radius);
     height: 40px;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
   a.forumtitle { font-size: var(--l-size) !important; } 
   }
 
@@ -2445,7 +2445,7 @@ position: absolute; }
 
 /* event */
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
   #c5 a.forumtitle { font-size: var(--l-size) !important; } 
   }
 
