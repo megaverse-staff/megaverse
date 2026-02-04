@@ -2444,7 +2444,7 @@ position: absolute; }
 /* event */
 
 @media screen and (max-width: 1500px) {
-  #c9 a.forumtitle { font-size: var(--l-size) !important; } 
+  #c9 a.forumtitle { font-size: var(--l-size) !important; line-height: 22px !important; } 
   }
 
 @media screen and (max-width: 1180px) { #c9 .forum_rp_flex {width: 100% !important;} 
