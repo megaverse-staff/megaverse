@@ -1,29 +1,6 @@
 /*LISTE DES SUJETS + INTÉRIEUR D'UN SUJET — CONTENU MESSAGES*/ 
 
-/*** ------------------------------- ***/
-/*** affichage sujets catégories sous forums --------------- ***/
 
-#f1.category, #f2.category, #f3.category, #f4.category, #f7.category, #f8.category, #f9.category, #f11.category, #f12.category, #f13.category, #f14.category, #f15.category, #f16.category, #f18.category, #f19.category, #f27.category, #f28.category, #f30.category, #f31.category, #f32.category, #f33.category, #f35.category, #f36.category, #f37.category, #f38.category, #f40.category, #f44.category, #f81.category, #f94.category, #f167.category, #f175.category, #f183.category, #f189.category, #f201.category, #f202.category {
-    display: grid;
-    grid-template-columns: auto;
-}
-
-#f1 .cate_title, #f2 .cate_title, #f3 .cate_title, #f4 .cate_title, #f7 .cate_title, #f8 .cate_title, #f9 .cate_title, #f11 .cate_title, #f12 .cate_title, #f13 .cate_title, #f14 .cate_title, #f15 .cate_title, #f16 .cate_title, #f18 .cate_title, #f19 .cate_title, #f27 .cate_title, #f28 .cate_title, #f30 .cate_title, #f31 .cate_title, #f32 .cate_title, #f33 .cate_title, #f35 .cate_title, #f36 .cate_title, #f37 .cate_title, #f38 .cate_title, #f40 .cate_title, #f44 .cate_title, #f81 .cate_title, #f94 .cate_title, #f167 .cate_title, #f175 .cate_title, #f183 .cate_title, #f189 .cate_title, #f201 .cate_title, #f202 .cate_title {
-    display: none;
-}
-
-#f1 .forum, #f2 .forum, #f3 .forum, #f4 .forum, #f7 .forum, #f8 .forum, #f9 .forum, #f11 .forum, #f12 .forum, #f13 .forum, #f14 .forum, #f15 .forum, #f16 .forum, #f18 .forum, #f19 .forum, #f27 .forum, #f28 .forum, #f30 .forum, #f31 .forum, #f32 .forum, #f33 .forum, #f35 .forum, #f36 .forum, #f37 .forum, #f38 .forum, #f40 .forum, #f44 .forum, #f81 .forum, #f94 .forum, #f167 .forum, #f175 .forum, #f183 .forum, #f189 .forum, #f201 .forum, #f202 .forum {
-    height: fit-content;
-  margin-bottom: 30px;
-}
-
-@media screen and (max-width: 1500px) {
-
- #c9 .forum, #f1 .forum, #f2 .forum, #f3 .forum, #f4 .forum, #f7 .forum, #f8 .forum, #f9 .forum, #f11 .forum, #f12 .forum, #f13 .forum, #f14 .forum, #f15 .forum, #f16 .forum, #f18 .forum, #f19 .forum, #f27 .forum, #f28 .forum, #f30 .forum, #f31 .forum, #f32 .forum, #f33 .forum, #f35 .forum, #f36 .forum, #f37 .forum, #f38 .forum, #f40 .forum, #f44 .forum, #f81 .forum, #f94 .forum, #f167 .forum, #f175 .forum, #f183 .forum, #f189 .forum, #f201 .forum, #f202 .forum  {
-        height: unset;
-    margin-bottom: unset;
-}
-}
 
 .fo_deco {
     display: flex;
