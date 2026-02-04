@@ -13,7 +13,7 @@
 }
 
 #f1 .forum, #f2 .forum, #f3 .forum, #f4 .forum, #f7 .forum, #f8 .forum, #f9 .forum, #f11 .forum, #f12 .forum, #f13 .forum, #f14 .forum, #f15 .forum, #f16 .forum, #f18 .forum, #f19 .forum, #f27 .forum, #f28 .forum, #f30 .forum, #f31 .forum, #f32 .forum, #f33 .forum, #f35 .forum, #f36 .forum, #f37 .forum, #f38 .forum, #f40 .forum, #f44 .forum, #f81 .forum, #f94 .forum, #f167 .forum, #f175 .forum, #f183 .forum, #f189 .forum, #f201 .forum, #f202 .forum {
-    height: 220px;
+    height: fit-content;
   margin-bottom: 30px;
 }
 
