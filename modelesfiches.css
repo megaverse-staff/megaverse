@@ -468,6 +468,8 @@ lab-2 {
     height: 100%
 }
 
+.rp1.v2 .block { background: var(--neutralDark) !important; } .rp1.v2>.block:last-child{background: radial-gradient(at left top, var(--co-2), var(--co-1) 50%, 70%, var(--neutral)) !important; padding: 10px}
+
 .rp1 .lyrics {
     margin-top: auto;
     padding: 5px;
