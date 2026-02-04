@@ -2454,6 +2454,11 @@ position: absolute; }
 									   #c9 .forum_desc { width: 100% !important; border-radius: 0 !important; display: flex; border-bottom: 0 !important; border-top: 0 !important; } 
 									   #c9 .forum_lastpost.lastpost { width: 100% !important; border: 1px solid var(--black); border-radius: 0 0 5px 5px !important; border-top: 0 !important; } }
 
+#c9 .forums {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
 
 #c9 .cate_label { display: flex; flex-direction: row; align-items: center; justify-content: flex-end; gap: 12px; }
 
