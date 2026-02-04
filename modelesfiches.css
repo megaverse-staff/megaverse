@@ -448,6 +448,7 @@ lab-2 {
 	height: 250px;
 	border-radius: var(--radius) var(--radius) 0 0;
 	object-fit: cover;
+	margin-bottom: 0;
 }
 
 /*** RP1 ***/
