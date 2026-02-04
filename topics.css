@@ -1,6 +1,15 @@
 /*LISTE DES SUJETS + INTÉRIEUR D'UN SUJET — CONTENU MESSAGES*/ 
 
+.forum {
+    height: fit-content;
+  margin-bottom: 30px;
+}
 
+.cate_title { display:none; }
+
+.category { display: grid;
+    grid-template-columns: auto;
+}
 
 .fo_deco {
     display: flex;
