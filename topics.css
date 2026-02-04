@@ -760,6 +760,7 @@ div.post_row:last-of-type {
     border-radius: var(--radius);
     text-transform: uppercase;
     font-size: var(--little-size);
+	align-content: center;
 }
 
 .field-age .field_content::after {
