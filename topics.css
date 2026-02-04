@@ -478,7 +478,6 @@ background: var(--neutralDark);
 
 /* Titre */
 .topic-title {
-  font-size: var(--medium-size);
   color: var(--black);
   text-decoration: none;
 }
