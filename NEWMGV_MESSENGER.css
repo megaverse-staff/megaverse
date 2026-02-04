@@ -650,6 +650,16 @@ a.FAM-attachment-thumb{
 .FAM-chat-date>a.lastpost_link:after{
     content:","
 }
+
+.FAM-chat-date .blog_daymonth, .FAM-chat-date .blog_year {
+    color: var(--co-2);
+    font-size: var(--little-size);
+    font-family: var(--font-2);
+    font-style: italic;
+    font-weight: 400;
+    margin: 2px;
+}
+
 .FAM-forum .FAM-chat-content{
     background-color:var(--neutralDark)
 }
