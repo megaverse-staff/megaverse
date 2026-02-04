@@ -1038,7 +1038,6 @@ text-align: justify;
 
 /* Bloc fixe */
 .guide-fixed {
-  width: 300px;
   flex-shrink: 0;
 }
 
