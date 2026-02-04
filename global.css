@@ -34,7 +34,7 @@ text-transform: uppercase;
 /* bouton "copier" */
 .copyCode {
 position: absolute;
-    top: 7px;
+    top: 0;
     right: 35px;
     color: var(--co-2);
     font-weight: 600;
