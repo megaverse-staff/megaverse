@@ -17,6 +17,14 @@
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 1500px) {
+
+   #f1 .forum, #f2 .forum, #f3 .forum, #f4 .forum, #f6 .forum, #f8 .forum, #f10 .forum, #f11 .forum, #f12 .forum, #f15 .forum, #f14 .forum, #f16 .forum, #f17 .forum, #f18 .forum, #f19 .forum, #f20 .forum, #f21 .forum, #f22 .forum, #f23 .forum, #f28 .forum, #f29 .forum, #f30 .forum, #f31 .forum, #f37 .forum, #f44 .forum {
+        height: unset;
+    margin-bottom: unset;
+}
+}
+
 .fo_deco {
     display: flex;
     flex-direction: row;
