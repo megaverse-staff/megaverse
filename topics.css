@@ -329,6 +329,27 @@ background: var(--neutralDark);
   display: none;
 }
 
+.topic_msgicon:has(img[src*="cw"])::before {
+    content: "CW/TW";
+}
+
+.topic_msgicon:has(img)::before {
+    content: "";
+    display: inline-block;
+    width: 55px;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 600;
+    color: white;
+    background: var(--co-2);
+    border-radius: var(--xs-radius);
+    font-size: var(--small-size) !important;
+    letter-spacing: 1px; }
+
+.topic-labels img {
+    display: none;
+}
+
 .topiclist-infos img {
   margin-right: 3px;
 }
