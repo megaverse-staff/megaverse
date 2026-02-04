@@ -77,7 +77,7 @@
 .bloglist {
     background: var(--neutral);
     border-radius: 5px;
-    display: grid;
+    display: block;
     grid-template-columns: 65px auto;
     margin-bottom: 10px;
 }
