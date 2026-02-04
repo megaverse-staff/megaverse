@@ -1868,7 +1868,6 @@ a.forumtitle {
     color: var(--co-2);
     font-size: var(--l-size);
     line-height: 30px;
-  height: 100%; 
 }
 
 .forum_details {
