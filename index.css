@@ -962,6 +962,7 @@ color: white;
     transition: .7s;
     background: linear-gradient(135deg, var(--co-2) 33%, var(--co-1), var(--co-1c));
     background-size: 350% 120%;
+	align-content: center;
 }
 
 .etiquette:hover {
