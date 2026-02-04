@@ -313,7 +313,7 @@ button.button.is-checked {
   padding: 25px;
 }
 
-/* responsive page connexion /*
+/* responsive page connexion */
 @media screen and (max-width: 940px) {
  #main-content:has(.fld_connexion) { flex-direction: column; }
 #main-content:has(.fld_connexion)>div {
