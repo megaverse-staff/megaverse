@@ -183,7 +183,11 @@ object-fit: cover;
 .userlist_pseudo {
   text-align: center;
   font-family: var(--special-font);
-  font-size: var(--xl-size);
+  font-size: 25px;
+}
+
+.userlist_pseudo a {
+    font-weight: 300;
 }
 
 .userlist_infos {
