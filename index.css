@@ -2485,7 +2485,7 @@ position: absolute; }
     display: none;
 }
 
-#c9 .forum {background: transparent; border: none; padding: 0; height: fit-content; margin-bottom: 20px;}
+#c9 .forum {background: transparent; border: none; padding: 0; height: fit-content;}
 
 #c9 a.forumtitle {
     text-align: right;
