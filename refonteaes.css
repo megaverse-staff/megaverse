@@ -939,3 +939,17 @@ telepathy::before {
 telepathy::after {
 	margin-left: 10px;
 }
+
+t8 {
+    display: block;
+    padding: 5px 0;
+    font-size: var(--small-size);
+    line-height: 16px;
+    border-top: 1px solid var(--co-2);
+    color: var(--contrast);
+    letter-spacing: 5px;
+    text-align: right;
+    font-style: italic;
+    font-weight: 600;
+    text-transform: uppercase;
+}
