@@ -338,9 +338,11 @@ background: var(--neutralDark);
 }
 
 .topicslist-description {
-  border-top: 1px solid var(--neutralDark);
-  padding-top: 5px;
-  width: 100%;
+    width: 100%;
+    font-size: var(--little-size);
+    font-family: var(--font-2);
+    font-style: italic;
+    color: var(--black);
 }
 
 /* ligne qui séparent les annonces et les notes des autres sujets (à activer dans "message > configuration") */
