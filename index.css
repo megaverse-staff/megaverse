@@ -2721,8 +2721,13 @@ position: absolute; }
 #c4 .cate_desc, #c5 .cate_desc, #c8 .cate_desc{ display: block; background: var(--neutral); height: 120px; border-radius: var(--radius); padding: 8px; overflow: auto; color: var(--black); text-align: justify; }
 
 ul.tabs_list { display: flex; flex-direction: column; gap: 8px; align-items: center; }
-li.tabs_item { width: 100%; border-radius: var(--radius); padding: 8px 16px; color: white; text-transform: lowercase; font-size: 14px; background-size: cover; background-position: center; }
+li.tabs_item { width: 100%; border-radius: var(--radius); color: white; text-transform: lowercase; font-size: 14px; background-size: cover; background-position: center; }
 li.tabs_item a { color: white; }
+li.tabs_item a {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+}
 
 /*images onglets elysium*/
 #c4 li.tabs_item:first-child { background-image: url(https://www.aht.li/3838270/downtown.jpg); } 
