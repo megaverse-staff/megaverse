@@ -2079,6 +2079,7 @@ border-radius: var(--radius);
   overflow: hidden;
 	background: var(--neutral);
 	border: 1px solid var(--black);
+	height: 100%;
 }
 
 #c2 .forum_lastpost span, #c1 .forum_lastpost span, #c7 .forum_lastpost span {
