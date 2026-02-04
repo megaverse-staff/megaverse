@@ -2759,6 +2759,7 @@ li.tabs_item a {
     background: var(--neutral);
     border: 1px solid var(--black);
     border-radius: var(--radius) !important;
+	margin: 0;
 }
 
 #c4 .forum_content, #c5 .forum_content, #c8 .forum_content { flex-direction: column; padding: var(--spacing); gap: 40px; height: auto;} 
