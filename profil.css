@@ -671,7 +671,7 @@ prisma, .prisma {
     border: none !important;
 }
 
-#field_id7 textarea {
+#field_id10 textarea {
     height: 213px;
     width: 100%;
 }
@@ -728,29 +728,29 @@ table {
 
 /*SAUF aes, gameplay & champs personnage aes */
 
-#field_id8, #field_id30, #field_id15, #field_id17, #field_id18, #field_id19, #field_id20, #field_id21, #field_id22, #field_id23, #field_id24, #field_id25, #field_id26, #field_id27 {
+#field_id9, #field_id22, #field_id11, #field_id19, #field_id40, #field_id13, #field_id12, #field_id6, #field_id16, #field_id14, #field_id15, #field_id17, #field_id18, #field_id21 {
     grid-column: 1 / -1;
 }
 
 /*aes*/ 
-#field_id8 label {
+#field_id9 label {
     display: none;
 }
 
-#field_id8 textarea {
+#field_id9 textarea {
     height: 313px;
     width: 100%;
 }
 
 /*gameplay*/ 
-#field_id30 textarea {
+#field_id22 textarea {
     height: 113px;
     width: 100%;
 }
 
 /*rpgiste, avatar, credit, arrivee, messages, naaksha & 5 premiers champs onglet personnage  */
 
-div#field_id1, div#field_id9, div#field_id10, div#field_id-4, div#field_id-6, div#field_id-13, div#field_id13, div#field_id4, div#field_id11, div#field_id14, div#field_id12 {
+div#field_id1, div#field_id3, div#field_id4, div#field_id-4, div#field_id-6, div#field_id-13, div#field_id5, div#field_id7, div#field_id36, div#field_id2, div#field_id37 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -761,13 +761,13 @@ div#field_id1, div#field_id9, div#field_id10, div#field_id-4, div#field_id-6, di
 }
 
 /*champ astro en full largeur*/
-#field_id12 {
+#field_id37 {
   grid-column: 1 / -1;
 }
 
 /*on retire les titres pour relations puis chrono*/
-#field_id31 label, #field_id32 label, #field_id33 label, #field_id34 label, 
-#field_id35 label, #field_id36 label, #field_id37 label, #field_id38 label, #field_id39 label
+#field_id24 label, #field_id25 label, #field_id26 label, #field_id27 label, 
+#field_id28 label, #field_id29 label, #field_id30 label, #field_id31 label, #field_id34 label
 { display:none; }
 
 /*on met en full size le text area de relations et chrono */
@@ -803,11 +803,11 @@ div#field_id1, div#field_id9, div#field_id10, div#field_id-4, div#field_id-6, di
 
 /* multicomptes */
 
-#field_id29 label {
+#field_id47 label {
     display: none;
 }
 
-#field_id29 textarea {
+#field_id47 textarea {
     width: 100%;
     height: 300px;
 }
@@ -861,7 +861,7 @@ div#field_id1, div#field_id9, div#field_id10, div#field_id-4, div#field_id-6, di
     display: none;
 }
 
-#field_id42 textarea, #field_id43 textarea, #field_id44 textarea, #field_id45 textarea, #field_id46 textarea {
+#field_id44 textarea, #field_id38 textarea, #field_id43 textarea, #field_id45 textarea, #field_id46 textarea {
     width: 100%;
     height: 400px;
 }
