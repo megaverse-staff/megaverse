@@ -1603,9 +1603,11 @@ content:'\eaa2'; font-family: var(--font-ic);
 #newest_user {
     display: block;
     font-family: var(--special-font);
-    font-size: var(--xl-size);
+    font-size: var(--l-size);
     letter-spacing: -1px;
 }
+
+#newest_user a { font-weight: 400; }
 
 /* qeel milieu */
 
