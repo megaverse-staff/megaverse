@@ -468,7 +468,7 @@ lab-2 {
 }
 
 .rp1>.block:first-child {
-    width: 150px !important
+    width: 150px;
 }
 
 .rp1>.block:first-child>.flex {
