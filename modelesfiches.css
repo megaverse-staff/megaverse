@@ -891,6 +891,24 @@ t1b {
 
 /*** RP6 ***/
 
+@media screen and (max-width: 1300px) {
+    
+.rp_wave.flex {
+    flex-direction: column !important;
+}
+
+.wave1 {
+    display: flex;
+    width: 100% !important;
+}
+
+.infowave {
+    position: relative !important;
+    left: 0 !important;
+}
+    
+}
+
 .rp_wave {
     padding: 20px;
     border-radius: var(--xs-radius);
@@ -906,7 +924,7 @@ t1b {
 }
 
 .wave2 {
-    width: 500px;
+    width: 100%;
     padding: 20px;
     border-radius: var(--xs-radius);
     border: 1px solid var(--neutralDarker);
