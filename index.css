@@ -692,6 +692,7 @@ html.fa-panel-open body{
     margin-bottom: var(--spacing);
     color: white;
     text-transform: uppercase;
+	font-size: 14px;
 }
 
 #fa_menulist li::before {
@@ -2108,7 +2109,7 @@ right: -40px;
     bottom: 75px;
 }
 
-#c2 .forum_avatar img, #c1 .forum_avatar img, #c7 .forum_avatar img, #c4 .forum_avatar img, #c5 .forum_avatar img {
+#c2 .forum_avatar img, #c1 .forum_avatar img, #c7 .forum_avatar img, #c4 .forum_avatar img, #c5 .forum_avatar img, #c8 .forum_avatar img {
     background: var(--neutralDark);
     width: 80px;
     height: 80px;
