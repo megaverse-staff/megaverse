@@ -971,8 +971,16 @@ t1b {
 
 /*** RP7 ***/
 
+@media screen and (max-width: 1400px) {
+    
 .rp_sea {
-    width: 550px;
+    width: 80% !important;
+}
+    
+}
+
+.rp_sea {
+    width: 55%;
     border-radius: var(--xs-radius);
     border: 4px solid var(--neutralDark);
     min-height: 300px;
