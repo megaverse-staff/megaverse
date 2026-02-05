@@ -453,6 +453,15 @@ lab-2 {
 
 /*** RP1 ***/
 
+@media screen and (max-width: 1100px) {
+    
+   .rp1.flex {
+    flex-direction: column !important;}
+
+.rp1>.block:first-child {
+    width: 100% !important;}
+}
+
 .rp1 {
     max-width: 800px;
     margin: 0 auto
