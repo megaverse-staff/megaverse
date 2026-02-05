@@ -805,9 +805,17 @@ t1b {
 
 /*** RP5 ***/
 
+@media screen and (max-width: 1400px) {
+    
+.rp_up {
+    width: 80% !important;
+}
+    
+}
+
 .rp_up {
     background-color: var(--neutralDark);
-    width: 600px;
+    width: 60%;
     padding-top: 5px;
     padding-bottom: 15px;
     padding-left: 10px;
@@ -1032,12 +1040,20 @@ t1b {
 
 /*** RP8 ***/
 
+@media screen and (max-width: 1400px) {
+    
+.rp_id {
+    width: 80% !important;
+}
+    
+}
+
 .rp_id>br {
     display: none;
 }
 
 .rp_id {
-    width: 600px;
+    width: 60%;
     border: 1px solid var(--neutralDarker);
     margin: 10px auto;
     border-radius: 20px;
