@@ -3,6 +3,67 @@
 
 /****** SIGNATURE ******/ 
 
+.sign_1 { display: flex; 
+        align-items: center; 
+        gap: 15px; 
+        justify-content: center; }
+
+.sign1 {
+    justify-content: center;
+    display: flex;
+}
+
+.sign1::before {
+    content: '';
+    width: 100px;
+    height: 140px;
+    background: var(--co-2);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    margin: 10px 0 0 -15px
+}
+
+.sign1 img {
+    width: 100px;
+    height: 140px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    position: relative
+}
+
+.sign1_titre {
+    font-family: var(--special-font);
+    font-size: 30px;
+    color: var(--black);
+    border-bottom: 4px solid var(--co-1);
+    transform: rotate(-3deg);
+    font-style: normal;
+    margin-bottom: 6px;
+}
+
+.sign1_txt {
+    width: 200px;
+    line-height: 12px;
+    text-align: justify;
+    padding: 5px;
+    letter-spacing: 1px;
+    font-size: 11px;
+    font-family: times;
+    font-style: italic;
+}
+
+.sign1_sub { font-family: var(--special-font); 
+            font-size: 30px; 
+            font-style: normal; 
+            margin-top: 6px; 
+            text-align: right;
+            color: var(--co-2);
+
+           }
+
 .sign2 {display:flex;width: 300px; margin-top: 40px;}
 .sign2_title{position: absolute; font-family: var(--special-font); font-size: var(--xl-size); line-height: 125px; color: var(--co-1); margin: -62px 0px 0px 0px; -webkit-transform: rotate(349deg); text-align: center;}
 .sign2_contour{border:1px dashed var(--co-2);border-radius:100%;width:120px;height:120px;padding:10px;z-index:201;position:relative;}
