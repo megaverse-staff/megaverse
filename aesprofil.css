@@ -1,6 +1,6 @@
 /* AES SPÉCIFIQUES AUX PROFILS, BUJO etc*/
 /* FIX ICONS PROFIL CP, TH */
-.pr_ctnr .cp {
+.pr_ctnr .cp, .pr_ctnr .sf {
     display: inline;
     width: auto !important;
     font-family: 'cappuccicons' !important;
