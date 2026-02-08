@@ -34,6 +34,13 @@
     height: 70px !important;
 }
 
+.pr_ctnr .heart {
+    display: flex;
+    width: 40px !important;
+    justify-content: center;
+    align-items: center;
+}
+
 /* BUJO */
 .userBujo {
 	font-size: var(--inter-size);
