@@ -28,6 +28,12 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.square1.th, .square1.cp, .square1.sf {
+    display: flex;
+    width: 70px !important;
+    height: 70px !important;
+}
+
 /* BUJO */
 .userBujo {
 	font-size: var(--inter-size);
