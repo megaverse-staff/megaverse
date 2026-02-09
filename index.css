@@ -623,6 +623,11 @@ background: linear-gradient(to bottom, var(--neutralDark) 50%, transparent), lin
     margin-bottom: 10px;
 }
 
+button#FAprofileBtn {
+    background: unset;
+  padding: 10px;
+}
+
 .USERNAME {
     font-size: var(--xl-size);
     color: white;
