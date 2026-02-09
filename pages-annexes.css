@@ -355,3 +355,49 @@ h2.u {
 
 .msg_bloc_2:has(.annexe) { display: flex; border-left: 1px solid var(--black); }
 
+/*** ------------------------------- ***/
+/*** PAGES DE RECHERCHES ----------- ***/
+
+/* RECHERCHE DE MESSAGE -----*/
+
+/* Conteneur d'un message*/
+.post_search {
+  display: grid;
+  grid-template-columns: 200px auto;
+  border-radius: 5px;
+  margin: 10px 0;
+  background: var(--neutral);
+}
+
+.post_search>div {
+  padding: 10px;
+}
+
+/* Colonne d'information du message */
+.postsearch_infos {
+  border-right: var(--border);
+  font-size: var(--little-size);
+}
+
+/* RECHERCHE DE SUJET -----*/
+/* Même CSS que la liste des sujets dans un forum */
+.topicslist_row {
+    display: flex;
+    background: var(--neutralDarker);
+    border-radius: var(--radius);
+    position: relative;
+  margin-bottom: 10px;
+}
+
+.topicslist_infos {
+    padding: 20px 25px;
+    flex: 1;
+    align-content: center;
+}
+
+.topicslist-stats {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
