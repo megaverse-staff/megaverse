@@ -25,12 +25,24 @@ display: none;
 
 .pr_title::before, .pr_title::after {color: var(--contrast)}
 
+/* TITRES DES PAGES --- ***/
+
 /* Utilisé pour des titres de sujets, blogs... */
 h2,
 .h2 {
-margin: 0;
-font-size: var(--large-size);
-font-weight: 700;
+  margin: 0;
+  font-size: var(--large-size);
+  font-weight: 700;
+}
+
+/* Utilisé pour des titres de sous-sections, petit encadré, ...*/
+h3,
+.h3 {
+  color: var(--contrastLight);
+  padding-bottom: 10px;
+  margin: 0;
+  font-size: var(--medium-size);
+  font-weight: bold;
 }
 
 /* Utilisé dans les profils & reglement catégories ... */
