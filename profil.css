@@ -671,6 +671,9 @@ prisma, .prisma {
     border: none !important;
 }
 
+/* champ partistaff label caché */
+#field_id40 label { display: none; }
+
 #field_id10 textarea {
     height: 213px;
     width: 100%;
