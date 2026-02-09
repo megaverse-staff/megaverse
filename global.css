@@ -797,4 +797,442 @@ div#compteur-mots {
 div.sceditor-dropdown a,
 div.sceditor-dropdown a:link,
 div.sceditor-dropdown label {
-	color: var(--textColor) !important;
+	color: var(--textColor) !important; }
+
+/*** ------------------------------- ***/
+/*** TEXTES, BALISES, ETC ---------- ***/
+
+/* Lien-tag des utilisateurs */
+.mentiontag {
+}
+
+/*** ------------------------------- ***/
+/*** ELEMENTS FLOTTANTS ------------ ***/
+
+/* Fenêtre popup "recherche" */
+.overview {
+    background: var(--neutralDark);
+    outline-offset: 5px;
+    outline: 1px solid var(--black);
+    border-radius: 5px;
+    border: var(--border);
+    padding: var(--spacing);
+    position: fixed !important;
+    top: 50% !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    text-align: center;
+}
+
+/* Bouton rechercher */
+.overview button[type='submit'] {
+    border-radius: var(--xs-radius);
+    margin-left: 5px;
+    background: linear-gradient(135deg, var(--neutralDark) 33%, var(--co-1), var(--co-2));
+    background-size: 350% 120%;
+    transition: .7s;
+    background-position: 1% 0%;
+    background-color: var(--co-1);
+      color: var(--black);
+}
+
+.overview button[type='submit']:hover 
+{background-position: 99% 0;}
+
+.overview .input-wrap input[type="text"] {
+width: 100%;
+}
+
+.overview .input-wrap {margin-bottom: 5px;display: flex;}
+
+.overview a {
+display: block;
+margin: var(--spacing) auto 0;
+padding: 2px 5px;
+border: 1px solid var(--co-1);
+border-radius: var(--xs-radius);
+width: fit-content;
+}
+
+/* Boîte "recherche un utilisateur" */
+#find_username {
+display: none;
+position: fixed;
+left: 50%;
+width: 450px;
+margin-left: -225px;
+top: 50%;
+margin-top: -125px;
+background-color: var(--neutral);
+padding: 10px;
+border: var(--border);
+border-radius: 5px;
+}
+
+/* Notiffi CSS */
+/* Cache la toolbar défaut */
+#fa_toolbar {
+display: none;
+}
+
+/* Bouton de notification */
+#notiffi_button {
+  cursor: pointer;
+  background: var(--co-2grad);
+  color: white;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+    font-size: var(--inter-size);
+    font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  position: fixed;
+  z-index: 99;
+  top: 58px;
+  right: 16px;
+  height: 35px;
+}
+
+/* Conteneur du nombre de notification non lues REMPLI */
+.unread_count {
+  position: relative;
+  background: var(--co-1);
+  border-radius: 5px;
+  width: 25px;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 12px;
+  scale: 1;
+  opacity: 1;
+  aspect-ratio: 1;
+  transition: scale ease-out .2s;
+}
+
+/* Conteneur du nombre de notification non lues VIDE */
+.unread_count:empty {
+  position: absolute;
+  scale: 0;
+  opacity: 0;
+  transition: all ease-out .2s;
+}
+
+
+
+/* Menu des notifications FERMÉ */
+#notiffi_panel {
+    --menuSize: 500px;
+    width: var(--menuSize);
+    position: fixed;
+    z-index: 11;
+    top: 49px;
+    height: 100%;
+    right: calc(var(--menuSize) * -1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    border-left: 1px solid var(--black);
+    padding: 15px;
+    padding-top: 60px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease .7s;
+    background: linear-gradient(to bottom, var(--neutralDark) 50%, transparent), linear-gradient(to bottom, var(--co-1) 65%, var(--co-1b));
+  padding-bottom: 60px;
+}
+
+/* Menu des notifications OUVERT */
+#notiffi_panel.open {
+  right: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Conteneur des notifications */
+.all_notifications {
+  width: 100%;
+  overflow: auto;
+  max-height: 100%;
+  background: var(--neutral);
+  padding: 10px;
+  border-radius: var(--radius);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  /* Désactive la barre de défilement dans le contenenur */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Conteneur des notifications VIDE */
+.no_notification {
+  text-align: center;
+  font-style: italic;
+}
+
+/* Conteneur du footer du menu
+  (voir toutes les notifications, marquer comme lu, tout supprimer) */
+.notiffi_manage {
+  width: 100%;
+      font-size: var(--inter-size);
+      text-align: center;
+}
+
+/* Conteneur des bouton d'action des notifications */
+
+  /* Bouton d'action */
+  button {
+    padding: 2px 10px;
+    background: var(--transparent);
+    border-radius: 5px;
+            font-size: var(--inter-size);
+  }
+
+/* Apparence d'une notification */
+.notif_text {
+    font-size: var(--little-size);
+}
+
+.notification {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: border .2s;
+  animation: notiffiFadeIn 0.3s ease-in-out;
+
+  /* Notification au survol */
+  &:hover {
+    border-color: var(--neutralDarker);
+  }
+}
+
+/* Animation d'apparition des notifications */
+@keyframes notiffiFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apparence d'une notification NON LUE */
+.notification.unread {
+  background-color: var(--neutral);
+}
+
+/* Conteneur des détails de la notification (avatar, icone) */
+.notif_details {
+  position: relative;
+  align-self: start;
+}
+
+/* Conteneur de l'avatar */
+.notif_avatar {
+  background: var(--neutral);
+  height: 55px;
+  border-radius: var(--radius);
+  aspect-ratio: 1;
+
+  /* Image de l'avatar */
+  & img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: var(--radius);
+  }
+}
+
+/* Icone du type de la notification */
+.notif_icon {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  background: var(--neutralDarker);
+  width: 18px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  font-size: 10px;
+}
+
+/* Icone lorsque la notification est non lue */
+.notification.unread .notif_icon {
+  color: var(--neutral);
+  background: var(--accentClr);
+}
+
+/* Conteneur du texte et la date de la notification */
+.notif_content {
+  width: 100%;
+}
+
+/* Date de la notification */
+.notif_time {
+  font-size: var(--little-size);
+  opacity: .8;
+  margin-top: 5px;
+}
+
+/* Bouton de suppression de la notification */
+.notif_close {
+  background: transparent;
+  align-self: start;
+  font-size: 18px;
+  line-height: 0;
+  opacity: 0;
+  border-radius: 100px;
+  aspect-ratio: 1;
+  padding: 2px;
+  transition: all .3s;
+}
+
+/* Affiche le bouton de suppression au survol de la notification */
+.notification:hover .notif_close {
+  opacity: 1
+}
+
+/* Alerte d'une notification */
+.notification.alert {
+  position: fixed;
+  width: 400px;
+  align-items: center;
+  z-index: 99;
+  bottom: 10px;
+  right: 10px;
+  background: var(--neutralDarker);
+  transform: translateY(100%);
+  opacity: 0;
+  filter: blur(5px);
+  transition: all .5s ease-in-out;
+}
+
+.notification.alert.up {
+  transform: translateY(0%);
+  opacity: 1;
+  filter: blur(0);
+  transition: all .5s ease-in-out;
+}
+
+.alert_close {
+  background: var(--neutral);
+  font-size: 18px;
+  line-height: 0;
+  border-radius: 100px;
+  aspect-ratio: 1;
+  padding: 2px;
+}
+
+/*** ------------------------------- ***/
+/*** ANNONCES DEFILANTES ----------- ***/
+
+/* Barre défilante */
+.module {
+  border-radius: 5px;
+  border: var(--border);
+  margin: 10px 0;
+  padding: 4px 8px;
+}
+
+/* REPONSE RAPIDE --- */
+/*supression de la mention "réponse rapide" */
+.quickreply div.h3 {
+  display: none;
+}
+
+/*centrer la réponse rapide*/
+.quickreply {
+}
+
+/* Retire le cadre de la réponse rapide pour les invités */
+#quickreply_content:empty {
+  display: none;
+}
+
+/*** --------------------------------------- ***/
+/*** BOUTONS D'INTERACTION ET BARRE DE TEXTE ***/
+
+/* CHAMPS DE TEXTE ---*/
+input:is([type="text"], [type="password"], .inputbox),
+textarea { border: none;
+    border-radius: 5px;
+    background: var(--neutralDark);
+    color: var(--textColor);
+    font-size: var(--normal-size);
+    padding: 2px 6px;
+}
+
+/* Au focus */
+:focus:is(input:is([type="text"], [type="password"], .inputbox), textarea) {
+  outline: none;
+  border: 1px solid var(--accentClr);
+}
+
+/* BOUTONS D'INTERACTION --- *
+ * Envoyer, prévisualiser, sauvegarder, aller,... */
+input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]), .button, button {
+      border: solid 1px var(--black);
+    text-decoration: none;
+    color: var(--black);
+    text-align: right;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, var(--neutralDark) 33%, var(--co-1), var(--co-2));
+    background-size: 350% 120%;
+    transition: .7s;
+    background-position: 1% 0%;
+    background-color: var(--co-1);
+  padding: 5px;
+}
+
+/* Au survol */
+:hover:is(input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]), .button) {
+  background-position: 99% 0;
+}
+
+/* Boutons désactivés */
+:disabled:is(input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]), .button) {
+  opacity: .5;
+  filter: saturate(1);
+  cursor: not-allowed;
+}
+
+:disabled:hover:is(input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]), .button) {
+  color: inherit;
+}
+
+.submit-buttons {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.quickmod {
+  margin-bottom: 20px;
+}
+
+/* MENUS DEROULANTS --- */
+select {
+    background: var(--neutral);
+    border: none;
+    border-radius: var(--radius);
+    font-size: var(--normal-size);
+    padding: 0 7px;
+    color: var(--textColor);
+}
+
+select:focus-visible {
+  outline: 1px solid var(--accentClr);
+}
