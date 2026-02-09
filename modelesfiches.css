@@ -2083,3 +2083,58 @@ lett11 { font-size: var(--xl-size); line-height: 115%; font-family: var(--specia
         width: 60%;
     }
 }
+
+/*responsive nouvelle fiche*/
+@media screen and (max-width: 1200px) { 
+  .fiche4_grille {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+}
+  
+  .fiche4_grille2 {
+    display: flex !important;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+  
+  .fiche4_infos {
+    width: 100%;
+}
+  
+  .fiche4_avatar {
+    align-self: center;
+}
+  
+  .fiche4_avatar img {
+    width: 250px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+  
+  .grille_fichong {
+    display: flex !important;
+    flex-direction: column;
+}
+}
+
+  @media screen and (max-width: 430px) { 
+  .fiche4_etiquette {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+}
+  
+  .fiche4_avatar img {
+    height: 150px;
+    width: 150px;
+}
+  
+  .fiche4_infos {
+    display: flex !important;
+    flex-direction: column;
+}
+  
+  
+}
