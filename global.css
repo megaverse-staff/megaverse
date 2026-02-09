@@ -1236,3 +1236,163 @@ select {
 select:focus-visible {
   outline: 1px solid var(--accentClr);
 }
+
+
+/*** ------------------------------- ***/
+/*** ELEMENTS ESTHETIQUES ---------- ***/
+
+/* Contenur général qui sert généralement de fond et/ou de contour*/
+.container {
+  background: var(--neutral);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Barre de séparation */
+.separator {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid var(--neutralDark);
+  clear: both;
+  height: 1px;
+  width: 100%;
+}
+
+hr {
+  border: none;
+  border-top: var(--border);
+}
+
+/* Titre d'un toggle */
+summary {
+  cursor: pointer;
+}
+
+/* Conteneur moins large (les historiques des messages essentiellement) */
+.wrapped {
+  width: 80%;
+  margin: 10px auto;
+  clear: both;
+}
+
+/* Image/avatar réduit */
+.mini_img img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+  margin-right: 10px;
+  background: var(--neutralDark);
+}
+
+/* Permet d'aligner un élément à droite ou à gauche */
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Barre de gestion 
+ * Contient des boutons ou des liens spéciaux */
+.links_bar {
+margin: 25px 0;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    clear: both;
+    align-items: center;
+    gap: 5px;
+    background: var(--neutralDark);
+    display: flex;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: var(--little-size);
+}
+
+/* problème alignement bas de page sujet*/
+.links_bar .buttons {
+   margin: unset; 
+}
+
+.links_bar.linkspa, .links_bar.linksqeel {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr 1fr;
+    padding: 3px;
+    text-transform: lowercase;
+}
+
+.links_bar.linkspa a, .links_bar.linksqeel a {
+    text-align: center;
+    font-size: var(--little-size);
+}
+
+/* supprime si vide */
+.links_bar:empty {
+  display: none;
+}
+
+/* Lien spécial mis en avant */
+.specials_links a,
+a.specials_links {
+  background: var(--neutralDark);
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+/* Suppression des liens vides */
+.specials_links a:empty,
+a.specials_links:empty {
+  display: none;
+}
+
+/*** ------------------------------- ***/
+/*** PAGINATIONS -------------------- ***/
+
+.pagination {
+    flex-grow: 1;
+    display: flex;
+    gap: 3px;
+  align-items: center;
+}
+
+/*lien unique vers les pages numérotées*/
+.pagination span a {
+    border: solid 1px var(--black);
+    padding: 0px 7px;
+    background-color: var(--neutralDarker);
+    border-radius: var(--xs-radius);
+}
+
+/*survol des liens uniques des pages*/
+.pagination span a:hover {
+  font-weight: 600;
+}
+
+/*lien actif : page sur laquelle vous vous trouvez */
+.pagination span strong {
+padding: 0px 7px;
+    background: var(--black);
+    color: var(--white);
+    border-radius: var(--xs-radius);
+    border: solid 1px var(--white) !important;
+}
+
+span.page-sep {
+    font-size: 0;
+      margin-left: 2px;
+}
+
+/*suppression de l'image-lien "aller à la page suivante" */
+.page-topic span a:last-child,
+.pag-img {
+  display: none;
+}
+
+
