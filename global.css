@@ -1,4 +1,139 @@
- /*BODY, INPUTS, CODES/SPOILERS/HIDE...*/
+ /****** ------------------------------------------------------------------------------
+ ****** GÉNÉRALITÉS ------------------------------------------------------------------ 
+ ****** Sélecteurs généraux s'appliquant à plusieurs reprises sur tout le forum ******/
+
+/* SCROLL ---*/
+
+/* S'applique à TOUS les éléments du forum*/
+* {
+  box-sizing: border-box;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: var(--neutralDarker) var(--co-gradient);
+	}
+}
+
+::-webkit-scrollbar {width: 6px;
+	height: 2px;}
+
+/* Rail */
+::-webkit-scrollbar-track-piece {background-color: var(--base-1);}
+
+/* Poignée */
+::-webkit-scrollbar-thumb {background: var(--co-gradient);
+	border: 1.5px solid var(--base-1);}
+
+
+/*** ------------------------------- ***/
+/*** TOUTES LES PAGES --------------- ***/
+
+/* FOND DU FORUM ---*/
+
+body:not(#sceditor_smilies body) {
+    margin: 0 !important;
+    font-family: var(--font);
+    font-size: var(--normal-size);
+    line-height: 1.5 !important;
+    color: var(--textColor);
+  background: var(--neutralDark);
+    text-align: justify;
+}
+
+/* STRUCTURE PRINCIPALE ---*/
+.main_forum {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--texture), var(--base-gradient);
+    background-size: 50px, cover;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+  min-width: 0;
+  min-height: 100vh;
+  z-index: 0;
+}
+
+/* Conteneur de toutes les sous-sections
+ * comme les encadrés d'options, de rappel, etc... */
+.panel {
+    background: var(--neutral);
+    border-radius: 5px;
+    padding: var(--spacing);
+  margin-bottom: 10px;
+}
+
+.panel#postingbox {
+    background: none;
+}
+
+/* BOUTON CHANGEMENT DE THEME ---*/
+@media (prefers-color-scheme: dark) {
+  .color-scheme-toggle .dark {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .color-scheme-toggle .light {
+    display: none;
+  }
+}
+
+.color-scheme-toggle,
+[data-color-scheme="light"] .color-scheme-toggle .dark,
+[data-color-scheme="dark"] .color-scheme-toggle .light {
+  display: block;
+  width: 100%;
+}
+
+[data-color-scheme="dark"] .color-scheme-toggle .dark,
+[data-color-scheme="light"] .color-scheme-toggle .light {
+  display: none;
+}
+
+.color-scheme-toggle {
+    background-color: var(--neutralDark);
+    font-size: 1.6rem;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    text-align: center;
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px !important;
+      margin-bottom: 12px;
+  border: 1px solid var(--black);
+}
+
+.color-scheme-toggle:hover {
+  color: var(--accentClr);
+}
+
+/*** ----------------------------------- ***/
+/*** LIENS ET TEXTE -------------------- ***/
+
+/* LIENS DU FORUM --- */
+a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--contrast);
+}
+
+/* Emoji mis par défaut de FA
+ * Les réduire les rend moins horribles à voir */
+.emojione {
+  width: 19px !important;
+}
+
+/*BODY, INPUTS, CODES/SPOILERS/HIDE...*/
 /*** ------------------------------- ***/
 
 /* BALISES DE MESSAGE : spoiler, code, quote... */
