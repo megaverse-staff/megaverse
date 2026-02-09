@@ -401,3 +401,103 @@ h2.u {
     margin-top: 5px;
 }
 
+/*** ------------------------------- ***/
+/*** EDITION DE PROFIL ------------- ***/
+
+/* Onglets dans la modification de profil */
+#tabs ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 10px;
+}
+
+/*onglet*/
+#tabs li {
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-size: var(--small-size);
+    letter-spacing: 1px;
+    color: var(--black);
+}
+
+/* Onglet selectionné */
+#tabs li.activetab {
+background: var(--co-gradient);
+    border: var(--border);
+    border-radius: 5px;
+}
+
+/* onglet au survol */
+#tabs li:hover {
+    background: var(--co-1);
+    border-radius: 5px;
+    border: 1px solid var(--black);
+}
+
+/* Suppression de l'onglet "amis et ignorés" */
+div#tabs li:nth-child(5) {
+  display: none;
+}
+
+.profil_preferences dl {
+  grid-template-columns: 40% auto;
+}
+
+.profil_editavatar dl {
+    grid-template-columns: 600px 200px;
+    margin: 60px auto;
+    justify-content: center;
+}
+
+.profil_editavatar .block {
+    display: block;
+    transition: none;
+    text-transform: lowercase;
+    color: var(--textColor);
+    background: var(--neutral);
+    text-align: justify;
+}
+
+.profil_preferences .italic {
+  font-size: var(--little-size);
+}
+
+.profil_editavatar .flex {
+    display: flex;
+  gap: 20px;
+}
+
+/*** BROUILLON ***/
+
+.mobile-visible.lastpost-infos {
+    display: none;
+}
+
+td.mobile-visible {
+    display: none;
+}
+
+/* EDITER SIGNATURE ---*/
+#parent_editor_simple>#smiley-box {
+  float: left;
+  /* float: right; -- pour smileys à droite */
+}
+
+#parent_editor_simple #message-box {
+  margin-left: 240px;
+  /* margin-right: XXXpx -- pour smileys à droite */
+}
+
+#parent_editor_simple #message-box>br {
+  display: none;
+}
+
+#parent_editor_simple #message-box>#textarea_content {
+  width: 100% !important;
+}
+
+.panel.row2.sig {
+  text-align: center;
+  margin-top: 10px;
+}
+
