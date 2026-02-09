@@ -2436,3 +2436,201 @@ flex-grow: 100;
 }
 
 
+/*** ------------------------------- ***/
+/*** EDITEUR DE TEXTE -------------- ***/
+/* Editeur de texte */
+.sceditor-container {
+  border: var(--border) !important;
+  background-color: var(--neutral) !important;
+}
+
+/* Barre d'outils de l'éditeur de texte*/
+div.sceditor-toolbar {
+  background: var(--neutralDarker) !important;
+  border-bottom: var(--border) !important;
+}
+
+/* Conteneur des groupes d'outils */
+div.sceditor-group {
+  background: var(--neutralDark) !important;
+  border-bottom: var(--border) !important;
+}
+
+/* Bouton d'un outil */
+a.sceditor-button {
+  height: 26px !important;
+  /*ne pas retirer*/
+  width: 26px !important;
+  /*ne pas retirer*/
+}
+
+/* Bouton d'un outil au survol ou actif*/
+.sceditor-button.active,
+.sceditor-button:active,
+.sceditor-button:hover,
+.sceditor-button.hover {
+  background: var(--neutral) !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: 1px solid var(--neutralDarker);
+}
+
+/* Conteneur de la zone de texte */
+.sceditor-container iframe,
+.sceditor-container textarea {
+  background-color: var(--neutral) !important;
+  /*ne pas supprimer*/
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 5px !important;
+  /*ne pas supprimer*/
+  min-height: 250px !important;
+}
+
+.sceditor-container textarea:focus {
+  outline: none
+}
+
+/*Boîte Smiley*/
+html#sceditor_smilies,
+body#sce_smilies_body {
+  background: transparent !important;
+}
+
+
+
+/*** ------------------------------- ***/
+/*** SONDAGE ----------------------- ***/
+
+.poll {
+  background: var(--neutral);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.head_poll {
+  padding: 10px;
+  border-bottom: 1px solid var(--neutralDark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poll_list {
+  display: grid;
+  grid-template-columns: 220px auto;
+}
+
+.poll_option {
+  padding: 10px 20px 0 10px;
+  border-right: 1px solid var(--neutralDark);
+  text-align: right;
+}
+
+.poll_vote {
+  padding: 10px 10px 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.poll_send {
+  margin-left: 220px;
+  padding: 20px 10px 20px 20px;
+  border-left: 1px solid var(--neutralDark);
+}
+
+.poll_vote:nth-child(2),
+.poll_option:first-child {
+  padding-top: 20px;
+}
+
+.votes-users-list {
+  justify-content: start;
+  margin: 20px 0 0;
+}
+
+/*Boîte Smiley*/
+body#sce_smilies_body {
+	background: transparent !important;
+}
+
+div.sceditor-container,
+body div.sceditor-group,
+a.sceditor-button:hover,
+a.sceditor-button.hover {
+	background: none !important;
+	border: none !important;
+	box-shadow: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	border-radius: var(--radius) !important;
+}
+
+#quickEmojInternal {
+	width: 240px !important;
+	height: 250px !important;
+	min-height: auto !important;
+	border-radius: var(--xs-radius);
+	background: var(--neutralDarker);
+}
+
+#smilies_categ select {
+    background: var(--co-gradient);
+    border: none;
+    color: white;
+    text-transform: lowercase;
+    width: 99%;
+    text-align: center;
+    border-radius: var(--radius);
+}
+
+#smileyContainer iframe {
+    height: 581px;
+    background: var(--neutralDarker);
+    padding: var(--spacing);
+    border-radius: var(--radius);
+}
+
+#sceditor_smilies {
+	color: gray !important;
+	outline: none !important;
+}
+
+#smilies_categ select {
+	width: 100%;
+	background: transparent;
+	border: none;
+	padding-bottom: 5px;
+	color: gray;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 1px;
+	border-bottom: 1px solid;
+}
+/*** ------------------------------- ***/
+/*** PAGE D'ENVOI D'UN MESSAGE ----- ***/
+
+.message-edition {
+  display: flex;
+  flex-direction: row;
+  /* flex-direction: row-reverse; -- pour smileys à droite */
+  gap: 15px;
+  /*espace entre la zone de texte et la boîte à smileys*/
+}
+
+/* Prévisualisation d'un message */
+#preview {
+background: var(--neutral);
+    padding: 10px;
+    border: var(--border);
+    border-radius: 5px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+#preview .inner .postbody {
+    margin: var(--spacing) !important;
+}
+
+
