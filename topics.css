@@ -599,6 +599,8 @@ object-fit: cover;
   justify-content: center;
   margin-top: 10px;
   margin-bottom: 20px;
+	position: relative;
+	z-index: 10;
 }
 
 .poster-count {
@@ -629,7 +631,6 @@ object-fit: cover;
 
 .poster-more-list {
   display: none;
-	z-index: 10px;
 }
 
 .poster-more {
