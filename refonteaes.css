@@ -209,7 +209,7 @@ margin-top: 5px;
 }
 .sub-4 { position: relative; font-size: var(--small-size); line-height: var(--inter-size); font-style: italic; border-top: 1px solid var(--white); border-bottom: 1px solid var(--white); margin: 0 30px; padding: 5px 0; }
 .sub-4::before { content: '\00201C'; position: absolute; left: -35px; font-family: var(--special-font); font-size: var(--xxl-size); font-style: normal; color: var(--co-1); }
-.sub-4::after { content: '\00201D'; position: absolute; right: -25px; bottom: -25px; font-family: var(--special-font); font-size: var(--xxl-size); line-height: 0; font-style: normal; color: var(--co-1); }
+.sub-4::after { content: '\00201E'; position: absolute; right: -25px; bottom: 15px; font-family: var(--special-font); font-size: var(--xxl-size); line-height: 0; font-style: normal; color: var(--co-1); }
 
 .tit, tit {color: var(--tit)} 
 .chr, chr {color: var(--chr)}
