@@ -1687,7 +1687,7 @@ t1b {
 .title10 {
     font-family: var(--special-font);
     font-size: var(--xl-size);
-    font-weight: 700;
+    font-weight: 400;
     color: var(--co-2);
 }
 
