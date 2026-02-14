@@ -1541,15 +1541,7 @@ content:'\eaa2'; font-family: var(--font-ic);
 @media screen and (max-width: 1070px) {
 .qeel { display: flex !important;
     flex-direction: column !important; } 
-}
-
-@media screen and (max-width: 1070px) {
-.qeel-left span {
-   display: none !important;
-}
-}
-
-@media screen and (max-width: 1070px) {
+	
 .dernier_inscrit {
    margin: 16px !important;
 }
