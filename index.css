@@ -2220,7 +2220,7 @@ position: absolute; }
     align-items: center;
     background: transparent;
     border: none;
-	height: unset !important;
+	min-height: unset !important;
 }
 
 #c2 .forum_details, #c1 .forum_details, #c7 .forum_details {
