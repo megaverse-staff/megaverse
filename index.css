@@ -1851,7 +1851,7 @@ height: 100%;}
 
 .forum_links { display: none; }
 
-.forum_lastpost.lastpost { width: 100%; height: -webkit-fill-available; background: var(--neutral); padding: var(--spacing); border: 1px solid var(--black); border-radius: var(--radius); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; justify-content: center;}
+.forum_lastpost.lastpost { width: 100%; min-height: 212px; background: var(--neutral); padding: var(--spacing); border: 1px solid var(--black); border-radius: var(--radius); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; justify-content: center;}
 
 .forum_icon {
     display: none;
