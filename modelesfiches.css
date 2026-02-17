@@ -1941,6 +1941,251 @@ t9 {
     padding-right: 10px;
 }
 
+/*MODÈLE 15 */
+.dope_rp1 {
+  width: 60%;
+  margin: 0 auto;
+  background: var(--neutralDarker);
+  padding: 10px;
+  border-radius: var(--radius);
+}
+
+.dope_rp {
+  background: var(--co-gradient);
+}
+
+headbar {
+  position: relative;
+  height: 150px;
+  background: var(--co-gradient);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 5px;
+}
+
+headbar span {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  display: block;
+  margin: -100px 0 0 -100px;
+  width: 200px;
+  height: 200px;
+  font-size: 100px;
+  line-height: 200px !important;
+  text-align: center;
+  color: white;
+  opacity: 0.5;
+}
+
+headbar d {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0 10px;
+  width: auto;
+  height: 25px;
+  overflow: hidden;
+  font: 200 italic 13px/25px var(--font-2);
+  letter-spacing: 0;
+  text-transform: lowercase;
+  background: var(--neutral);
+  border-radius: 5px;
+  z-index: 11;
+  color: var(--black);
+}
+
+headbar l {
+  flex: 0 0 auto;
+  margin: 0;
+  font: 400 40px/40px var(--special-font);
+  letter-spacing: 0;
+  text-transform: uppercase;
+  background: var(--black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 11;
+}
+
+spacebar {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  background: var(--neutralDark);
+}
+
+spacebar bar {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--white);
+}
+
+.dope_icon {
+  position: absolute;
+  top: 30px;
+  right: -1px;
+  transform: translateY(-50%);
+  flex: 0 0 auto;
+  width: 120px;
+  height: 80px;
+  background: var(--neutralDarker);
+  border-radius: .5rem 0 0 .5rem;
+}
+
+.dope_icon img {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  margin: 10px 10px;
+  border-radius: var(--radius);
+}
+
+.dope_bar {
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  background: var(--neutralDarker);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.dope_bar icon {
+  flex: 0 0 auto;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  background: url('https://2img.net/i.imgur.com/X93fPpY.gif') center center no-repeat;
+  background-size: cover;
+}
+
+.dope_bar .dl {
+  flex: 0 0 auto;
+  margin: 0;
+  font: 400 20px/20px var(--special-font);
+  letter-spacing: 0;
+  text-transform: uppercase;
+  background: var(--co-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dope_bar line {
+  flex: 1 0 auto;
+  margin: 0;
+  width: auto;
+  height: 1px;
+  background: var(--co-1);
+}
+
+.dope_bar links {
+  flex: 0 0 auto;
+  margin: 0;
+  width: auto;
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+}
+
+.dope_bar links time {
+  background: var(--co-gradient);
+  border-radius: var(--radius);
+  padding: 2px 5px;
+  color: var(--contrast);
+  font-size: var(--small-size);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.dope_deco {
+  display: flex;
+  gap: 20px;
+}
+
+.dope_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+  gap: 10px;
+  width: 150px;
+  background: var(--co-2grad);
+  border-radius: var(--radius);
+}
+
+.dope_txt {
+  background: radial-gradient(at left top, var(--co-2), var(--co-1) 50%, 70%, var(--neutral));
+  padding: 10px;
+}
+
+.block_dp {
+  background: var(--neutralDarker);
+  border-radius: var(--radius);
+  padding: var(--spacing);
+}
+
+.dope_txt .desc {
+  height: 400px;
+}
+
+@media screen and (max-width: 1600px) {
+  .dope_rp1 {
+    width: 80% !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .dope_rp1 {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .dope_content {
+    display: none !important;
+  }
+
+  .dope_bar links {
+    flex-direction: column !important;
+    width: 100%;
+  }
+
+  .dope_bar links time {
+    width: 100%;
+  }
+
+  headbar l {
+    font: 400 24px / 30px var(--special-font);
+  }
+
+  headbar d {
+    margin-top: 60px;
+  }
+}
+
+/* MODÈLE 16*/ 
+
+
 /* MODELE RP TRANSFERT */
 
 .bookrp { position: relative; display: flex; max-width: 870px; margin: 0 auto; } 
