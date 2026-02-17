@@ -1175,6 +1175,15 @@ a.fa-mention {
 /*responsive*/
 @media screen and (max-width: 890px) {
 
+	.msg_bloc_1 {
+    display: flex !important;
+    flex-direction: column;
+}
+
+	.bloc_left_1 {
+    border-right: 1px solid var(--black);
+}
+
   .msg_bloc_2 {
     display: flex !important;
     flex-direction: column;
