@@ -441,17 +441,6 @@ lab-2 {
 	padding: 0 6px 1px;
 }
 
-@media screen and (max-width: 1080px) { 
-  .fiche3{flex-direction: column;} 
-  
-  .fiche3 > .block:last-of-type {
-    width: 100% !important;
-    margin: 0 !important; }
-    
-  .fiche3 > .block:first-of-type {
-    width: 100% !important; }
-  }
-
 .fiche3 more {
 	position: absolute;
 	top: 15px;
@@ -513,6 +502,22 @@ lab-2 {
 	border-radius: var(--radius) var(--radius) 0 0;
 	object-fit: cover;
 	margin-bottom: 0;
+}
+
+@media screen and (max-width: 1080px) { 
+  .fiche3{flex-direction: column;} 
+  
+  .fiche3 > .block:last-of-type {
+    width: 100% !important;
+    margin: 0 !important; }
+    
+  .fiche3 > .block:first-of-type {
+    width: 100% !important; }
+  }
+
+@media screen and (max-width: 450px) { 
+.fiche3 little-tx {
+    width: 100%; }
 }
 
 /*** RP1 ***/
