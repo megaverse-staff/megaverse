@@ -1342,6 +1342,23 @@ t1b {
     overflow: hidden;
 }
 
+/* RESPONSIVE */
+
+@media screen and (max-width: 430px) {
+
+	.rp_transp .title t1 { font-size: 60px !important; }
+ .rp_transp .rp_content {
+    margin: unset !important;
+}
+	.rp_transp .sep details {
+    width: 200px !important;
+}
+
+.rp_transp blockquote {
+    margin: 0 !important;
+}
+}
+
 /*** RP10 ***/
 
 .rpevent {
