@@ -1158,6 +1158,7 @@ text-align: justify;
 @media screen and (max-width: 480px) {
   .slider-page { grid-template-columns: repeat(2, 1fr) !important;}
 	.slider-page .block_grad b { z-index: 2; }
+	.guide-links { flex-direction: column !important; gap: 4px !important; }
 }
 
 /*PAGE D'ACCUEIL*/
