@@ -1203,6 +1203,9 @@ a.fa-mention {
 }
 
 @media screen and (max-width: 430px) {
+
+	.post_message > div:not(.sepa_sign):not(.msg_tools):not(.like_button):not(fa_like_div):not(.signature_div) {     padding: 20px !important; }
+	
   .msg_rpgiste_infos {
     align-items: center;
     flex-direction: column;
