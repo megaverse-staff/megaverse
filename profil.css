@@ -955,6 +955,18 @@ div#field_id1, div#field_id3, div#field_id4, div#field_id-4, div#field_id-6, div
     flex-direction: column;
     text-align: center;
 }
+	#userInfos, #userRpg {
+    display: flex !important;
+    flex-direction: column;
+}
+	.profile_avatar .profile_field {
+    flex-direction: row !important;
+}
+	.profile_field {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+}
   }
 
 /*** ------------------------------- ***/
