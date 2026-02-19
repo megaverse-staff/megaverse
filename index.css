@@ -2787,7 +2787,7 @@ font-size: var(--large-size);
   background: transparent;
   border: none;  
 }
-#c4 .forum_desc .desc, #c5 .forum_desc .desc, #c8 .forum_desc .desc { height: 100px; }
+#c4 .forum_desc .desc, #c5 .forum_desc .desc, #c8 .forum_desc .desc { height: 120px; }
 
 #c4 .forum_rp_flex, #c5 .forum_rp_flex, #c8 .forum_rp_flex { display: flex; flex-direction: row; gap: 40px; width: 100%; justify-content: space-around; z-index: 10; align-items: center; }
 #c4 .forum_lastpost.lastpost, #c5 .forum_lastpost.lastpost, #c8 .forum_lastpost.lastpost  { 
@@ -2799,6 +2799,7 @@ font-size: var(--large-size);
       background: none;
     border: none;
   flex-direction: row;
+	min-height: auto !important;
 }
 #c4 .forum_avatar, #c5 .forum_avatar, #c8 .forum_avatar  { width: 80px; height: 80px; }
 
