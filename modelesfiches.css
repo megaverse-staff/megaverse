@@ -2149,7 +2149,7 @@ spacebar bar {
   height: 400px;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1750px) {
   .dope_rp1 {
     width: 80% !important;
   }
