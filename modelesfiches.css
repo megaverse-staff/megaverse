@@ -2348,7 +2348,7 @@ spacebar bar {
 
 /* état ouvert */
 .bxd-rp1_toggle:checked+.bxd-rp1_tagbtn {
-  background: var(--co-gradient);
+  background: var(--co-1grad);
   color: var(--black);
   border-color: transparent;
 }
