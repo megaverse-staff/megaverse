@@ -2424,7 +2424,7 @@ lett11 { font-size: var(--xl-size); line-height: 115%; font-family: var(--specia
     }
 }
 
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 1600px) {
     .fiche4 {
         width: 80%;
     }
