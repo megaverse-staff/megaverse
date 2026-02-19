@@ -2185,6 +2185,265 @@ spacebar bar {
 }
 
 /* MODÈLE 16*/ 
+.bxd-rp1_ctnr {
+  width: 85%;
+  background-color: var(--neutral);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  border-radius: 5px;
+  padding: var(--spacing);
+}
+
+.bxd-rp1_headerbg {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  top: 0;
+  -webkit-mask-image: url(https://i.ibb.co/SDBb2c1K/test-bg.webp);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center bottom;
+  left: 0;
+}
+
+.bxd-rp1_headerbg div {
+  height: 100%;
+  width: 100%;
+  background: var(--co-gradient);
+}
+
+.bxd-rp1_header {
+  gap: var(--spacing);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+  justify-content: center;
+}
+
+/* planète */
+.planet_ctnr {
+  width: 30%;
+  justify-items: center;
+}
+
+.rp-planetWrap {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: grid;
+  place-items: center;
+}
+
+.rp-orbit {
+  position: absolute;
+  inset: 0;
+  border-radius: 100%;
+  border: 1px solid var(--black);
+  opacity: .85;
+  animation: rp-orbit 120s infinite linear;
+}
+
+.rp-orbit::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background: var(--black);
+  top: 8px;
+  left: 50%;
+  transform: translateX(40px);
+}
+
+@keyframes rp-orbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rp-planet {
+  position: relative;
+  z-index: 2;
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  clip-path: circle(99%);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 0px 45px rgba(18, 14, 14, 0.2);
+}
+
+.bxd-rp1_header_content {
+  width: 70%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+}
+
+.bxd-rp1_tit {
+  font-weight: 200;
+  margin: 0;
+  font-family: var(--special-font);
+  font-size: var(--xl-size);
+  line-height: 2rem;
+  color: var(--black);
+}
+
+.bxd-rp1_sub {
+  font-size: var(--little-size);
+  font-weight: 400;
+  margin-top: 5px;
+  font-family: var(--font-2);
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.bxd-rp1_rpcontent {
+  padding: 15px;
+  max-height: 460px;
+  overflow-y: auto;
+  background-color: var(--neutralDark);
+  margin: 20px;
+  position: relative;
+  text-transform: none;
+  font-weight: normal;
+  text-align: justify;
+  border-radius: var(--radius);
+}
+
+/* TAGS icônes + infobulles */
+.bxd-rp1_tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.bxd-rp1_tag {
+  position: relative;
+}
+
+/* checkbox invisible (toggle) */
+.bxd-rp1_toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* bubble cachée par défaut */
+.bxd-rp1_bubble {
+  display: none;
+}
+
+/* état ouvert */
+.bxd-rp1_toggle:checked+.bxd-rp1_tagbtn {
+  background: var(--co-gradient);
+  color: var(--black);
+  border-color: transparent;
+}
+
+.bxd-rp1_toggle:checked+.bxd-rp1_tagbtn+.bxd-rp1_bubble {
+  display: block;
+}
+
+/* accessibilité focus clavier */
+.bxd-rp1_tagbtn {
+  outline: none;
+}
+
+.bxd-rp1_toggle:focus-visible+.bxd-rp1_tagbtn {
+  outline: 2px solid var(--co-1);
+  outline-offset: 2px;
+}
+
+.bxd-rp1_tagbtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+  background: var(--neutralDark);
+  border: 1px solid var(--neutral);
+  color: var(--textColor);
+  cursor: pointer;
+  user-select: none;
+  transition: .2s ease;
+  text-decoration: none;
+}
+
+.bxd-rp1_tagbtn span {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.bxd-rp1_taglink {
+  display: grid;
+}
+
+.bxd-rp1_taglink:hover {
+  transform: translateY(-1px);
+}
+
+.bxd-rp1_bubble {
+  position: absolute;
+  top: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 170px;
+  max-width: 260px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--neutralDarker);
+  border: 1px solid var(--neutral);
+  color: var(--contrast);
+  font-size: var(--inter-size);
+  line-height: 1.35;
+  box-shadow: var(--shadowBox);
+  z-index: 50;
+}
+
+.bxd-rp1_bubble b {
+  font-family: var(--font-2);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-size: var(--small-size);
+}
+
+.bxd-rp1_bubble::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: var(--neutralDarker);
+  border-left: 1px solid var(--neutral);
+  border-top: 1px solid var(--neutral);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.bxd-rp1_ctnr::after {
+  content: '';
+  height: 15px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: var(--co-gradient);
+}
+
+/*MODÈLE 17*/
 
 
 /* MODELE RP TRANSFERT */
