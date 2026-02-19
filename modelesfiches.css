@@ -2387,12 +2387,16 @@ spacebar bar {
   line-height: 1;
 }
 
+.bxd-rp1_tagbtn:hover {
+  transform: translateY(-0.25em);
+}
+
 .bxd-rp1_taglink {
   display: grid;
 }
 
 .bxd-rp1_taglink:hover {
-  transform: translateY(-1px);
+  transform: translateY(-0.25em);
 }
 
 .bxd-rp1_bubble {
