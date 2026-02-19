@@ -750,6 +750,12 @@ div.post_row:last-of-type {
     color: var(--black);
 }
 
+.post_pseudo {
+    font-family: var(--special-font);
+    font-weight: 300 !important;
+    font-size: var(--xl-size);
+}
+
 .post_pseudo a {
     font-family: var(--special-font);
     font-weight: 300 !important;
