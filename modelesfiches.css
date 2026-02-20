@@ -2447,6 +2447,12 @@ spacebar bar {
   background: var(--co-gradient);
 }
 
+@media screen and (min-width: 1600px) {
+  .bxd-rp1_ctnr {
+    width: 60% !important;
+  }
+}
+
 /*MODÈLE 17*/
 
 
