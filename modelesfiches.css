@@ -2459,6 +2459,7 @@ spacebar bar {
   }
 	.bxd-rp1_header {
     flex-direction: column !important;
+		gap: 0 !important;
 }
 	.bxd-rp1_rpcontent {
     margin: 0 !important;
