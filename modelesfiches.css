@@ -2186,7 +2186,7 @@ spacebar bar {
 
 /* MODÈLE 16*/ 
 .bxd-rp1_ctnr {
-  width: 85%;
+  width: 80%;
   background-color: var(--neutral);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
   overflow: hidden;
