@@ -2447,10 +2447,22 @@ spacebar bar {
   background: var(--co-gradient);
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1800px) {
   .bxd-rp1_ctnr {
     width: 60% !important;
   }
+}
+
+@media screen and (max-width: 430px) {
+  .bxd-rp1_ctnr, .bxd-rp1_header_content {
+    width: 100% !important;
+  }
+	.bxd-rp1_header {
+    flex-direction: column !important;
+}
+	.bxd-rp1_rpcontent {
+    margin: 0 !important;
+}
 }
 
 /*MODÈLE 17*/
