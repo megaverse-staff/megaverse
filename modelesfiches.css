@@ -2700,12 +2700,6 @@ lett11 { font-size: var(--xl-size); line-height: 115%; font-family: var(--specia
     height: 600px;
 }
 
-@media screen and (min-width: 1500px) {
-    .fiche4 {
-        width: 60%;
-    }
-}
-
 @media screen and (min-width: 1600px) {
     .fiche4 {
         width: 80%;
