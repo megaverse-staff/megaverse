@@ -934,12 +934,11 @@
 
 .lien_card {
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: block;
     align-items: center;
     overflow: hidden;
     border-radius: var(--radius);
-    padding: 16px;
+    padding: 12px;
     height: 100%;
     background: var(--neutralDark);
     isolation: isolate;
@@ -1009,7 +1008,7 @@
 
 .lien_title {
     font-family: var(--special-font);
-    font-size: 32px;
+    font-size: 30px;
     line-height: 100%;
     letter-spacing: -1px;
     color: rgba(255, 255, 255, .92);
