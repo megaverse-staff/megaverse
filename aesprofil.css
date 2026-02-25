@@ -920,3 +920,169 @@
 /* liens profil mel #1 */
 
 .nvlnprliens img {width:80px; height:80px; border-radius: 100%; object-fit:cover; box-shadow: 10px 0 0 var(--co-1);} .nvlnliens { padding:10px; width: 190px;} .nvlnliens h3, .nvlnliens h4 { width: 100%; display: inline-grid;} .nvlnliens i { width: 100%; text-align: center; display: inline-table; }
+
+
+/* liens profil mel #2 */
+
+.liens_cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+    margin: 16px auto;
+}
+
+.lien_card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    overflow: hidden;
+    border-radius: var(--radius);
+    padding: 16px;
+    height: 100%;
+    background: var(--neutralDark);
+    isolation: isolate;
+}
+
+.lien_card.co-1 {
+    --cA: var(--co-1);
+    --cB: var(--co-1b, var(--co-2));
+}
+
+.lien_card.co-1b {
+    --cA: var(--co-1b, var(--co-1));
+    --cB: var(--co-1c, var(--co-2));
+}
+
+.lien_card.co-1c {
+    --cA: var(--co-1c, var(--co-1));
+    --cB: var(--co-1b, var(--co-2));
+}
+
+.lien_card.co-2 {
+    --cA: var(--co-2);
+    --cB: var(--co-2b, var(--co-1));
+}
+
+.lien_card.co-2b {
+    --cA: var(--co-2b,
+            var(--co-2));
+    --cB: var(--co-2c, var(--co-1));
+}
+
+.lien_card.co-2c {
+    --cA: var(--co-2c, var(--co-2));
+    --cB: var(--co-2b,
+            var(--co-1));
+}
+
+.lien_card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(219deg,
+            var(--cA) 0%, var(--cB) 100%);
+    z-index: -3;
+}
+
+.lien_card::after {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    right:
+        -70px;
+    top: -70px;
+    width: 520px;
+    height: 300px;
+    background: linear-gradient(219deg, var(--cA) 0%, var(--cB) 100%);
+    border-radius: 30% 70% 22% 78% / 30% 34% 66% 70%;
+    opacity: .65;
+    mix-blend-mode: soft-light;
+    pointer-events: none;
+}
+
+.lien_main {
+    padding: 8px;
+    max-width: 90%;
+}
+
+.lien_title {
+    font-family: var(--special-font);
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -1px;
+    color: rgba(255, 255, 255, .92);
+    text-shadow: 0 8px 12px rgba(0, 0, 0, .45);
+    font-weight: 200;
+    text-transform: lowercase;
+}
+
+.lien_meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    font-size: var(--little-size);
+    color: var(--white);
+    font-family: var(--font-2);
+    font-style: italic;
+}
+
+.lien_avatar {
+    right: 0;
+    position: absolute;
+    width: 90px;
+    height: 100%;
+    top: 0;
+}
+
+.lien_avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.lien_desc {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: .35s ease;
+    z-index: 2;
+    background:
+        var(--neutral);
+    padding: 16px;
+    color: var(--textColor);
+    height: 100%;
+    overflow: auto;
+}
+
+.lien_card:hover .lien_desc {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.lien_card:hover .lien_main,
+.lien_card:hover .lien_avatar {
+    filter:
+        blur(1.5px);
+    opacity: .35;
+    transition: .35s ease;
+}
+
+.lien_card.rev {
+    grid-template-columns: auto 1fr;
+}
+
+.lien_card.rev .lien_avatar {
+    margin: 0 0 0 28px;
+    order: 0;
+}
+
+.lien_card.rev .lien_main {
+    order: 1;
+}
