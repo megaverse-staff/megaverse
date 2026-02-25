@@ -986,17 +986,17 @@
     z-index: -3;
 }
 
+
 .lien_card::after {
     content: "";
     position: absolute;
     z-index: -2;
-    right:
-        -70px;
-    top: -70px;
-    width: 520px;
-    height: 300px;
+    right: 50%;
+    top: -50%;
+    width: 80%;
+    height: 200%;
     background: linear-gradient(219deg, var(--cA) 0%, var(--cB) 100%);
-    border-radius: 30% 70% 22% 78% / 30% 34% 66% 70%;
+    border-radius: 100%;
     opacity: .65;
     mix-blend-mode: soft-light;
     pointer-events: none;
