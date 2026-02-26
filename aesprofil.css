@@ -942,6 +942,7 @@
     height: 100%;
     background: var(--neutralDark);
     isolation: isolate;
+	align-content: center;
 }
 
 .lien_card.co-1 {
@@ -1003,7 +1004,7 @@
 
 .lien_main {
     padding: 8px;
-    max-width: 90%;
+    width: 75%;
 }
 
 .lien_title {
