@@ -2703,7 +2703,7 @@ position: absolute; }
 #c6 .forum_avatar, #c7 .forum_avatar { width: 110px; height: 110px; justify-self: center; }
 #c6 .forum_avatar img, #c7 .forum_avatar img { width: 110px; height: 110px; object-fit: cover; object-position: center; border-radius: 100%; border: 10px var(--co-2) solid; }
 
-#c6 .forum_icon, #c7 .forum_icon, #c8 .forum_icon, #c5 .forum_icon { display: none; } 
+#c6 .forum_icon, #c7 .forum_icon, #c8 .forum_icon, #c9 .forum_icon { display: none; } 
 .forum_media_circle { display: none; } 
 #c6 .forum_media_circle, 
 #c7 .forum_media_circle { display: block !important; }
@@ -2715,15 +2715,15 @@ position: absolute; }
 @media screen and (max-width: 430px) { #c6 .forums, #c7 .forums { display: flex; flex-direction: column; } }
 
 /* catés rp */
-.category#c8, .category#c5, .category#c10 { display: grid; grid-template-columns: 350px auto; gap: 30px; }
-#c8 .cate_title, #c5 .cate_title, #c10 .cate_title { position: relative; border: 1px solid var(--black); background: var(--co-gradient2); border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; gap: 16px; justify-content: flex-start; }
-#c8 .cate_label, #c5 .cate_label, #c10 .cate_label { display: flex; flex-direction: row; align-items: center; justify-content: flex-end; gap: 12px; }
-#c8 .cate_label_icon, #c5 .cate_label_icon, #c10 .cate_label_icon { order: 3; display: flex; align-items: center; justify-content: center; }
-#c8 .cate_label_txt, #c5 .cate_label_txt, #c10 .cate_label_txt { order: 1; font-family: var(--special-font); line-height: 1; color: var(--black); }
-#c8 .cate_label_divider, #c5 .cate_label_divider, #c10 .cate_label_divider { order: 2; width: 100%; background: var(--black); position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; flex: 1; height: 1px; }
+.category#c8, .category#c9, .category#c10 { display: grid; grid-template-columns: 350px auto; gap: 30px; }
+#c8 .cate_title, #c9 .cate_title, #c10 .cate_title { position: relative; border: 1px solid var(--black); background: var(--co-gradient2); border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; gap: 16px; justify-content: flex-start; }
+#c8 .cate_label, #c9 .cate_label, #c10 .cate_label { display: flex; flex-direction: row; align-items: center; justify-content: flex-end; gap: 12px; }
+#c8 .cate_label_icon, #c9 .cate_label_icon, #c10 .cate_label_icon { order: 3; display: flex; align-items: center; justify-content: center; }
+#c8 .cate_label_txt, #c9 .cate_label_txt, #c10 .cate_label_txt { order: 1; font-family: var(--special-font); line-height: 1; color: var(--black); }
+#c8 .cate_label_divider, #c9 .cate_label_divider, #c10 .cate_label_divider { order: 2; width: 100%; background: var(--black); position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; flex: 1; height: 1px; }
 
 .cate_desc { display:none; }
-#c8 .cate_desc, #c5 .cate_desc, #c10 .cate_desc{ display: block; background: var(--neutral); height: 120px; border-radius: var(--radius); padding: 8px; overflow: auto; color: var(--black); text-align: justify; }
+#c8 .cate_desc, #c9 .cate_desc, #c10 .cate_desc{ display: block; background: var(--neutral); height: 120px; border-radius: var(--radius); padding: 8px; overflow: auto; color: var(--black); text-align: justify; }
 
 ul.tabs_list { display: flex; flex-direction: column; gap: 8px; align-items: center; }
 li.tabs_item { width: 100%; border-radius: var(--radius); color: white; text-transform: lowercase; font-size: 14px; background-size: cover; background-position: center; }
