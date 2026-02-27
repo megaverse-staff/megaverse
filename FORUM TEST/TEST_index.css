@@ -1000,12 +1000,16 @@ color: white;
     display: block;
 }
 .header-top-line {
-    display: flex;
+display: flex;
     justify-content: center;
     gap: 20px;
     text-transform: uppercase;
     align-items: center;
-  color: var(--black);
+    color: var(--black);
+    background: var(--neutral);
+    border-radius: var(--radius);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .header_txt {
