@@ -2008,7 +2008,7 @@ a.forumtitle {
     order: 1;
 }
 
-#c1 .cate_title, #c2 .cate_title, #c3 .cate_title, #c4 .cate_title, #c9 .cate_title, #c6 .cate_title, #c7 .cate_title {
+#c1 .cate_title, #c2 .cate_title, #c3 .cate_title, #c4 .cate_title, #c5 .cate_title, #c6 .cate_title, #c7 .cate_title {
   position: relative;
   border: 1px solid var(--black);
   background: var(--co-gradient2);
@@ -2846,7 +2846,7 @@ font-size: var(--large-size);
   } 
   
   @media screen and (max-width: 780px) { 
-    #c8 .forum_rp_flex, #c9 .forum_rp_flex, #c10 .forum_rp_flex {flex-direction: column !important; width: 100% !important; }
+  #c8 .forum_rp_flex, #c9 .forum_rp_flex, #c10 .forum_rp_flex {flex-direction: column !important; width: 100% !important; }
   #c8 #subforum, #c9 #subforum, #c10 #subforum { width: 100% !important; justify-content: center;}  
   #c8 .forum_lastpost.lastpost, #c9 .forum_lastpost.lastpost, #c10 .forum_lastpost.lastpost { width: 100% !important;}
   } 
