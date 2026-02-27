@@ -992,6 +992,16 @@ color: white;
     margin: 0 auto;
 }
 
+.title_header {
+    background: var(--neutral);
+    padding: 10px;
+    border-radius: var(--radius);
+    outline-offset: 5px;
+    outline: 1px solid var(--black);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
 .header-top-line::before, .header-top-line::after {
     content: '';
     width: 100px;
