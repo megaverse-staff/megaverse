@@ -728,9 +728,7 @@ a.FAM-attachment-thumb{
      display: none;
 }
  .FAM-new-post,.FAM-new-post a,.FAM-new-post .FAM-chat-title{
-    color:var(--co-1);
-    font-weight:bold!important
-}
+    color:var(--co-1);}
 .FAM-new-post .FAM-chat-avatar{
     opacity:1
 }
