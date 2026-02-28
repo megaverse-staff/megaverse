@@ -708,7 +708,7 @@ a.FAM-attachment-thumb{
     margin-top:4px
 }
 .FAM-chat-date>a.lastpost_link{
-    font-weight:600;
+    font-weight:400;
     color:var(--contrast)!important;
     margin-right:5px
 }
