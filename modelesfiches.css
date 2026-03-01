@@ -2330,15 +2330,19 @@ spacebar bar {
   flex-wrap: wrap;
 }
 
-.bxd-rp1_tag {
+.bxd-rp1_tag{
   position: relative;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
 }
 
 /* checkbox invisible (toggle) */
-.bxd-rp1_toggle {
+.bxd-rp1_toggle{
   position: absolute;
   opacity: 0;
-  pointer-events: none;
+  inset: 0;
+  margin: 0;
 }
 
 /* bubble cachée par défaut */
@@ -2346,25 +2350,23 @@ spacebar bar {
   display: none;
 }
 
-/* état ouvert */
-.bxd-rp1_toggle:checked+.bxd-rp1_tagbtn {
+/* accessibilité focus clavier */
+.bxd-rp1_tagbtn{ outline: none; }
+
+.bxd-rp1_toggle:focus-visible ~ .bxd-rp1_tagbtn{
+  outline: 2px solid var(--co-1);
+  outline-offset: 2px;
+}
+
+/* état ouvert (checkbox cochée) */
+.bxd-rp1_toggle:checked ~ .bxd-rp1_tagbtn{
   background: var(--co-1grad);
   color: var(--black);
   border-color: transparent;
 }
 
-.bxd-rp1_toggle:checked+.bxd-rp1_tagbtn+.bxd-rp1_bubble {
+.bxd-rp1_toggle:checked ~ .bxd-rp1_bubble{
   display: block;
-}
-
-/* accessibilité focus clavier */
-.bxd-rp1_tagbtn {
-  outline: none;
-}
-
-.bxd-rp1_toggle:focus-visible+.bxd-rp1_tagbtn {
-  outline: 2px solid var(--co-1);
-  outline-offset: 2px;
 }
 
 .bxd-rp1_tagbtn {
