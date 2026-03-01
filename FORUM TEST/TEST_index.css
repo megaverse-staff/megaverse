@@ -891,6 +891,10 @@ position: relative;
     text-align: justify;
     color: var(--black);
     padding: 12px;
+    background: var(--neutral);
+    backdrop-filter: blur(5px);
+    border-radius: var(--radius);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .news_content .news_date {
