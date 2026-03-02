@@ -2860,3 +2860,8 @@ font-size: var(--large-size);
 #c4 .forumtitle_inside, #c5 .forumtitle_inside, #c8 .forumtitle_inside  { width: 100% !important; }
 #c4 .fond_fo_deco, #c5 .fond_fo_deco, #c8 .fond_fo_deco { width: 100% !important; }
 }
+
+/*hauteur partenariats*/
+#f3 .forum_lastpost.lastpost {
+    height: 263px;
+}
