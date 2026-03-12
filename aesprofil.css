@@ -845,9 +845,10 @@
 }
 
 /* Titres aes profil Jen #1 */
-.titledp1 {
-    display: flex;
-    justify-self: center;
+
+.titledp {
+    display: grid;
+    justify-content: center;
 }
 
 .titredp1 {
