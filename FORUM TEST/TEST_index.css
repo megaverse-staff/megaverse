@@ -1041,7 +1041,9 @@ display: flex;
     background: var(--neutral);
     border-radius: var(--radius);
     max-width: 480px;
-text-align: justify;
+    text-align: justify;
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
 }
 
 .projo_title {
