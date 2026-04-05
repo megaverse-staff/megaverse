@@ -192,6 +192,7 @@ display: none;
 /* chaîne de lien de navigation : catégorie > forum > sous-fo */
 .navigation_chain {
   font-size: 0;
+	position: relative;
   /*retire les :: de séparation */
 }
 
