@@ -2317,6 +2317,10 @@ button.rep-button .rep-nb {
 
 @media screen and (max-width: 430px) { 
 
+	.news_ctnr {
+    width: 100% !important;
+}
+
       #blog {
         width: 100% !important;
     }
