@@ -1655,7 +1655,7 @@ blockquote.FAM-codebox>div{
 }
 
 .FAM-topic-search-result mark {
-  background: rgba(180, 150, 255, 0.28);
+  background: var(--base-2b);
   color: inherit;
   padding: 0 2px;
   border-radius: 4px;
