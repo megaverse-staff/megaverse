@@ -1636,9 +1636,10 @@ blockquote.FAM-codebox>div{
 }
 
 .FAM-topic-search-result-title {
-  font-size: 14px;
-  line-height: 1.25;
-  color: var(--textColor);
+    font-size: var(--little-size);
+    line-height: 1.25;
+    color: var(--textColor);
+    text-transform: none;
 }
 
 .FAM-topic-search-result-date {
@@ -1657,6 +1658,5 @@ blockquote.FAM-codebox>div{
 .FAM-topic-search-result mark {
   background: var(--base-2b);
   color: inherit;
-  padding: 0 2px;
   border-radius: 4px;
 }
