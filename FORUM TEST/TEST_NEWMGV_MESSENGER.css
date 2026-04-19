@@ -1409,3 +1409,254 @@ blockquote.FAM-codebox>div{
     right:-26px;
     z-index:1
 }
+
+/*drag and drop + bouton pour plus de sujets*/
+#FAM-tab-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  min-width: 0;
+}
+
+#FAM-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+}
+
+#FAM-tabs .FAM-tab {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+#FAM-tabs .FAM-tab-name {
+  display: block;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.FAM-tab[draggable="true"] {
+  cursor: grab;
+}
+
+.FAM-tab[draggable="true"] .FAM-tab-name {
+  cursor: inherit;
+}
+
+.FAM-tab-dragging {
+  opacity: .45;
+}
+
+#FAM-tab-overflow {
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+#FAM-tab-overflow-toggle {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  outline: 0;
+  background: rgba(255,255,255,0.06);
+  color: inherit;
+  border-radius: 10px;
+  height: 34px;
+  min-width: 34px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+
+#FAM-tab-overflow-toggle:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+#FAM-tab-overflow-toggle i {
+  font-size: 13px;
+  line-height: 1;
+}
+
+#FAM-tab-overflow-count {
+  font-size: 11px;
+  line-height: 1;
+}
+
+#FAM-tab-overflow-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 240px;
+    max-width: min(240px, 80vw);
+    background: var(--neutralDarker);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    padding: 8px;
+    z-index: 999;
+  color: var(--black);
+}
+
+#FAM-tab-overflow-menu[data-hidden="true"] {
+  display: none;
+}
+
+#FAM-tab-overflow-menu[data-hidden="false"] {
+  display: block;
+}
+
+.FAM-overflow-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+.FAM-overflow-item:hover {
+    background: var(--co-1grad);
+}
+
+.FAM-overflow-item-active {
+  background: var(--co-2);
+}
+
+.FAM-overflow-item-name {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.FAM-overflow-item i {
+  flex: 0 0 auto;
+  font-size: 14px;
+  opacity: .8;
+  cursor: pointer;
+  transition: opacity .2s ease;
+}
+
+.FAM-overflow-item i:hover {
+  opacity: 1;
+}
+
+#FAM-tab-add {
+  flex: 0 0 auto;
+}
+
+
+/*FONCTION SEARCH*/
+
+#FAM-topic-search-modal {
+  position: absolute;
+  inset: 0;
+  z-index: 200;
+  background: rgba(10, 10, 18, 0.18);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 70px 18px 18px;
+}
+
+#FAM-topic-search-box {
+    width: min(560px, 100%);
+    border-radius: 18px;
+    background: var(--neutralDarker);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+}
+
+#FAM-topic-search-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+#FAM-topic-search-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #2d2d36;
+}
+
+#FAM-topic-search-close {
+  flex: 0 0 auto;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  color: #6c6c76;
+}
+
+#FAM-topic-search-results {
+  max-height: 420px;
+  overflow: auto;
+  padding: 8px;
+}
+
+.FAM-topic-search-result {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.FAM-topic-search-result:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.FAM-topic-search-result-title {
+  font-size: 14px;
+  line-height: 1.25;
+  color: #2f2f38;
+}
+
+.FAM-topic-search-result-date {
+  font-size: 11px;
+  line-height: 1.2;
+  opacity: 0.65;
+}
+
+.FAM-topic-search-empty {
+  padding: 18px 12px;
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.FAM-topic-search-result mark {
+  background: rgba(180, 150, 255, 0.28);
+  color: inherit;
+  padding: 0 2px;
+  border-radius: 4px;
+}
