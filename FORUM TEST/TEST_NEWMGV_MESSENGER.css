@@ -1599,7 +1599,7 @@ blockquote.FAM-codebox>div{
   outline: none;
   font-size: 14px;
   line-height: 1.2;
-  color: #2d2d36;
+  color: var(--textColor);
 }
 
 #FAM-topic-search-close {
@@ -1638,7 +1638,7 @@ blockquote.FAM-codebox>div{
 .FAM-topic-search-result-title {
   font-size: 14px;
   line-height: 1.25;
-  color: #2f2f38;
+  color: var(--textColor);
 }
 
 .FAM-topic-search-result-date {
