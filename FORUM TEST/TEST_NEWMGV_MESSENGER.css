@@ -600,13 +600,13 @@ a.FAM-attachment-thumb{
     position:relative;
     width:100%
 }
-#FAM-timeout-bar{
-    background:#CCC;
-    position:absolute;
-    left:0;
-    bottom:0;
-    width:5px;
-    z-index:-1
+#FAM-timeout-bar {
+    background: var(--co-1);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 5px;
+    z-index: 1;
 }
 .FAM-chat{
     position:relative;
