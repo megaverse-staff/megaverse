@@ -3128,7 +3128,7 @@ s2 span {
     line-height: 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: black;
+    color: var(--black);
     overflow: hidden;
   font-weight: 600;
 }
