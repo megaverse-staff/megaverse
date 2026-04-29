@@ -1087,3 +1087,143 @@
 .lien_card.rev .lien_main {
     order: 1;
 }
+
+/* liens hover dope lovers */
+
+.fl_flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.fl_kard {
+    width: 200px;
+    min-width: 200px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--co-gradient);
+    padding: 0;
+    vertical-align: top;
+    position: relative;
+}
+
+.fl_inner {
+    width: 100%;
+    height: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.fl_media {
+    height: 200px;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+
+.fl_stack {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    display: block;
+}
+
+.fl_stack>tbody {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.fl_stack>tbody>tr {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* On neutralise la logique de lignes de table pour superposer */
+.fl_stack>tbody>tr>td {
+    display: block;
+}
+
+.fl_desc {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 99%;
+    background: var(--base-1);
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: auto;
+    overscroll-behavior: contain;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.fl_img {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    transform: translateY(0);
+    transition: transform .6s ease;
+}
+
+.fl_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.fl_media:hover .fl_img {
+    transform: translateY(-200px);
+}
+
+/* Au hover, on garde l'anim mais on met la couche image derrière pour laisser le scroll à la description */
+.fl_media:hover .fl_desc {
+    pointer-events: auto;
+}
+
+.fl_resume {
+    height: 65px;
+    padding: 15px;
+    color: white;
+    vertical-align: middle;
+}
+
+.fl_resume_inner {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.fl_bubble {
+  display: flex !important;
+      justify-content: center;
+    align-items: center;
+    max-width: 35px;
+      min-width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    background: rgba(255, 255, 255, .4);
+    border: 1px solid white;
+}
+
+.fl_first {
+    font-family: var(--special-font);
+    font-size: var(--medium-size);
+    line-height: var(--medium-size);
+}
+
+.fl_first a {
+    font-weight: 300;
+  color: white;}
+
+.fl_last {
+    font-family: var(--font-2);
+    font-style: italic;
+    font-size: var(--little-size);
+    line-height: var(--little-size);
+}
