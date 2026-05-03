@@ -124,7 +124,7 @@ body:not(#sceditor_smilies body) {
 a {
   font-weight: 600;
   text-decoration: none;
-  color: var(--contrast);
+  color: var(--black);
 }
 
 /* Emoji mis par défaut de FA
