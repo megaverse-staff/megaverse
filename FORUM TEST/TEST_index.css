@@ -1306,7 +1306,7 @@ display: flex;
 
 .top_sites { gap: 12px; }
 
-.top { width: 44px; height: 44px; border-radius: var(--radius); outline-offset: 5px; }
+.top { width: 40px; height: 40px; border-radius: var(--radius); outline-offset: 5px; }
 
 .top:nth-of-type(odd) { background: var(--co-1grad);}
 .top:nth-of-type(even) { background: var(--co-2grad); }
