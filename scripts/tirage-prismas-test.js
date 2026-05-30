@@ -101,14 +101,9 @@
         list.className = 'prisma-roll-list';
         list.textContent = cards.map(card => card.id).join('; ');
 
-        const warning = document.createElement('div');
-        warning.className = 'prisma-roll-warning';
-        warning.textContent = 'Tirage généré automatiquement. Toute édition de post peut modifier le résultat et est interdite. Si une édition est constatée par le staff, le tirage entier se verra annulé.';
-
         wrapper.appendChild(title);
         wrapper.appendChild(grid);
         wrapper.appendChild(list);
-        wrapper.appendChild(warning);
 
         return wrapper;
       }
