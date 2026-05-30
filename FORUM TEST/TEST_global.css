@@ -1530,4 +1530,62 @@ span.page-sep {
   display: none;
 }
 
+/*TIRAGES PRISMACARDS*/
 
+    .prisma-database {
+      display: none;
+    }
+
+    .prisma-roll {
+      margin: 20px 0;
+      padding: 16px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.06);
+    }
+
+    .prisma-roll-title {
+    margin-bottom: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: var(--font-2);
+    background: var(--co-gradient);
+    color: white;
+    padding: 4px 8px;
+    border-radius: var(--radius);
+}
+
+    .prisma-roll-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .prisma-card-result {
+      display: inline-flex;
+      flex: 0 0 auto;
+    }
+
+    .prisma-card-result img {
+      display: block;
+      width: 90px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .prisma-roll-list {
+      margin-top: 14px;
+      font-size: 13px;
+      line-height: 140%;
+      letter-spacing: .3px;
+    }
+
+    .prisma-roll-warning {
+      margin-top: 10px;
+      opacity: .7;
+      font-size: 11px;
+      font-style: italic;
+    }
+
+/*FIN TIRAGES PRISMACARDS*/
