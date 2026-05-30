@@ -1537,11 +1537,10 @@ span.page-sep {
     }
 
     .prisma-roll {
-      margin: 20px 0;
-      padding: 16px;
-      border-radius: 14px;
-      background: rgba(255,255,255,.06);
-    }
+    padding: 16px;
+    border-radius: var(--radius);
+    background: var(--neutral);
+}
 
     .prisma-roll-title {
     margin-bottom: 12px;
