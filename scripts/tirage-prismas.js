@@ -103,7 +103,7 @@
 
         const warning = document.createElement('div');
         warning.className = 'prisma-roll-warning';
-        warning.textContent = 'Tirage généré automatiquement. Toute édition du marqueur peut modifier le résultat.';
+        warning.textContent = 'Tirage généré automatiquement. Toute édition de post peut modifier le résultat et est interdite. Si une édition est constatée par le staff, le tirage entier se verra annulé.';
 
         wrapper.appendChild(title);
         wrapper.appendChild(grid);
