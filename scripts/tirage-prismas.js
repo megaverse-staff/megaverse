@@ -134,8 +134,11 @@
           const markers = parseRollMarkers(text);
           if (!markers.length) return;
 
-          markers.forEach((marker, markerIndex) => {
-            const seedText = `${location.pathname}|post:${postIndex}|marker:${markerIndex}|${text}|${marker.fullMatch}`;
+          const postWrapper = post.closest('[id^="p"], .post');
+const postId = postWrapper && postWrapper.id ? postWrapper.id : `post-${postIndex}`;
+
+markers.forEach((marker, markerIndex) => {
+  const seedText = `${location.origin}${location.pathname}|${postId}|marker:${markerIndex}|${marker.fullMatch}`;
             const drawnCards = drawCards(database, marker.count, seedText);
             const rollElement = renderRoll(drawnCards, marker);
 
