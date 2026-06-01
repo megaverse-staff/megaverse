@@ -1912,7 +1912,7 @@
     width: 100%;
     margin-bottom: 10px;
     border-radius: 14px;
-    background: var(--base-2);
+    background: var(--base-1);
     transition: 0.2s;
     cursor: pointer;
 }
