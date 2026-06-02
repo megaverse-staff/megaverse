@@ -2769,6 +2769,201 @@ lett11 { font-size: var(--xl-size); line-height: 115%; font-family: var(--specia
   
 }
 
+/****** RP ******/
+
+@media screen and (max-width: 1800px) {
+    .lovers_dope {
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .lovers_dope {
+        width: 90% !important;
+    }
+}
+
+@media screen and (max-width: 1580px) {
+    .lovers_dope {
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    .lovers_dope {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+  .info_lovers {
+    display: none !important;
+    
+  }
+
+  .lovers_infos { display: flex !important;
+                flex-direction: column !important; }
+
+  .lovers_infos line { margin-top: 10px !important; }
+  .lovers_title a { margin-bottom: 10px !important; }
+}
+
+.lovers_dope {
+    background: var(--co-1grad);
+    border-radius: 64px 8px 64px 8px;
+    overflow: hidden;
+    width: 50%;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.topic-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lovers_grid {
+    display: grid;
+    grid-template-rows: 0.3fr auto;
+}
+
+.lovers_infos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.lovers_infos span {
+    background: var(--gradientlight1);
+    padding: 8px;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: bold;
+}
+
+.lovers_infos line {
+    min-width: 100px;
+    height: 2px;
+    background: var(--co-2grad);
+}
+
+.lovers_title {
+    background: var(--neutralDark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.lovers_title a {
+    font-family: var(--font-2);
+    font-size: 30px;
+    font-weight: 800;
+    border-bottom: 4px solid;
+    border-image-slice: 1;
+    border-image-source: var(--gradient);
+}
+
+.heart-container {
+    width: 120px;
+    height: 120px;
+    clip-path: path("M60,120 C-37.5,60 15,0 60,30 C105,0 167.5,60 60,120Z");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart_iconrp {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heart-container,
+.tool_lovers {
+    transition: 0.25s ease;
+    transform: scale(1);
+}
+
+.heart-container:hover,
+.tool_lovers:hover {
+    transform: scale(1.05);
+}
+
+.block_lovers {
+    background: var(--neutralDarker);
+    border-radius: 8px 8px 53px 8px;
+    padding: var(--spacing);
+}
+
+.block_lovers .desc {
+    height: 300px;
+}
+
+.info_lovers {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.tool_lovers {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    background: var(--neutral);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.ltool {
+    width: 50px;
+    height: 50px;
+    background: var(--co-1);
+    position: relative;
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.lov_name {
+    display: grid;
+    grid-template-rows: 30px auto;
+}
+
+.lov_name1 {
+    text-align: right;
+    font-size: 20pt;
+    background: var(--co-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+tool1 {
+    background: var(--black);
+    color: var(--white);
+    font-size: 9px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+tool1 a {     font-size: 9px !important;
+         border-bottom: 0 !important;
+         font-weight: 100 !important;
+    color: var(--white) !important;}
+
 /*** MODÈLE ADMIN NEW ***/
 
 /* mise en page */
