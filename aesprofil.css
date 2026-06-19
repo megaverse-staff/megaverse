@@ -874,10 +874,6 @@
     border-bottom: none;
 }
 
-.list_rp td {
-    grid-template-columns: 15px 60px 1fr auto 60px !important;
-}
-
 /* Titres aes profil Jen #1 */
 
 .titledp {
