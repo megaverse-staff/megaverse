@@ -864,8 +864,6 @@
     color: var(--co-1);
 }
 
-.list_rp td.sms { background: var(--co-2grad); border-radius: 5px;}
-
 .list_rp td.sms u,
 .list_rp td.rpopen u,
 .list_rp td.rpclose u {
