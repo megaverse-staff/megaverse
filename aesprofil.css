@@ -848,7 +848,23 @@
 
 /* RPS */
 .list_rp2 {font-size: 13px;}
-.list_rp2 tr {display:grid;grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));gap: 10px;}
+
+.list_rp2 td {
+    border: 0.5px dashed var(--co-1);
+    padding: 5px;
+}
+
+.list_rp2 td:hover {
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.list_rp2 td {
+    transition: 0.25s ease;
+    transform: scale(1);
+}
+
+.list_rp2 tr {display:grid;grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));gap: 10px;}
 .list_rp2 td:before {padding-right: 10px;}
 .list_rp2 .sms::before {
     content: '\e9d5';
@@ -871,6 +887,8 @@
 }
 
 .list_rp2 .rpclose {opacity: 0.7;}
+
+
 
 /* Titres aes profil Jen #1 */
 
