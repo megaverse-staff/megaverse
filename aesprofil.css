@@ -849,6 +849,7 @@
 .list_rp td.sms u::before {
     content: '\e9d5';
     font-family: 'cappuccicons';
+	color: #fff;
 }
 
 .list_rp td.rpopen u::before {
@@ -862,6 +863,8 @@
     font-family: 'cappuccicons';
     color: var(--co-1);
 }
+
+.list_rp td.sms { background: var(--co-2grad); border-radius: 5px;}
 
 .list_rp td.sms u,
 .list_rp td.rpopen u,
