@@ -863,11 +863,6 @@
     color: var(--co-1);
 }
 
-.list_rp td.sms u:hover:before {
-    transition: 300ms;
-    color: var(--co-2);
-}
-
 .list_rp td.sms u,
 .list_rp td.rpopen u,
 .list_rp td.rpclose u {
