@@ -2502,6 +2502,204 @@ lett11 { font-size: var(--xl-size); line-height: 115%; font-family: var(--specia
     width: 100% !important; }
   }
 
+/*MODÈLE 18*/
+
+@media screen and (max-width: 2000px) {
+    .newrp {
+        width: 60% !important;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .newrp {
+        width: 70% !important;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .newrp {
+        width: 75% !important;
+    }
+}
+
+@media screen and (max-width: 1580px) {
+    .newrp {
+        width: 85% !important;
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    .newrp {
+        width: 80% !important;
+    }
+
+    .newrptitle {
+        font-size: 20px !important;
+        top: 60px !important;
+    }
+
+    .info_lovers {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        margin-top: 50px !important;
+        margin-bottom: 50px !important;
+        align-content: center !important;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .newrp_postit {
+        display: none !important;
+    }
+
+    .newrptitle {
+        font-size: 30px !important;
+    }
+}
+
+.newrp {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 50%;
+    position: relative;
+}
+
+.newrp::before {
+    content: '\eaba';
+    font-family: var(--font-ic);
+    position: absolute;
+    left: -100px;
+    top: -30px;
+    font-size: 160px;
+    opacity: 0.6;
+    color: var(--co-1);
+    transform: rotate(325deg);
+}
+
+.newrp::after {
+    content: '\eaba';
+    font-family: var(--font-ic);
+    position: absolute;
+    left: -50px;
+    top: -115px;
+    font-size: 130px;
+    z-index: -1;
+    opacity: 0.6;
+    color: var(--co-2);
+    transform: rotate(354deg);
+}
+
+.newrpcadre {
+    outline: 1px solid var(--neutralDarker);
+    outline-offset: -20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: relative;
+}
+
+#newdeg {
+    background-color: var(--neutralDark);
+    height: auto;
+    border-radius: 64px 8px 8px 8px;
+    margin: 0 auto;
+}
+
+#newdeg:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 140px;
+    background: var(--co-gradient);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.newbg {
+    padding: 40px;
+    position: relative;
+}
+
+.newrp-img {
+    width: 145px;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--white);
+    position: absolute;
+    left: 70px;
+    top: 35px;
+}
+
+.newrptxt {
+    background: var(--neutralDarker);
+    padding: 10px;
+    border-radius: 8px 8px 53px 8px;
+    height: 300px;
+    overflow: auto;
+}
+
+.newrptitle {
+    position: absolute;
+    left: 235px;
+    top: 48px;
+    text-align: left;
+    width: 420px;
+    color: white;
+    font-family: var(--special-font);
+    font-size: 35px;
+}
+
+.newrpsubtitle {
+    position: absolute;
+    left: 260px;
+    top: 86px;
+    text-align: left;
+    width: 500px;
+    color: white;
+    font-family: 'ellograph-cf';
+    font-style: italic;
+    font-size: 12px;
+}
+
+.newrp_postit {
+    position: absolute;
+    right: -45px;
+    top: -5px;
+    width: 300px;
+    display: block;
+    height: 70px;
+    padding: 14px 14px 12px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18), 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+    border-radius: 2px;
+    transform-origin: center;
+    transition: 0.2s ease;
+    text-align: center;
+    transform: rotate(8deg);
+    background: var(--base-1);
+    font-family: 'ellograph-cf';
+    font-style: italic;
+    align-content: center;
+    font-size: var(--little-size);
+    letter-spacing: 0;
+    text-transform: lowercase;
+}
+
+.newrp_postit::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(1deg);
+    width: 45px;
+    height: 18px;
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    opacity: 0.9;
+    z-index: 3;
+}
+
 /* FICHE PRESA 3 */
 
 .fiche4 {
