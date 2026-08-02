@@ -5,6 +5,7 @@
 <link
   href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
   rel="stylesheet" /><div class="mgv-update">
+  <input type="checkbox" id="mgv-theme-toggle" class="mgv-theme-toggle" aria-label="Basculer entre les modes jour et nuit">
   <div class="mgv-hero"> <img
       src="https://64.media.tumblr.com/59af7b81c0a466dbeef0b5826c140ac8/56b310c47512e4cf-cc/s1280x1920/fc09b7639d57c98f281ca9855c43543d397280ca.pnj">
     <img
@@ -18,8 +19,15 @@
     </div>
   </div>
   <div class="mgv-body">
-    <p class="mgv-intro">Crepuscule et aube s'entrelacent sur chaque version au dessus des mers entourant Terre-1 et
-      Terre-2, comme le stylo 4 couleurs, c'est un doux mélange qui vous accueille sur cette nouvelle version ! ♡</p>
+    <div class="mgv-intro-row">
+      <p class="mgv-intro">Crepuscule et aube s'entrelacent sur chaque version au dessus des mers entourant Terre-1 et
+        Terre-2, comme le stylo 4 couleurs, c'est un doux mélange qui vous accueille sur cette nouvelle version ! ♡</p>
+      <label class="mgv-theme-switch" for="mgv-theme-toggle" title="Changer de thème">
+        <span class="mgv-theme-sun" aria-hidden="true">☀</span>
+        <span class="mgv-theme-moon" aria-hidden="true">☾</span>
+        <span class="mgv-theme-knob" aria-hidden="true"></span>
+      </label>
+    </div>
     <div class="mgv-section-title"><span class="mgv-section-star">✦</span> Ce mois-ci</div>
     <div class="mgv-news">
       <div class="mgv-card"><span class="mgv-number">01</span>
@@ -130,6 +138,105 @@
     --tit: #fe8b7a;
     --shadowBox: 0 0 20px var(--neutralDark);
   }
+
+  /* Mode sombre manuel de la fiche — fonctionne même dans une iframe. */
+  .mgv-update:has(#mgv-theme-toggle:checked) {
+    --neutral: #00000075;
+    --neutralDark: #0000009e;
+    --neutralDarker: #121212;
+    --white: #000000;
+    --black: #ffffff;
+    --gray: #8e8e8e;
+    --co-1: #751634;
+    --co-1b: #fe8b5c;
+    --co-1c: #be2a62;
+    --co-2: #143277;
+    --co-2b: #64419d;
+    --co-2c: #8256aa;
+    --base-1: #161616;
+    --base-2: #212121;
+    --base-2b: #0f1b4f;
+    --contrast: #e5e5f0;
+    --contrastLight: #f4f4f4;
+    --contrastLighter: #fff;
+    --textColor: #b9b9c2;
+    --tit: #fe8b7a;
+    --shadowBox: 0 0 20px var(--neutralDark);
+  }
+
+  .mgv-theme-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .mgv-intro-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .mgv-intro-row .mgv-intro { margin-top: 0; }
+
+  .mgv-theme-switch {
+    position: relative;
+    display: grid;
+    grid-template-columns: 24px 24px;
+    align-items: center;
+    width: 52px;
+    height: 28px;
+    margin-top: 1px;
+    color: var(--contrast);
+    background: var(--co-gradient);
+    border: 1px solid var(--contrast);
+    border-radius: 30px;
+    box-shadow: 3px 3px 0 var(--neutral);
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .mgv-theme-sun,
+  .mgv-theme-moon {
+    position: relative;
+    z-index: 2;
+    font: 12px/1 Arial, sans-serif;
+    text-align: center;
+  }
+
+  .mgv-theme-knob {
+    position: absolute;
+    z-index: 1;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: var(--base-1);
+    border: 1px solid var(--contrast);
+    border-radius: 50%;
+    transition: transform .3s ease, background .3s ease;
+  }
+
+  #mgv-theme-toggle:checked ~ .mgv-body .mgv-theme-knob {
+    transform: translateX(24px);
+  }
+
+  #mgv-theme-toggle:focus-visible ~ .mgv-body .mgv-theme-switch {
+    outline: 2px solid var(--tit);
+    outline-offset: 3px;
+  }
   
-  body { font-family: var(--font) !important; background: unset; }
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  body {
+    width: fit-content;
+    max-width: 100%;
+    font-family: var(--font) !important;
+  }
 </style>
