@@ -162,6 +162,48 @@
     --textColor: #b9b9c2;
     --tit: #fe8b7a;
     --shadowBox: 0 0 20px var(--neutralDark);
+    color-scheme: dark;
+    color: var(--textColor) !important;
+    background: linear-gradient(130deg, #161616, #0f1b4f, #161616) !important;
+  }
+
+  .mgv-update:has(#mgv-theme-toggle:checked) .mgv-body {
+    color: var(--textColor) !important;
+    background:
+      radial-gradient(circle at 0 18%, rgba(117, 22, 52, .28), transparent 30%),
+      radial-gradient(circle at 100% 72%, rgba(20, 50, 119, .34), transparent 32%),
+      linear-gradient(135deg, #161616, #17172a 52%, #0f1b4f) !important;
+  }
+
+  .mgv-update:has(#mgv-theme-toggle:checked) .mgv-intro,
+  .mgv-update:has(#mgv-theme-toggle:checked) .mgv-card p,
+  .mgv-update:has(#mgv-theme-toggle:checked) .mgv-focus p {
+    color: #b9b9c2 !important;
+  }
+
+  .mgv-update:has(#mgv-theme-toggle:checked) .mgv-section-title,
+  .mgv-update:has(#mgv-theme-toggle:checked) .mgv-card h3,
+  .mgv-update:has(#mgv-theme-toggle:checked) .mgv-focus h3 {
+    color: #e5e5f0 !important;
+  }
+
+  .mgv-update:has(#mgv-theme-toggle:checked) .mgv-card,
+  .mgv-update:has(#mgv-theme-toggle:checked) .mgv-focus {
+    border-color: rgba(229, 229, 240, .78) !important;
+  }
+
+  .mgv-update:has(#mgv-theme-toggle:checked) * {
+    scrollbar-color: #8256aa #161616;
+  }
+
+  .mgv-update:has(#mgv-theme-toggle:checked) *::-webkit-scrollbar-track {
+    background: #161616;
+  }
+
+  .mgv-update:has(#mgv-theme-toggle:checked) *::-webkit-scrollbar-thumb {
+    background: linear-gradient(#be2a62, #8256aa);
+    border: 2px solid #161616;
+    border-radius: 10px;
   }
 
   .mgv-theme-toggle {
