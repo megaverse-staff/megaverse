@@ -2565,6 +2565,48 @@ font-size: var(--little-size);
 }
 
 /* AES MEL #1 */
+.titleaes_bxd2 {
+    font-family: 'gravhez';
+    font-size: 35px;
+    color: var(--co-2);
+    letter-spacing: 1px;
+    opacity: 0.8;
+    height: 100px;
+    width: 100px;
+}
+
+.subaes_bxd2 {
+    font-family: var(--font-2);
+    text-transform: uppercase;
+    color: var(--contrast);
+    font-size: 8px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: justify;
+    line-height: 1.6;
+    height: 100px;
+    width: 100px;
+}
+
+.table-container_bxd2 {
+    display: table;
+    max-width: 70%;
+    table-layout: fixed;
+    border-spacing: 10px;
+}
+
+.table-row_bxd2 {
+    display: table-row;
+}
+
+.table-cell_bxd2 {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
+    width: 50%;
+}
+
+/* AES MEL #2 */
 .imgprnvln img {
     width: 100px;
     height: 100px;
@@ -2608,7 +2650,7 @@ font-size: var(--little-size);
     text-align: center;
     display: inline-table;
 }
-/* AES MEL #2 */ 
+/* AES MEL #3 */ 
 @import url('https://raw.githubusercontent.com/nowcelestial/fonts/refs/heads/main/saber.css');
 
 @font-face {
