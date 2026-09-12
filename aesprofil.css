@@ -253,7 +253,7 @@
 }
 .liens .bujoInv {
 	display: grid;
-	background-image: url(https://tinyurl.com/5n7u5zkf);
+	background: var(--co-gradient2);
 	transition: 0.3s all;
 }
 .liens .bujoInv:hover {
