@@ -2564,7 +2564,51 @@ font-size: var(--little-size);
     margin-bottom: 5px;
 }
 
-/* AES MEL #1 */ 
+/* AES MEL #1 */
+.imgprnvln img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px 0 10px 0;
+}
+
+.txtprnvln {
+    font-family: var(--special-font);
+    font-size: 24px;
+    text-transform: uppercase;
+    color: var(--co-1);
+    text-align: center;
+}
+
+.prnvln {
+    width: 220px !important;
+}
+
+.nvlnprliens img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    object-fit: cover;
+    box-shadow: 10px 0 0 var(--co-1);
+}
+
+.nvlnliens {
+    padding: 10px;
+    width: 190px;
+}
+
+.nvlnliens h3,
+.nvlnliens h4 {
+    width: 100%;
+    display: inline-grid;
+}
+
+.nvlnliens i {
+    width: 100%;
+    text-align: center;
+    display: inline-table;
+}
+/* AES MEL #2 */ 
 @import url('https://raw.githubusercontent.com/nowcelestial/fonts/refs/heads/main/saber.css');
 
 @font-face {
