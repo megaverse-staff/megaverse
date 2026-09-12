@@ -2563,3 +2563,113 @@ font-size: var(--little-size);
     display: block;
     margin-bottom: 5px;
 }
+
+/* AES MEL #1 */ 
+@import url('https://raw.githubusercontent.com/nowcelestial/fonts/refs/heads/main/saber.css');
+
+@font-face {
+    font-family: 'Saber';
+    src: url('https://raw.githubusercontent.com/nowcelestial/fonts/main/Saber.otf') format('opentype'), url('https://raw.githubusercontent.com/nowcelestial/fonts/main/saber-webfont.woff2') format('woff2'), url('https://raw.githubusercontent.com/nowcelestial/fonts/main/saber-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap
+}
+
+.sig-bxd1 {
+    position: relative;
+    max-width: 150px !important;
+    margin: auto;
+    color: var(--co-2);
+    font-family: 'Saber';
+    text-align: center;
+    font-feature-settings: "liga" 1, "calt" 1;
+    font-variant-ligatures: common-ligatures discretionary-ligatures
+}
+
+.signature table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.sig-wrapper {
+    position: relative;
+    display: inline-block
+}
+
+.sig-arch {
+    position: relative;
+    width: 120px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 80px 80px 16px 16px;
+}
+
+.sig-arch img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.sig-arch:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid var(--co-1);
+    pointer-events: none
+}
+
+.sig-arch:after {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border-radius: 168px 168px 10px 10px;
+    border: 1px solid var(--co-1);
+    pointer-events: none
+}
+
+.sig-text {
+    position: absolute;
+    top: 55%;
+    left: -60px;
+    text-align: left
+}
+
+.title {
+    font-size: 52px;
+    line-height: 1;
+    margin: 0;
+    font-weight: 400
+}
+
+.subtitle {
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    font-style: italic
+}
+
+.sig-deco {
+    position: absolute;
+    border: 1px solid var(--co-1);
+    border-radius: 50%
+}
+
+.deco1 {
+    max-width: 150px;
+    height: 110%;
+    top: -10%;
+    left: 0;
+    transform: rotate(66deg);
+    mask: linear-gradient(to left, black, transparent 102%);
+    -webkit-mask: linear-gradient(to left, black, transparent 102%);
+}
+
+.deco2 {
+    position: absolute;
+    bottom: 0;
+    right: -60%;
+    font-size: 50px;
+    color: var(--co-2)
+}
