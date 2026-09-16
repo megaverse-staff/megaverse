@@ -1,13 +1,17 @@
 /**
  * MGV — AVATARS LIGHT / DARK
- * ----------------------------------------
- * Récupère automatiquement l'avatar light + dark
- * depuis le profil public Forumactif.
+ * Forum officiel
  *
- * Le champ "avatar night mode" est :
- * profile_field_id50
+ * Avatar normal : avatar Forumactif
+ * Avatar dark   : champ profil #field_id50
  *
- * Cache : 24 heures.
+ * Le script :
+ * - découvre les membres présents sur la page
+ * - récupère leur profil public si nécessaire
+ * - associe automatiquement avatar normal / avatar dark
+ * - remplace toutes les occurrences de ces images sur la page
+ * - fonctionne avec les éléments ajoutés dynamiquement
+ * - garde les données en cache 24h
  */
 
 (function () {
@@ -16,31 +20,29 @@
 
     const CONFIG = {
 
-        // ID du champ Forumactif "avatar night mode"
+        // Champ "avatar night mode" sur le profil public
         darkField: '#field_id50',
 
         // Avatar principal sur le profil public
         profileAvatar: '#user_avatar img',
 
-        // Durée du cache : 24h
+        // Cache pendant 24 heures
         cacheDuration: 24 * 60 * 60 * 1000,
 
-        // Préfixe utilisé dans localStorage
         cachePrefix: 'mgv-avatar-'
     };
 
 
-    /* =========================================
-       VARIABLES
-       ========================================= */
-
     const html = document.documentElement;
 
-    // Utilisateurs déjà en cours de récupération
     const pendingUsers = new Map();
 
-    // Correspondances connues :
-    // URL avatar light => données avatar
+    /*
+     * Contient les correspondances :
+     *
+     * URL light → données membre
+     * URL dark  → mêmes données membre
+     */
     const avatarRegistry = new Map();
 
 
@@ -48,9 +50,6 @@
        OUTILS
        ========================================= */
 
-    /**
-     * Normalise une URL d'image.
-     */
     function normalizeUrl(url) {
 
         if (!url) return '';
@@ -64,9 +63,6 @@
     }
 
 
-    /**
-     * Extrait un ID utilisateur depuis /u123
-     */
     function getUserIdFromUrl(url) {
 
         if (!url) return null;
@@ -74,12 +70,16 @@
         try {
 
             const parsed = new URL(url, location.origin);
-            const match = parsed.pathname.match(/^\/u(\d+)\/?$/);
+
+            const match =
+                parsed.pathname.match(/^\/u(\d+)\/?$/);
 
             return match ? match[1] : null;
 
         } catch (e) {
+
             return null;
+
         }
 
     }
@@ -103,7 +103,8 @@
 
             if (
                 !data.timestamp ||
-                Date.now() - data.timestamp > CONFIG.cacheDuration
+                Date.now() - data.timestamp >
+                CONFIG.cacheDuration
             ) {
 
                 localStorage.removeItem(
@@ -111,6 +112,7 @@
                 );
 
                 return null;
+
             }
 
             return data;
@@ -138,15 +140,16 @@
             );
 
         } catch (e) {
-            // Si localStorage est indisponible,
-            // le système continue simplement sans cache.
+
+            // Le système continue sans cache
+
         }
 
     }
 
 
     /* =========================================
-       REGISTRE DES AVATARS
+       REGISTRE
        ========================================= */
 
     function registerAvatar(userId, data) {
@@ -166,8 +169,7 @@
 
         /*
          * On enregistre aussi l'URL dark.
-         * Ça permet de reconnaître une image qui aurait
-         * déjà été switchée.
+         * Ainsi une image déjà switchée reste reconnue.
          */
         if (dark) {
             avatarRegistry.set(dark, avatarData);
@@ -179,69 +181,99 @@
 
 
     /* =========================================
-       LECTURE D'UN PROFIL
+       LECTURE DU PROFIL PUBLIC
        ========================================= */
 
-    function parseProfile(documentProfile) {
+    function parseProfile(profileDocument) {
 
+        /*
+         * Avatar Forumactif normal
+         */
         const avatar =
-            documentProfile.querySelector(CONFIG.profileAvatar);
-
-        const darkField =
-            documentProfile.querySelector(CONFIG.darkField);
+            profileDocument.querySelector(
+                CONFIG.profileAvatar
+            );
 
         if (!avatar) return null;
 
-        const light = normalizeUrl(avatar.src);
+
+        const light = normalizeUrl(
+            avatar.getAttribute('src') || avatar.src
+        );
+
 
         /*
-         * Le champ Forumactif est un input sur ton profil.
-         * On récupère donc sa value.
+         * Champ "avatar night mode"
+         *
+         * Sur MGV officiel :
+         *
+         * #field_id50
+         *     └── .field_uneditable
+         *             └── img
          */
+        const darkField =
+            profileDocument.querySelector(
+                CONFIG.darkField
+            );
+
         let dark = '';
 
         if (darkField) {
 
-            dark =
-                darkField.value ||
-                darkField.getAttribute('value') ||
-                '';
+            const darkImg =
+                darkField.querySelector('img');
+
+            if (darkImg) {
+
+                dark = normalizeUrl(
+                    darkImg.getAttribute('src') ||
+                    darkImg.src
+                );
+
+            }
 
         }
 
+
         return {
             light: light,
-            dark: normalizeUrl(dark)
+            dark: dark
         };
 
     }
 
 
     /* =========================================
-       RÉCUPÉRATION D'UN UTILISATEUR
+       CHARGEMENT D'UN MEMBRE
        ========================================= */
 
     async function loadUser(userId) {
 
         userId = String(userId);
 
+
         /*
-         * Déjà en cours ?
-         * On réutilise la même Promise.
+         * Requête déjà en cours ?
          */
         if (pendingUsers.has(userId)) {
+
             return pendingUsers.get(userId);
+
         }
 
 
         /*
-         * Cache disponible ?
+         * Déjà en cache ?
          */
-        const cached = getCachedUser(userId);
+        const cached =
+            getCachedUser(userId);
 
         if (cached) {
 
-            registerAvatar(userId, cached);
+            registerAvatar(
+                userId,
+                cached
+            );
 
             return cached;
 
@@ -249,64 +281,83 @@
 
 
         /*
-         * Sinon on charge /uX.
+         * Sinon récupération de /uX
          */
         const promise = fetch('/u' + userId, {
             credentials: 'same-origin'
         })
 
-            .then(response => {
+        .then(response => {
 
-                if (!response.ok) {
-                    throw new Error(
-                        'Profil /u' + userId + ' inaccessible'
-                    );
-                }
+            if (!response.ok) {
 
-                return response.text();
-
-            })
-
-            .then(htmlString => {
-
-                const parser = new DOMParser();
-
-                const profileDocument =
-                    parser.parseFromString(
-                        htmlString,
-                        'text/html'
-                    );
-
-                const data = parseProfile(profileDocument);
-
-                if (!data) return null;
-
-                cacheUser(userId, data);
-                registerAvatar(userId, data);
-
-                return data;
-
-            })
-
-            .catch(error => {
-
-                console.warn(
-                    '[MGV Avatars]',
-                    error
+                throw new Error(
+                    'Profil /u' +
+                    userId +
+                    ' inaccessible'
                 );
 
-                return null;
+            }
 
-            })
+            return response.text();
 
-            .finally(() => {
+        })
 
-                pendingUsers.delete(userId);
+        .then(htmlString => {
 
-            });
+            const parser =
+                new DOMParser();
+
+            const profileDocument =
+                parser.parseFromString(
+                    htmlString,
+                    'text/html'
+                );
+
+            const data =
+                parseProfile(profileDocument);
+
+            if (!data) return null;
 
 
-        pendingUsers.set(userId, promise);
+            cacheUser(
+                userId,
+                data
+            );
+
+            registerAvatar(
+                userId,
+                data
+            );
+
+
+            return data;
+
+        })
+
+        .catch(error => {
+
+            console.warn(
+                '[MGV Avatars]',
+                error
+            );
+
+            return null;
+
+        })
+
+        .finally(() => {
+
+            pendingUsers.delete(userId);
+
+        });
+
+
+        pendingUsers.set(
+            userId,
+            promise
+        );
+
 
         return promise;
 
@@ -320,22 +371,34 @@
     function registerCurrentProfile() {
 
         const match =
-            location.pathname.match(/^\/u(\d+)\/?$/);
+            location.pathname.match(
+                /^\/u(\d+)\/?$/
+            );
 
         if (!match) return;
+
 
         const userId = match[1];
 
         /*
-         * Ici les informations sont déjà présentes
-         * dans le DOM : aucune requête nécessaire.
+         * Sur un profil, toutes les données sont
+         * déjà présentes : aucun fetch nécessaire.
          */
-        const data = parseProfile(document);
+        const data =
+            parseProfile(document);
 
         if (!data) return;
 
-        cacheUser(userId, data);
-        registerAvatar(userId, data);
+
+        cacheUser(
+            userId,
+            data
+        );
+
+        registerAvatar(
+            userId,
+            data
+        );
 
     }
 
@@ -350,12 +413,19 @@
 
 
         /*
-         * 1 — Tous les liens Forumactif /u123
+         * Liens classiques Forumactif :
+         * /u1
+         * /u74
+         * etc.
          */
-        root.querySelectorAll?.('a[href]').forEach(link => {
+        root.querySelectorAll?.(
+            'a[href]'
+        ).forEach(link => {
 
             const userId =
-                getUserIdFromUrl(link.getAttribute('href'));
+                getUserIdFromUrl(
+                    link.getAttribute('href')
+                );
 
             if (userId) {
                 ids.add(userId);
@@ -365,37 +435,44 @@
 
 
         /*
-         * 2 — Switcheroo
+         * SWITCHEROO
          *
-         * Exemple :
-         * <li data-id="1"
-         *     data-action="switcheroo">
+         * <li
+         *   data-id="74"
+         *   data-action="switcheroo"
+         * >
          */
         root.querySelectorAll?.(
             '[data-action="switcheroo"][data-id]'
         ).forEach(element => {
 
-            const userId = element.dataset.id;
+            const userId =
+                element.dataset.id;
 
-            if (/^\d+$/.test(userId || '')) {
+            if (
+                /^\d+$/.test(
+                    userId || ''
+                )
+            ) {
+
                 ids.add(userId);
+
             }
 
         });
 
 
-        /*
-         * Charge chaque membre découvert.
-         */
         ids.forEach(userId => {
+
             loadUser(userId);
+
         });
 
     }
 
 
     /* =========================================
-       SWITCH DES IMAGES
+       SWITCH DE TOUTES LES IMAGES
        ========================================= */
 
     function updateImages(root = document) {
@@ -403,53 +480,73 @@
         const isDark =
             html.dataset.colorScheme === 'dark';
 
-        root.querySelectorAll?.('img').forEach(img => {
 
-            /*
-             * On regarde :
-             * - son src actuel
-             * - son src original éventuellement mémorisé
-             */
+        /*
+         * Oui : TOUTES les images.
+         *
+         * Mais seules celles dont l'URL correspond
+         * à un avatar connu sont modifiées.
+         */
+        root.querySelectorAll?.(
+            'img'
+        ).forEach(img => {
+
+
             const current =
-                normalizeUrl(img.currentSrc || img.src);
+                normalizeUrl(
+                    img.getAttribute('src') ||
+                    img.src
+                );
+
 
             const original =
-                normalizeUrl(img.dataset.mgvAvatarOriginal);
+                normalizeUrl(
+                    img.dataset.mgvAvatarOriginal
+                );
 
 
-            let data =
+            const data =
                 avatarRegistry.get(current) ||
                 avatarRegistry.get(original);
 
 
+            /*
+             * Ce n'est pas un avatar connu :
+             * on ne touche absolument à rien.
+             */
             if (!data) return;
 
 
-            /*
-             * On marque l'image comme avatar MGV.
-             */
-            img.classList.add('mgv-switch-avatar');
+            img.classList.add(
+                'mgv-switch-avatar'
+            );
 
-            img.dataset.avatarLight = data.light;
+
+            img.dataset.avatarLight =
+                data.light;
+
 
             if (data.dark) {
-                img.dataset.avatarDark = data.dark;
+
+                img.dataset.avatarDark =
+                    data.dark;
+
+            }
+
+
+            if (
+                !img.dataset.mgvAvatarOriginal
+            ) {
+
+                img.dataset.mgvAvatarOriginal =
+                    data.light;
+
             }
 
 
             /*
-             * Garde l'URL originale.
-             */
-            if (!img.dataset.mgvAvatarOriginal) {
-                img.dataset.mgvAvatarOriginal = data.light;
-            }
-
-
-            /*
-             * Dark renseigné :
-             * dark mode => dark
-             *
-             * Sinon fallback sur light.
+             * Si aucun avatar dark n'est renseigné,
+             * avatar light utilisé partout.
              */
             const wanted =
                 isDark && data.dark
@@ -458,9 +555,13 @@
 
 
             if (
-                normalizeUrl(img.src) !== wanted
+                normalizeUrl(
+                    img.getAttribute('src')
+                ) !== wanted
             ) {
+
                 img.src = wanted;
+
             }
 
         });
@@ -469,12 +570,13 @@
 
 
     /* =========================================
-       MISE À JOUR GLOBALE
+       RAFRAÎCHISSEMENT
        ========================================= */
 
     function refresh(root = document) {
 
         discoverUsers(root);
+
         updateImages(root);
 
     }
@@ -486,62 +588,108 @@
 
     let observerTimer;
 
-    const observer = new MutationObserver(mutations => {
 
-        /*
-         * Debounce :
-         * si Switcheroo injecte 15 éléments d'un coup,
-         * on ne relance pas le système 15 fois.
-         */
-        clearTimeout(observerTimer);
+    const observer =
+        new MutationObserver(
+            function (mutations) {
 
-        observerTimer = setTimeout(() => {
+                clearTimeout(
+                    observerTimer
+                );
 
-            mutations.forEach(mutation => {
 
-                mutation.addedNodes.forEach(node => {
+                observerTimer =
+                    setTimeout(
+                        function () {
 
-                    if (
-                        node.nodeType !== Node.ELEMENT_NODE
-                    ) return;
+                            mutations.forEach(
+                                mutation => {
 
-                    refresh(node);
+                                    mutation
+                                        .addedNodes
+                                        .forEach(
+                                            node => {
 
-                });
+                                                if (
+                                                    node.nodeType !==
+                                                    Node.ELEMENT_NODE
+                                                ) {
+                                                    return;
+                                                }
 
-            });
+                                                refresh(node);
 
-            /*
-             * Certains scripts modifient uniquement
-             * des src existants.
-             */
-            updateImages();
+                                            }
+                                        );
 
-        }, 50);
+                                }
+                            );
 
-    });
+
+                            updateImages();
+
+                        },
+                        50
+                    );
+
+            }
+        );
 
 
     /* =========================================
-       CHANGEMENT DE THÈME
+       SURVEILLANCE DU LIGHT / DARK
        ========================================= */
 
     /*
-     * Le plugin du thème pourra déclencher
-     * cet événement.
+     * On ne touche PAS à ton plugin de thème.
+     *
+     * On surveille simplement :
+     *
+     * <html data-color-scheme="dark">
+     *
+     * Quand sa valeur change, les avatars suivent.
      */
-    document.addEventListener(
-        'mgv:themechange',
-        function () {
-            updateImages();
+    const themeObserver =
+        new MutationObserver(
+            function (mutations) {
+
+                mutations.forEach(
+                    function (mutation) {
+
+                        if (
+                            mutation.type ===
+                            'attributes' &&
+
+                            mutation.attributeName ===
+                            'data-color-scheme'
+                        ) {
+
+                            updateImages();
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+    themeObserver.observe(
+        document.documentElement,
+        {
+            attributes: true,
+            attributeFilter: [
+                'data-color-scheme'
+            ]
         }
     );
 
 
-    /*
-     * Fonction publique pratique pour debug
-     * ou futurs scripts.
-     */
+    /* =========================================
+       OUTILS DE DEBUG
+       ========================================= */
+
     window.MGVAvatars = {
 
         refresh: refresh,
@@ -552,15 +700,24 @@
 
         clearCache: function () {
 
-            Object.keys(localStorage).forEach(key => {
+            Object.keys(
+                localStorage
+            ).forEach(key => {
 
                 if (
-                    key.startsWith(CONFIG.cachePrefix)
+                    key.startsWith(
+                        CONFIG.cachePrefix
+                    )
                 ) {
-                    localStorage.removeItem(key);
+
+                    localStorage.removeItem(
+                        key
+                    );
+
                 }
 
             });
+
 
             avatarRegistry.clear();
 
@@ -577,33 +734,30 @@
 
     function init() {
 
-        /*
-         * Si on est déjà sur /uX,
-         * récupère directement ses informations.
-         */
         registerCurrentProfile();
 
-        /*
-         * Recherche les membres présents.
-         */
         refresh();
 
-        /*
-         * Observe les ajouts dynamiques.
-         */
+
         if (document.body) {
 
-            observer.observe(document.body, {
-                childList: true,
-                subtree: true
-            });
+            observer.observe(
+                document.body,
+                {
+                    childList: true,
+                    subtree: true
+                }
+            );
 
         }
 
     }
 
 
-    if (document.readyState === 'loading') {
+    if (
+        document.readyState ===
+        'loading'
+    ) {
 
         document.addEventListener(
             'DOMContentLoaded',
