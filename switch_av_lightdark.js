@@ -17,7 +17,7 @@
     const CONFIG = {
 
         // ID du champ Forumactif "avatar night mode"
-        darkField: '#profile_field_6_41_content',
+        darkField: '#profile_field_6_50_content',
 
         // Avatar principal sur le profil public
         profileAvatar: '#user_avatar img',
