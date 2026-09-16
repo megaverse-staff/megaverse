@@ -5,7 +5,7 @@
  * depuis le profil public Forumactif.
  *
  * Le champ "avatar night mode" est :
- * profile_field_6_41
+ * profile_field_id50
  *
  * Cache : 24 heures.
  */
@@ -17,7 +17,7 @@
     const CONFIG = {
 
         // ID du champ Forumactif "avatar night mode"
-        darkField: '#profile_field_6_50_content',
+        darkField: '#field_id50',
 
         // Avatar principal sur le profil public
         profileAvatar: '#user_avatar img',
