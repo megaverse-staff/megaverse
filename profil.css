@@ -1061,3 +1061,8 @@ div#field_id1, div#field_id3, div#field_id4, div#field_id-4, div#field_id-6, div
 .tooltipster-arrow {
   display: none;
 }
+
+/* CACHER CHAMP AVATAR NIGHT */
+#field_id50 {
+    display: none !important;
+}
