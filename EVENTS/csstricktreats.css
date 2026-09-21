@@ -7,8 +7,9 @@
         }
 
         .case {
-    width: 180px;
-    height: 180px;
+    width: 25%;
+    min-height: 180px;
+    height: auto;
     margin: 10px;
       background: url(https://www.aht.li/3934637/trickortreat2024.jpg) no-repeat;
     background-attachment: fixed;
