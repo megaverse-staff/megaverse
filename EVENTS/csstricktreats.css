@@ -1,0 +1,44 @@
+        #calendar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 50px auto;
+            max-width: 1200px;
+        }
+
+        .case {
+    width: 180px;
+    height: 180px;
+    margin: 10px;
+      background: url(https://www.aht.li/3934637/trickortreat2024.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: auto 100%;
+    text-align: center;
+    border-radius: var(--radius);
+    color: var(--textColorAccent);
+    border: var(--border);
+    box-shadow: var(--shadowBox);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0.3;
+    font-family: var(--special-font);
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 10px;}
+
+        .case.active {
+    opacity: 1;
+    color: #fff;
+    border: 1px solid var(--co-2);
+    box-shadow: 0 6px 10px var(--co-2);
+      text-transform: uppercase; 
+}
+
+.case span {
+    display: block;
+    font-size: 12px;
+    font-family: var(--font);
+    margin: 5px;
+    text-transform: lowercase;
+    text-align: left;
+}
