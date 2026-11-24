@@ -1265,7 +1265,7 @@ a.fa-mention {
 
 /* DÉCOS EVENTS */
 /*contour avatar event*/
-.post_avatar.yule::before{ content:""; position:absolute; inset: 0; background: url(https://www.aht.li/3946585/noel.png) no-repeat; background-size: cover; background-position: center; z-index: 1; pointer-events: none; }
+.post_avatar.yule::before{ content:""; position:absolute; inset: 0; background: url(https://www.aht.li/3999291/deco-yule-2026.png) no-repeat; background-size: cover; background-position: center; z-index: 1; pointer-events: none; }
 .post_avatar.treat::before { content: ""; position: absolute; inset: 0; background: url(https://www.aht.li/3872728/cadre-treat.png) no-repeat; background-size: 100% auto; background-position: center; z-index: 1; pointer-events: none; width: 296px; height: 445px; margin: -10px 0 0 -15px; }
 .post_avatar.treat::after { content: ""; position: absolute; inset: 0; background: url(https://www.aht.li/3872730/cadre-treat2.gif) no-repeat; background-size: 25%; background-position: center; z-index: 1; pointer-events: none; background-position-x: right; background-position-y: bottom; margin: 0 -25px -25px 0; }
 .post_avatar.trick::before { content: ""; position: absolute; inset: 0; background: url(https://www.aht.li/3872727/cadre-trick.png) no-repeat; background-size: 100% auto; background-position: center; z-index: 1; pointer-events: none; width: 250px; height: 446px; margin: -10px 0 0 -22px; }
